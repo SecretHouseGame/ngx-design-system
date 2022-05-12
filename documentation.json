@@ -127,7 +127,7 @@
         },
         {
             "name": "InputTextComponent",
-            "id": "component-InputTextComponent-7536c97d233fdd78475aa25adb77b5cd7939c8212d214a0b602ec6c6523892926fe75804369d0e21d65adabbab669a2e20dc245f283b8d5ca42044076f3e49f7",
+            "id": "component-InputTextComponent-4bdb6fc1c6ecc0d8394c7c47684a1957c732a34d37a35d758b4a67f040d23907916e3531bf1cdc9d200782e568df84cf0ef2107b3e45bc1e18b52adf895ce3b7",
             "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-text/input-text.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -167,6 +167,15 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
                     "line": 13,
                     "type": "string",
                     "decorators": []
@@ -181,7 +190,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 17,
+                    "line": 18,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -193,7 +202,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { FormControl } from '@angular/forms';\n\n@Component({\n  selector: 'sh-input-text',\n  templateUrl: './input-text.component.html',\n  styleUrls: ['./input-text.component.scss'],\n  host: {'class': 'field'}\n})\nexport class InputTextComponent implements OnInit {\n\t@Input() id: string = '';\n\t@Input() control!: FormControl;\n\t@Input() label: string = '';\n\n\tconstructor() {}\n\n\tngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, Input, OnInit, Output } from '@angular/core';\r\nimport { FormControl } from '@angular/forms';\r\n\r\n@Component({\r\n  selector: 'sh-input-text',\r\n  templateUrl: './input-text.component.html',\r\n  styleUrls: ['./input-text.component.scss'],\r\n  host: {'class': 'field'}\r\n})\r\nexport class InputTextComponent implements OnInit {\r\n\t@Input() id: string = '';\r\n\t@Input() control!: FormControl;\r\n\t@Input() placeholder: string = '';\r\n\t@Input() label: string = '';\r\n\r\n\tconstructor() {}\r\n\r\n\tngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -208,12 +217,12 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 13
+                "line": 14
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<sh-field-container [for]=\"id\" [label]=\"label\">\n\t<input type=\"text\" [id]=\"id\" [formControl]=\"control\">\n</sh-field-container>\n"
+            "templateData": "<sh-field-container [for]=\"id\" [label]=\"label\">\r\n\t<input type=\"text\" [id]=\"id\" [formControl]=\"control\" placeholder=\"{{placeholder}}\">\r\n</sh-field-container>\r\n"
         },
         {
             "name": "NgxDsSecretHouseComponent",
@@ -272,13 +281,13 @@
     "modules": [
         {
             "name": "NgxDsSecretHouseModule",
-            "id": "module-NgxDsSecretHouseModule-6d4598526569419ef58da38e10919eed357e22ce28884e68b2ee9ae3a1916a04887e60e2a4eff48a2b7e64a5b48956c0fe637ec89907b7170d31689ed015d3dd",
+            "id": "module-NgxDsSecretHouseModule-1dbfe8e78d246dfec49211c844c8ebd9daf6835d0aee6b62e4cf808f7ee1d3f198cc9308679705a9dd1c7bbe87459e581537bc2f18e896430f349262611954a2",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/ngx-ds-secret-house/src/lib/ngx-ds-secret-house.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { NgxDsSecretHouseComponent } from './ngx-ds-secret-house.component';\nimport { InputTextComponent } from './components/form/input-text/input-text.component';\r\n\r\n@NgModule({\r\n\tdeclarations: [\r\n\t\tNgxDsSecretHouseComponent,\r\n  InputTextComponent,\r\n\t],\r\n\timports: [],\r\n\texports: [\r\n\t\tNgxDsSecretHouseComponent\r\n\t]\r\n})\r\nexport class NgxDsSecretHouseModule {\r\n}\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { NgxDsSecretHouseComponent } from './ngx-ds-secret-house.component';\r\nimport { InputTextComponent } from './components/form/input-text/input-text.component';\r\n\r\n@NgModule({\r\n\tdeclarations: [\r\n\t\tNgxDsSecretHouseComponent,\r\n  \t\tInputTextComponent,\r\n\t],\r\n\timports: [],\r\n\texports: [\r\n\t\tNgxDsSecretHouseComponent\r\n\t]\r\n})\r\nexport class NgxDsSecretHouseModule {\r\n}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -331,6 +340,16 @@
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
             },
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/InputText.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -338,6 +357,16 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/InputText.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<InputTextComponent>",
+                "defaultValue": "(args: InputTextComponent) => ({\r\n  props: args,\r\n})"
             }
         ],
         "functions": [],
@@ -363,6 +392,28 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "literal type"
+                }
+            ],
+            "stories/InputText.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/InputText.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/InputText.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<InputTextComponent>",
+                    "defaultValue": "(args: InputTextComponent) => ({\r\n  props: args,\r\n})"
                 }
             ]
         },
@@ -390,7 +441,7 @@
                 "linktype": "component",
                 "name": "InputTextComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/7",
                 "status": "low"
             },
             {
@@ -427,6 +478,26 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/InputText.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/InputText.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
