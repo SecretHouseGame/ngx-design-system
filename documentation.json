@@ -167,89 +167,6 @@
             }
         },
         {
-            "name": "FieldContainerComponent",
-            "id": "component-FieldContainerComponent-76a1451cad57ff0e85767065f60f4cca59413b1815350f644465565ff93132899129738371b61f00129c49e58c392ecfa4a59fa418e2d61258ad2ea4b500525a",
-            "file": "projects/ngx-ds-secret-house/src/lib/components/form/field-container/field-container.component.ts",
-            "encapsulation": [
-                "ViewEncapsulation.None"
-            ],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "sh-field-container",
-            "styleUrls": [
-                "./field-container.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./field-container.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "for",
-                    "defaultValue": "\"\"",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 11,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "\"\"",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 10,
-                    "type": "string",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 15,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';\r\n\r\n@Component({\r\n\tselector: 'sh-field-container',\r\n\ttemplateUrl: './field-container.component.html',\r\n\tstyleUrls: ['./field-container.component.scss'],\r\n\tencapsulation: ViewEncapsulation.None\r\n})\r\nexport class FieldContainerComponent implements OnInit {\r\n\t@Input() label: string = \"\";\r\n\t@Input() for: string = \"\";\r\n\r\n\tconstructor() {}\r\n\r\n\tngOnInit(): void {}\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "sh-field-container {\r\n\tlabel {\r\n\t\tfont-weight: bold;\r\n\t\tcolor: #000;\r\n\t}\r\n\r\n\tinput,\r\n\ttextarea,\r\n\tselect {\r\n\t\tborder-radius: 10px;\r\n\t\twidth: 100%;\r\n\t\tpadding: 10px;\r\n\t\tmargin-top: 5px;\r\n\r\n\t\tborder: 1px solid #6489ac;\r\n\r\n\t\t&:focus {\r\n\t\t\toutline: none;\r\n\t\t}\r\n\t}\r\n}\r\n",
-                    "styleUrl": "./field-container.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [],
-                "line": 11
-            },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<div>\r\n\t<label>{{ label }}</label>\r\n\t<ng-content></ng-content>\r\n</div>\r\n"
-        },
-        {
             "name": "HeaderComponent",
             "id": "component-HeaderComponent-a557eec14f72c438a8033301f4d6ce023e0a1844a3b06ec2b38794a612acc31735ae78a5ee10071b230c8c20d699eb914554e69d07ade54adb371da8efb464cc",
             "file": "stories/header.component.ts",
@@ -321,95 +238,6 @@
                 }
             ],
             "stylesData": ""
-        },
-        {
-            "name": "InputTextComponent",
-            "id": "component-InputTextComponent-e0fc1f4f1d46cb9e76867bd28d1deb837aa23328997352fb29883f910f79e7842338b758ff3f5972ca882496469ad287cfe5b085110e14abd2b8ba500f9bb39a",
-            "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-text/input-text.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "sh-input-text",
-            "styleUrls": [
-                "./input-text.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./input-text.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "control",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 11,
-                    "type": "FormControl",
-                    "decorators": []
-                },
-                {
-                    "name": "id",
-                    "defaultValue": "''",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 10,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "''",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 12,
-                    "type": "string",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 16,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { FormControl } from '@angular/forms';\n\n@Component({\n  selector: 'sh-input-text',\n  templateUrl: './input-text.component.html',\n  styleUrls: ['./input-text.component.scss']\n})\nexport class InputTextComponent implements OnInit {\n\t@Input() id: string = '';\n\t@Input() control!: FormControl;\n\t@Input() label: string = '';\n\n\tconstructor() {}\n\n\tngOnInit(): void {}\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "",
-                    "styleUrl": "./input-text.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [],
-                "line": 12
-            },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<sh-field-container [for]=\"id\" [label]=\"label\">\n\t<input type=\"text\" [id]=\"id\" [formControl]=\"control\">\n</sh-field-container>\n"
         },
         {
             "name": "NgxDsSecretHouseComponent",
@@ -548,13 +376,13 @@
     "modules": [
         {
             "name": "NgxDsSecretHouseModule",
-            "id": "module-NgxDsSecretHouseModule-f0d58f1f83ceb18d47449abd9e2ece2cdc823846daac9ba69e0f1a00fb143f5030218392147dd96c0d608e8224516593a604d05c8fbba61cb11dac411fc133fa",
+            "id": "module-NgxDsSecretHouseModule-806ced13000b408e80f48d49900739e4caebd145758f979114d60a21d1a7da534139da208e6a34187f3a044f096ff36b7523695530abe3e86f78a27442a54835",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/ngx-ds-secret-house/src/lib/ngx-ds-secret-house.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { NgxDsSecretHouseComponent } from './ngx-ds-secret-house.component';\nimport { InputTextComponent } from './components/form/input-text/input-text.component';\r\n\r\n\r\n@NgModule({\r\n\tdeclarations: [\r\n\t\tNgxDsSecretHouseComponent,\r\n  InputTextComponent\r\n\t],\r\n\timports: [],\r\n\texports: [\r\n\t\tNgxDsSecretHouseComponent\r\n\t]\r\n})\r\nexport class NgxDsSecretHouseModule {\r\n}\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { NgxDsSecretHouseComponent } from './ngx-ds-secret-house.component';\r\n\r\n@NgModule({\r\n\tdeclarations: [\r\n\t\tNgxDsSecretHouseComponent,\r\n\t],\r\n\timports: [],\r\n\texports: [\r\n\t\tNgxDsSecretHouseComponent\r\n\t]\r\n})\r\nexport class NgxDsSecretHouseModule {\r\n}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -563,9 +391,6 @@
                 {
                     "type": "declarations",
                     "elements": [
-                        {
-                            "name": "InputTextComponent"
-                        },
                         {
                             "name": "NgxDsSecretHouseComponent"
                         }
@@ -874,27 +699,9 @@
     },
     "routes": [],
     "coverage": {
-        "count": 3,
+        "count": 4,
         "status": "low",
         "files": [
-            {
-                "filePath": "projects/ngx-ds-secret-house/src/lib/components/form/field-container/field-container.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "FieldContainerComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/ngx-ds-secret-house/src/lib/components/form/input-text/input-text.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "InputTextComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/6",
-                "status": "low"
-            },
             {
                 "filePath": "projects/ngx-ds-secret-house/src/lib/ngx-ds-secret-house.component.ts",
                 "type": "component",
