@@ -7,7 +7,7 @@
 			"projectType": "library",
 			"root": "projects/ngx-ds-secret-house",
 			"sourceRoot": "projects/ngx-ds-secret-house/src",
-			"prefix": "lib",
+			"prefix": "ss",
 			"architect": {
 				"build": {
 					"builder": "@angular-devkit/build-angular:ng-packagr",

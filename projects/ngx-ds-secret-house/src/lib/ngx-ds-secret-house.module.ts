@@ -4,7 +4,7 @@ import { NgxDsSecretHouseComponent } from './ngx-ds-secret-house.component';
 
 @NgModule({
 	declarations: [
-		NgxDsSecretHouseComponent
+		NgxDsSecretHouseComponent,
 	],
 	imports: [],
 	exports: [
