@@ -7,6 +7,7 @@ import { FieldContainerComponent } from "./components/form/field-container/field
 import { InputTextComponent } from './components/form/input-text/input-text.component';
 import { InputTextareaComponent } from './components/form/input-textarea/input-textarea.component';
 import { InputSelectComponent } from './components/form/input-select/input-select.component';
+import { InputPasswordComponent } from './components/form/input-password/input-password.component';
 
 @NgModule({
 	declarations: [
@@ -15,6 +16,7 @@ import { InputSelectComponent } from './components/form/input-select/input-selec
   		InputTextComponent,
     InputTextareaComponent,
     InputSelectComponent,
+    InputPasswordComponent,
 	],
 	imports: [
 		ReactiveFormsModule
