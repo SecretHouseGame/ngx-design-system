@@ -7,15 +7,20 @@ sh-field-container {
 	input,
 	textarea,
 	select {
-		border-radius: 10px;
-		width: 100%;
+		display: block;
+		width: calc(100% - 1.2rem);
 		padding: 10px;
 		margin-top: 5px;
 
-		border: 1px solid #6489ac;
-
 		&:focus {
 			outline: none;
+		}
+	}
+
+	.field-group {
+		.small {
+			font-family: 'Roboto', sans-serif;
+			font-size: 14px;
 		}
 	}
 }
