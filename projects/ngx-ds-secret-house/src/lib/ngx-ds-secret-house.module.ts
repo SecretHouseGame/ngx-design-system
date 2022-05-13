@@ -10,10 +10,10 @@ import { InputTextComponent } from './components/form/input-text/input-text.comp
 import { InputTextareaComponent } from './components/form/input-textarea/input-textarea.component';
 import { InputSelectComponent } from './components/form/input-select/input-select.component';
 import { InputPasswordComponent } from './components/form/input-password/input-password.component';
+import { InputSwitchComponent } from './components/form/input-switch/input-switch.component';
 
 // Buttons
-import { BtnPrimaryComponent } from './components/buttons/btn-primary/btn-primary.component';
-import { InputSwitchComponent } from './components/form/input-switch/input-switch.component';
+import { ButtonComponent } from './components/buttons/button/button.component';
 
 const COMPONENTS = [
 	FieldContainerComponent,
@@ -22,13 +22,13 @@ const COMPONENTS = [
 	InputTextareaComponent,
 	InputSelectComponent,
 	InputSwitchComponent,
-	BtnPrimaryComponent
+	ButtonComponent
 ]
 
 @NgModule({
 	declarations: [
 		NgxDsSecretHouseComponent,
-		...COMPONENTS,
+		...COMPONENTS
 	],
 	imports: [
 		BrowserModule,

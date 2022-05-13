@@ -14,4 +14,4 @@ export * from './lib/components/form/input-select/input-select.component';
 export * from './lib/components/form/input-password/input-password.component';
 
 // Buttons
-export * from './lib/components/buttons/btn-primary/btn-primary.component';
+export * from './lib/components/buttons/button/button.component';
