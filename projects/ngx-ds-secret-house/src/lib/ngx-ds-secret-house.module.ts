@@ -9,22 +9,29 @@ import { InputTextareaComponent } from './components/form/input-textarea/input-t
 import { InputSelectComponent } from './components/form/input-select/input-select.component';
 import { InputPasswordComponent } from './components/form/input-password/input-password.component';
 
+// Buttons
+import { BtnPrimaryComponent } from './components/buttons/btn-primary/btn-primary.component';
+
+const COMPONENTS = [
+	FieldContainerComponent,
+	InputTextComponent,
+	InputPasswordComponent,
+	InputTextareaComponent,
+	InputSelectComponent,
+	BtnPrimaryComponent
+]
+
 @NgModule({
 	declarations: [
 		NgxDsSecretHouseComponent,
-		FieldContainerComponent,
-  		InputTextComponent,
-    InputTextareaComponent,
-    InputSelectComponent,
-    InputPasswordComponent,
+		...COMPONENTS,
 	],
 	imports: [
 		ReactiveFormsModule
 	],
 	exports: [
 		NgxDsSecretHouseComponent,
-		FieldContainerComponent,
-		InputTextComponent
+		...COMPONENTS
 	]
 })
 export class NgxDsSecretHouseModule {

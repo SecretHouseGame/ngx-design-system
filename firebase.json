@@ -1,0 +1,11 @@
+{
+	"hosting": {
+		"site": "secrethouse-storybook",
+		"public": "storybook-static",
+		"ignore": [
+			"firebase.json",
+			"**/.*",
+			"**/node_modules/**"
+		]
+	}
+}
