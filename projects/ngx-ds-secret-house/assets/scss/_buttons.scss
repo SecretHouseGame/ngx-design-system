@@ -7,15 +7,28 @@
 	font-weight: bold;
 	font-size: $size-normal;
 
+	transition: all .3s;
+
+	cursor: pointer;
+
 	&.btn-primary {
-		background-color: $yellow;
+		background-color: $brand-primary;
 		color: $white;
 
 		&.btn-outline {
 			background-color: $white;
-			color: $yellow;
+			color: $brand-primary;
 
-			border-color: $yellow;
+			border-color: $brand-primary;
+		}
+
+		&:hover {
+			background-color: $brand-primary-light;
+		}
+
+		&:disabled {
+			background-color: $brand-primary-light;
+			cursor: default;
 		}
 	}
 }

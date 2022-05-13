@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
 	selector: 'sh-btn-primary',
@@ -6,6 +6,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 	styleUrls: ['./btn-primary.component.scss']
 })
 export class BtnPrimaryComponent implements OnInit {
+	@Input() disabled: boolean = false;
 
 	constructor () {
 	}
