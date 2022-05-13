@@ -7,13 +7,15 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./input-password.component.scss'],
   host: {'class': 'field'}
 })
+
 export class InputPasswordComponent implements OnInit {
 	@Input() id: string = '';
 	@Input() control!: FormControl;
 	@Input() placeholder: string = '';
 	@Input() label: string = '';
 	@Input() help: string = '';
-	@Input() showPassword: boolean = false;
+	
+  showPassword: boolean = false;
 
   constructor() { }
 

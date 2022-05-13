@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { NgxDsSecretHouseComponent } from './ngx-ds-secret-house.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 // Forms
 import { FieldContainerComponent } from "./components/form/field-container/field-container.component";
@@ -11,6 +13,7 @@ import { InputPasswordComponent } from './components/form/input-password/input-p
 
 // Buttons
 import { BtnPrimaryComponent } from './components/buttons/btn-primary/btn-primary.component';
+import { InputSwitchComponent } from './components/form/input-switch/input-switch.component';
 
 const COMPONENTS = [
 	FieldContainerComponent,
@@ -18,6 +21,7 @@ const COMPONENTS = [
 	InputPasswordComponent,
 	InputTextareaComponent,
 	InputSelectComponent,
+	InputSwitchComponent,
 	BtnPrimaryComponent
 ]
 
@@ -27,7 +31,10 @@ const COMPONENTS = [
 		...COMPONENTS,
 	],
 	imports: [
-		ReactiveFormsModule
+		BrowserModule,
+		FormsModule,
+		ReactiveFormsModule,
+		CommonModule,
 	],
 	exports: [
 		NgxDsSecretHouseComponent,
