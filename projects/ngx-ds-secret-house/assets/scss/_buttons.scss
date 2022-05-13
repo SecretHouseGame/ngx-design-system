@@ -1,0 +1,34 @@
+@import '../styles';
+
+.btn {
+	padding: $space-small $space-medium;
+	border: 1px solid transparent;
+
+	font-weight: bold;
+	font-size: $size-normal;
+
+	transition: all .3s;
+
+	cursor: pointer;
+
+	&.btn-primary {
+		background-color: $brand-primary;
+		color: $white;
+
+		&.btn-outline {
+			background-color: $white;
+			color: $brand-primary;
+
+			border-color: $brand-primary;
+		}
+
+		&:hover {
+			background-color: $brand-primary-light;
+		}
+
+		&:disabled {
+			background-color: $brand-primary-light;
+			cursor: default;
+		}
+	}
+}
