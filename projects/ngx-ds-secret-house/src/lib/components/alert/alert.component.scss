@@ -1,11 +1,19 @@
 div {
     background-color: rgb(255, 0, 0);
     display: flex;
-    width: 15%;
-    padding: 0px 15px 0px 0px;
+    width: 20%;
+    padding: 0px 10px 0px 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     div {
         background-color: #543;
         width: 10%;
     }
-    
+    p {
+        padding: 0px 0px 0px 15px;
+        width:60%;
+    }
+    img {
+        width: 20%;
+        padding: 0px 10px 0px 10px; 
+    }
 }
