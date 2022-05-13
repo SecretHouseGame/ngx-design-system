@@ -1,19 +1,26 @@
+@import '../../../../assets/styles';
+
 div {
-    background-color: rgb(255, 0, 0);
+    background-color: #F9FAFB;
     display: flex;
     width: 20%;
     padding: 0px 10px 0px 0px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: 0px 2px 10px rgba(25, 1, 52, 0.12);
     div {
-        background-color: #543;
+        background-color: $light-blue;
         width: 10%;
+        svg {
+            align-self: center;
+        }
+        box-shadow:none;
     }
     p {
         padding: 0px 0px 0px 15px;
-        width:60%;
+        width:80%;
     }
-    img {
-        width: 20%;
-        padding: 0px 10px 0px 10px; 
+    svg {
+        // padding: 20px 10px 0px 10px; 
+        align-self: center;
+        padding: 0px 10px 0px 0px;
     }
 }
