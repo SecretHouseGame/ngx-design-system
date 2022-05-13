@@ -3,5 +3,6 @@
 	"dest": "../../dist/ngx-ds-secret-house",
 	"lib": {
 		"entryFile": "src/public-api.ts"
-	}
+	},
+	"assets": ["./assets/styles.scss"]
 }
