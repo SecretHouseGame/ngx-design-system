@@ -135,6 +135,114 @@
             "templateData": "<div class=\"field-group\">\r\n\t<label class=\"field-label\" for=\"{{for}}\">{{ label }}</label>\r\n\t<ng-content></ng-content>\r\n\t<small class=\"field-help\" *ngIf=\"help\">Aide : {{ help }}</small>\r\n</div>\r\n"
         },
         {
+            "name": "InputTextareaComponent",
+            "id": "component-InputTextareaComponent-64c5791fe151a05788bfed3ffe18bc9fc9a29ed4e1c404eff5062c4151f308d86922533f7ad7c4526b6c7e531c9d9591b752802e353a45c489a2b43cd782f2ef",
+            "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-textarea/input-textarea.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "host": {},
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "sh-input-textarea",
+            "styleUrls": [
+                "./input-textarea.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./input-textarea.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "control",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "FormControl",
+                    "decorators": []
+                },
+                {
+                    "name": "help",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "id",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 19,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { FormControl } from '@angular/forms';\n\n@Component({\n\tselector: 'sh-input-textarea',\n\ttemplateUrl: './input-textarea.component.html',\n\tstyleUrls: ['./input-textarea.component.scss'],\n\thost: {'class': 'field'}\n})\nexport class InputTextareaComponent implements OnInit {\n\t@Input() id: string = '';\n\t@Input() control!: FormControl;\n\t@Input() label: string = '';\n\t@Input() placeholder: string = '';\n\t@Input() help: string = '';\n\n\tconstructor() {}\n\n\tngOnInit(): void {}\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./input-textarea.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 15
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<sh-field-container [for]=\"id\" [label]=\"label\" [help]=\"help\">\n\t<textarea [id]=\"id\" [formControl]=\"control\" [placeholder]=\"placeholder\"></textarea>\n</sh-field-container>\n"
+        },
+        {
             "name": "InputTextComponent",
             "id": "component-InputTextComponent-a16d2c19e10e29c717c4102799ace2595fae22cf13f351fc85188f9637f2945020e94a80f2dcd7552cc5e06b1706bc2745e91abe5d40883813ccf05c0052759c",
             "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-text/input-text.component.ts",
@@ -299,13 +407,13 @@
     "modules": [
         {
             "name": "NgxDsSecretHouseModule",
-            "id": "module-NgxDsSecretHouseModule-1e1e8bf9b70b92e71aefd05aef1a35aab64f42bc53d43a35ae4bec02e6ab6a724a01be4f9680113b008995adc88b7e2484cec0476462540b5badbf7b028a310d",
+            "id": "module-NgxDsSecretHouseModule-f560058547037cf4dc963076c4c1bdb8451aa2090a9739d1564930b4c9bc14bb789c34aa3d18c9f27b47ca468eca0db4b3dcd91b2fb2145436f7774cd59859a6",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/ngx-ds-secret-house/src/lib/ngx-ds-secret-house.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { ReactiveFormsModule } from \"@angular/forms\";\r\nimport { NgxDsSecretHouseComponent } from './ngx-ds-secret-house.component';\r\n\r\n// Forms\r\nimport { FieldContainerComponent } from \"./components/form/field-container/field-container.component\";\r\nimport { InputTextComponent } from './components/form/input-text/input-text.component';\r\n\r\n@NgModule({\r\n\tdeclarations: [\r\n\t\tNgxDsSecretHouseComponent,\r\n\t\tFieldContainerComponent,\r\n  \t\tInputTextComponent,\r\n\t],\r\n\timports: [\r\n\t\tReactiveFormsModule\r\n\t],\r\n\texports: [\r\n\t\tNgxDsSecretHouseComponent,\r\n\t\tFieldContainerComponent,\r\n\t\tInputTextComponent\r\n\t]\r\n})\r\nexport class NgxDsSecretHouseModule {\r\n}\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { ReactiveFormsModule } from \"@angular/forms\";\r\nimport { NgxDsSecretHouseComponent } from './ngx-ds-secret-house.component';\r\n\r\n// Forms\r\nimport { FieldContainerComponent } from \"./components/form/field-container/field-container.component\";\r\nimport { InputTextComponent } from './components/form/input-text/input-text.component';\nimport { InputTextareaComponent } from './components/form/input-textarea/input-textarea.component';\r\n\r\n@NgModule({\r\n\tdeclarations: [\r\n\t\tNgxDsSecretHouseComponent,\r\n\t\tFieldContainerComponent,\r\n  \t\tInputTextComponent,\r\n    InputTextareaComponent,\r\n\t],\r\n\timports: [\r\n\t\tReactiveFormsModule\r\n\t],\r\n\texports: [\r\n\t\tNgxDsSecretHouseComponent,\r\n\t\tFieldContainerComponent,\r\n\t\tInputTextComponent\r\n\t]\r\n})\r\nexport class NgxDsSecretHouseModule {\r\n}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -319,6 +427,9 @@
                         },
                         {
                             "name": "InputTextComponent"
+                        },
+                        {
+                            "name": "InputTextareaComponent"
                         },
                         {
                             "name": "NgxDsSecretHouseComponent"
@@ -367,6 +478,26 @@
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
             },
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/form/InputText.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/form/InputTextarea.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -379,10 +510,20 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/InputText.stories.ts",
+                "file": "stories/form/InputText.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<InputTextComponent>",
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/form/InputTextarea.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<InputTextareaComponent>",
                 "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
             }
         ],
@@ -411,15 +552,47 @@
                     "type": "literal type"
                 }
             ],
-            "stories/InputText.stories.ts": [
+            "stories/form/InputText.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputText.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
                 {
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "stories/InputText.stories.ts",
+                    "file": "stories/form/InputText.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<InputTextComponent>",
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "stories/form/InputTextarea.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputTextarea.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputTextarea.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<InputTextareaComponent>",
                     "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
                 }
             ]
@@ -447,6 +620,15 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "InputTextComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-ds-secret-house/src/lib/components/form/input-textarea/input-textarea.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputTextareaComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/8",
                 "status": "low"
@@ -490,7 +672,26 @@
                 "status": "low"
             },
             {
-                "filePath": "stories/InputText.stories.ts",
+                "filePath": "stories/User.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "User",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/form/InputText.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/form/InputText.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -500,10 +701,21 @@
                 "status": "low"
             },
             {
-                "filePath": "stories/User.ts",
-                "type": "interface",
-                "linktype": "interface",
-                "name": "User",
+                "filePath": "stories/form/InputTextarea.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/form/InputTextarea.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
