@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
   title: 'SecretHouse/Input/Text',
-  component: FieldContainerComponent,
+  component: InputTextComponent,
   decorators: [
     moduleMetadata({
       //👇 Imports both components to allow component composition with Storybook
@@ -26,14 +26,19 @@ export default {
 } as Meta;
 
 // More on component templates: https://storybook.js.org/docs/angular/writing-stories/introduction#using-args
-const Template: Story<InputTextComponent> = (args: InputTextComponent) => ({
+const Template: Story<InputTextComponent> = (args) => ({
   props: args,
-  
 });
 
 export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
-Default .args = {
+Default.args = {
   placeholder: 'Ceci est le placeholder',
-  label: 'Quelle est ma question ?'
+  label: 'Quelle est ma question ?',
+  id: 'form-id',
+  help: "Ceci est une indication pour aider l'utilisateur",
 };
+
+Default.decorators = [
+  componentWrapperDecorator((story) => `<sh-field-container> ${story} </sh-field-container>`),
+];

@@ -10,7 +10,7 @@ import { InputTextComponent } from './components/form/input-text/input-text.comp
 	declarations: [
 		NgxDsSecretHouseComponent,
 		FieldContainerComponent,
-  		InputTextComponent
+  		InputTextComponent,
 	],
 	imports: [
 		ReactiveFormsModule
