@@ -1,4 +1,4 @@
-<div class="field-group">
+<div [class]=" 'field-group' " [ngClass]="{ 'success': success, 'error': error  }">
 	<label class="field-label" for="{{for}}">{{ label }}</label>
 	<ng-content></ng-content>
 	<small class="field-help" *ngIf="help">{{ help }}</small>

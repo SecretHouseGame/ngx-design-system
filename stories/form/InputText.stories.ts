@@ -31,11 +31,12 @@ const Template: Story<InputTextComponent> = (args) => ({
 });
 
 export const Default = Template.bind({});
+
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
 Default.args = {
-  placeholder: 'Ceci est le placeholder',
-  label: 'Quelle est ma question ?',
-  id: 'form-id',
+  placeholder: "Ceci est le placeholder",
+  label: "Quelle est ma question ?",
+  id: "form-id",
   help: "Ceci est une indication pour aider l'utilisateur",
 };
 
