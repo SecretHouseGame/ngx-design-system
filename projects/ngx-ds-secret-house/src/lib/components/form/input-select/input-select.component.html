@@ -1,0 +1,5 @@
+<sh-field-container [for]="id" [label]="label" [help]="help">
+	<select [id]="id" [formControl]="control">
+		<option *ngFor="let o of options" [value]="o | json" >{{o.name}}</option>
+	</select>
+</sh-field-container>
