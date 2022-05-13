@@ -5,6 +5,7 @@ import { NgxDsSecretHouseComponent } from './ngx-ds-secret-house.component';
 // Forms
 import { FieldContainerComponent } from "./components/form/field-container/field-container.component";
 import { InputTextComponent } from './components/form/input-text/input-text.component';
+import { AlertComponent } from './components/alert/alert.component';
 
 @NgModule({
 	declarations: [
@@ -13,7 +14,9 @@ import { InputTextComponent } from './components/form/input-text/input-text.comp
   		InputTextComponent,
 	],
 	imports: [
-		ReactiveFormsModule
+		ReactiveFormsModule,
+  		InputTextComponent,
+    	AlertComponent,
 	],
 	exports: [
 		NgxDsSecretHouseComponent,
