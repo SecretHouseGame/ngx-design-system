@@ -75,6 +75,68 @@
     "directives": [],
     "components": [
         {
+            "name": "BtnPrimaryComponent",
+            "id": "component-BtnPrimaryComponent-c567f5f07c9dc0b681d0840793c95e8dcda09b069acb60af036eec29700ad7187702c66c97b2aaff8c43fc5e945ab11d04cf90c3e1a2fdf705b9ce4df7774f36",
+            "file": "projects/ngx-ds-secret-house/src/lib/components/buttons/btn-primary/btn-primary.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "sh-btn-primary",
+            "styleUrls": [
+                "./btn-primary.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./btn-primary.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, OnInit, Output } from '@angular/core';\n\n@Component({\n\tselector: 'sh-btn-primary',\n\ttemplateUrl: './btn-primary.component.html',\n\tstyleUrls: ['./btn-primary.component.scss']\n})\nexport class BtnPrimaryComponent implements OnInit {\n\n\tconstructor () {\n\t}\n\n\tngOnInit (): void {\n\t}\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./btn-primary.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<button class=\"btn btn-primary\">\n\t<ng-content></ng-content>\n</button>\n"
+        },
+        {
             "name": "FieldContainerComponent",
             "id": "component-FieldContainerComponent-bbb7c9c2521d07a9ec6639a78eb8ab745db2a207f560480f043f7686827f21b73ded5038e64d075d20bcb871f728c4e5e1cbf4204665d373ce900abebf73ae72",
             "file": "projects/ngx-ds-secret-house/src/lib/components/form/field-container/field-container.component.ts",
@@ -562,6 +624,9 @@
                 {
                     "type": "declarations",
                     "elements": [
+						{
+							"name": "BtnPrimaryComponent"
+						},
                         {
                             "name": "FieldContainerComponent"
                         },
@@ -586,6 +651,9 @@
                 {
                     "type": "exports",
                     "elements": [
+						{
+							"name": "BtnPrimaryComponent"
+						},
                         {
                             "name": "FieldContainerComponent"
                         },
@@ -610,6 +678,16 @@
     ],
     "miscellaneous": {
         "variables": [
+            {
+                "name": "COMPONENTS",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ds-secret-house/src/lib/ngx-ds-secret-house.module.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\n\tFieldContainerComponent,\n\tInputTextComponent,\n\tBtnPrimaryComponent\n]"
+            },
             {
                 "name": "context",
                 "ctype": "miscellaneous",
@@ -694,6 +772,18 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
+            "projects/ngx-ds-secret-house/src/lib/ngx-ds-secret-house.module.ts": [
+                {
+                    "name": "COMPONENTS",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ds-secret-house/src/lib/ngx-ds-secret-house.module.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\n\tFieldContainerComponent,\n\tInputTextComponent,\n\tBtnPrimaryComponent\n]"
+                }
+            ],
             "projects/ngx-ds-secret-house/src/test.ts": [
                 {
                     "name": "context",
@@ -792,6 +882,15 @@
         "status": "low",
         "files": [
             {
+                "filePath": "projects/ngx-ds-secret-house/src/lib/components/buttons/btn-primary/btn-primary.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "BtnPrimaryComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
                 "filePath": "projects/ngx-ds-secret-house/src/lib/components/form/field-container/field-container.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -843,6 +942,16 @@
                 "name": "NgxDsSecretHouseComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-ds-secret-house/src/lib/ngx-ds-secret-house.module.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "COMPONENTS",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {

@@ -1,0 +1,21 @@
+@import '../styles';
+
+.btn {
+	padding: $space-small $space-medium;
+	border: 1px solid transparent;
+
+	font-weight: bold;
+	font-size: $size-normal;
+
+	&.btn-primary {
+		background-color: $yellow;
+		color: $white;
+
+		&.btn-outline {
+			background-color: $white;
+			color: $yellow;
+
+			border-color: $yellow;
+		}
+	}
+}

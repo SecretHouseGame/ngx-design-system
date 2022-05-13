@@ -4,18 +4,29 @@
    ##########################
 */
 
+@font-face {
+	font-family: 'Montserrat';
+	src: url('./fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+/**
+ ***** Colors *****
+ */
+
+$white: #ffffff;
 $black: #151515;
-$dark-blue: #041C32;
-$blue: #04293A;
-$light-blue: #064663;
+
+$blue: #064663;
+$blue-light: #27779B;
+$blue-dark: #190134;
+
 $yellow: #ECB365;
+$yellow-light: #F9CC8E;
 $yellow-hover: #eebd7c;
 
-/*
-   ##################
-   ###### Gray ######
-   ##################
-*/
+$orange: #EE7D52;
+
+$salmon: #F89E7C;
 
 $gray-50 : #F9FAFB;
 $gray-100 : #F3F4F6;
@@ -31,3 +42,89 @@ $gray-900 : #111827;
 $red: #F25D54;
 $green: #5CC689;
 $overlay: #04293A;
+$neutral: #EAEAEA;
+
+/**
+ ***** Globals Variables *****
+ */
+
+$success: $green;
+$danger: $red;
+
+$brand-primary: $yellow;
+$brand-primary-light: $yellow;
+
+$brand-secondary: $blue;
+$brand-secondary-light: $blue-light;
+
+$text-primary: $blue-dark;
+$text-secondary: $orange;
+$text-tertiary: $salmon;
+$text-success: $success;
+$text-error: $danger;
+$text-link: $blue-light;
+
+$element-primary: $white;
+$element-secondary: $orange;
+$element-tertiary: $salmon;
+$element-success: $success;
+$element-error: $danger;
+$element-neutral: $neutral;
+$element-overlay: $overlay;
+
+/**
+ ***** Font Sizes *****
+ */
+
+$size-normal: 16px;
+$size-sm: 12px;
+$size-lg: 18px;
+
+/**
+ ***** Spacing *****
+ */
+
+$space-small: 8px;
+$space-medium: 16px;
+$space-large: 24px;
+$space-big: 40px;
+
+/**
+ ***** Typography *****
+ */
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+h5 {
+	font-size: 14px;
+}
+
+h6 {
+	font-size: 12px;
+}
+
+p {
+	font-size: $size-normal;
+}
+
+small {
+	font-size: $size-sm;
+}
