@@ -2,22 +2,31 @@
     "pipes": [],
     "interfaces": [
         {
-            "name": "SelectOption",
-            "id": "interface-SelectOption-825394146e695d888424cdaaa737072a973e43d315e2a0cd0362bd6a7e2699568916cd672f5d75a1920f52b92179de7aa7358f15340324f586f0d5348604c33d",
-            "file": "projects/ngx-ds-secret-house/src/lib/components/interfaces/select-option.ts",
+            "name": "CheckboxOption",
+            "id": "interface-CheckboxOption-d6b9a733fb1da277a4487ff0385eef7639da09a8f29ff8464b8821b180acbfaed2b88926d50cece416d53431f73c4f90232936420485201b104cf664ae20ed40",
+            "file": "projects/ngx-ds-secret-house/src/lib/components/interfaces/checkbox-option.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface SelectOption {\n\tname: string;\n\tvalue: string;\n}\n",
+            "sourceCode": "export interface CheckboxOption {\r\n    id: string;\r\n\tvalue: string;\r\n    text: string;\r\n}\r\n",
             "properties": [
                 {
-                    "name": "name",
+                    "name": "id",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "string",
                     "optional": false,
                     "description": "",
                     "line": 2
+                },
+                {
+                    "name": "text",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
                 },
                 {
                     "name": "value",
@@ -34,13 +43,95 @@
             "methods": []
         },
         {
+            "name": "RadioOption",
+            "id": "interface-RadioOption-e0548b613c12ffdd98017ac6695467b031f016eac6f934263b340e325a0d1c4b6a8e567a4d7a5d945b23e3cd0bb0c00fa1daad2c62db5bc58ea5a7b1bd65d556",
+            "file": "projects/ngx-ds-secret-house/src/lib/components/interfaces/radio-option.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface RadioOption {\r\n    id: string;\r\n\tvalue: string;\r\n    text: string;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "text",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "SelectOption",
+            "id": "interface-SelectOption-85704e66162bbf2ca64083c76a1249ddf712fdfaae531edd493f8cf38bd8c881732c56956aa2622a61ec71f1b554a363526d3925ae5c688211c0790ef74331fe",
+            "file": "projects/ngx-ds-secret-house/src/lib/components/interfaces/select-option.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface SelectOption {\r\n\tid: string;\r\n\tname: string;\r\n\tvalue: string;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
             "name": "User",
-            "id": "interface-User-dcc5c3137cd472dd0002d85b562efd23162e3eff53ca4438a6251e6c46e3b8299076255380d1d42f386510cb6f2cbaab49fa5b5f253be459cdc3869428c5c400",
+            "id": "interface-User-9c7e5f1bbbab702cb032307d130876cb68969b0cd4eedef32a0c8cad8081a54e5f8f577ed6ad4539c1b99a1d246cb34031d198c2ea8eba440e64e91b14f01fdc",
             "file": "stories/User.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface User {}\r\n",
+            "sourceCode": "export interface User {}\n",
             "properties": [],
             "indexSignatures": [],
             "methods": []
@@ -76,7 +167,7 @@
     "components": [
         {
             "name": "BtnPrimaryComponent",
-            "id": "component-BtnPrimaryComponent-ce9404faedbb3fbec2fe2d2f5d2f27e0e15a8e4dcaf5c92a44a9e254390077ed6401381aa2e0415394d22acdbd394443f6605ba55bc372cbcd7bdec41ddbf82f",
+            "id": "component-BtnPrimaryComponent-33493966d772184def7ce9476b42eee54d610129bef48503163f4167ab9d29c4769061fa209416971303b3f116b17e39ea9ff90a5896698ea5d68de3735d001a",
             "file": "projects/ngx-ds-secret-house/src/lib/components/buttons/btn-primary/btn-primary.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -124,11 +215,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\n\n@Component({\n\tselector: 'sh-btn-primary',\n\ttemplateUrl: './btn-primary.component.html',\n\tstyleUrls: ['./btn-primary.component.scss']\n})\nexport class BtnPrimaryComponent implements OnInit {\n\t@Input() disabled: boolean = false;\n\n\tconstructor () {\n\t}\n\n\tngOnInit (): void {\n\t}\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\r\n\r\n@Component({\r\n\tselector: 'sh-btn-primary',\r\n\ttemplateUrl: './btn-primary.component.html',\r\n\tstyleUrls: ['./btn-primary.component.scss']\r\n})\r\nexport class BtnPrimaryComponent implements OnInit {\r\n\t@Input() disabled: boolean = false;\r\n\r\n\tconstructor () {\r\n\t}\r\n\r\n\tngOnInit (): void {\r\n\t}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import \"../../../../../assets/scss/buttons\";\n",
+                    "data": "@import \"../../../../../assets/scss/buttons\";\r\n",
                     "styleUrl": "./btn-primary.component.scss"
                 }
             ],
@@ -144,73 +235,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<button class=\"btn btn-primary\" [disabled]=\"disabled\">\n\t<ng-content></ng-content>\n</button>\n"
-        },
-        {
-            "name": "ButtonComponent",
-            "id": "component-ButtonComponent-58985aa91404afd02978fb36447244068c40cd5057ea04c789f70121b160779844f49164096e172ec04f53c57388d1f2e6a1ab8a631d0e11e49ae08292d1fe44",
-            "file": "projects/ngx-ds-secret-house/src/lib/components/buttons/button/button.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "sh-button",
-            "styleUrls": [
-                "./button.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./button.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 13,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n\tselector: 'sh-button',\n\ttemplateUrl: './button.component.html',\n\tstyleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent implements OnInit {\n\n\tconstructor () {\n\t}\n\n\tngOnInit (): void {\n\t}\n\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "",
-                    "styleUrl": "./button.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [],
-                "line": 8
-            },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<button class=\"btn btn-primary\" >\n\t<ng-content></ng-content>\n</button>\n"
+            "templateData": "<button class=\"btn btn-primary\" [disabled]=\"disabled\">\r\n\t<ng-content></ng-content>\r\n</button>\r\n"
         },
         {
             "name": "FieldContainerComponent",
-            "id": "component-FieldContainerComponent-76a1451cad57ff0e85767065f60f4cca59413b1815350f644465565ff93132899129738371b61f00129c49e58c392ecfa4a59fa418e2d61258ad2ea4b500525a",
+            "id": "component-FieldContainerComponent-bbb7c9c2521d07a9ec6639a78eb8ab745db2a207f560480f043f7686827f21b73ded5038e64d075d20bcb871f728c4e5e1cbf4204665d373ce900abebf73ae72",
             "file": "projects/ngx-ds-secret-house/src/lib/components/form/field-container/field-container.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.None"
@@ -278,11 +307,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';\n\n@Component({\n\tselector: 'sh-field-container',\n\ttemplateUrl: './field-container.component.html',\n\tstyleUrls: ['./field-container.component.scss'],\n\tencapsulation: ViewEncapsulation.None\n})\nexport class FieldContainerComponent implements OnInit {\n\t@Input() label: string = \"\";\n\t@Input() for: string = \"\";\n\t@Input() help: string = \"\";\n\n\tconstructor() {}\n\n\tngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';\r\n\r\n@Component({\r\n\tselector: 'sh-field-container',\r\n\ttemplateUrl: './field-container.component.html',\r\n\tstyleUrls: ['./field-container.component.scss'],\r\n\tencapsulation: ViewEncapsulation.None\r\n})\r\nexport class FieldContainerComponent implements OnInit {\r\n\t@Input() label: string = \"\";\r\n\t@Input() for: string = \"\";\r\n\t@Input() help: string = \"\";\r\n\r\n\tconstructor() {}\r\n\r\n\tngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "sh-field-container {\n\tlabel {\n\t\tfont-weight: bold;\n\t\tcolor: #000;\n\t}\n\n\tinput,\n\ttextarea,\n\tselect {\n\t\tborder-radius: 10px;\n\t\twidth: 100%;\n\t\tpadding: 10px;\n\t\tmargin-top: 5px;\n\n\t\tborder: 1px solid #6489ac;\n\n\t\t&:focus {\n\t\t\toutline: none;\n\t\t}\n\t}\n}\n",
+                    "data": "sh-field-container {\r\n\tlabel {\r\n\t\tfont-weight: bold;\r\n\t\tcolor: #000;\r\n\t}\r\n\r\n\tinput,\r\n\ttextarea,\r\n\tselect {\r\n\t\tborder-radius: 10px;\r\n\t\twidth: 100%;\r\n\t\tpadding: 10px;\r\n\t\tmargin-top: 5px;\r\n\r\n\t\tborder: 1px solid #6489ac;\r\n\r\n\t\t&:focus {\r\n\t\t\toutline: none;\r\n\t\t}\r\n\t}\r\n}\r\n",
                     "styleUrl": "./field-container.component.scss"
                 }
             ],
@@ -298,11 +327,667 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"field-group\">\n\t<label class=\"field-label\" for=\"{{for}}\">{{ label }}</label>\n\t<ng-content></ng-content>\n\t<small class=\"field-help\" *ngIf=\"help\">Aide : {{ help }}</small>\n</div>\n"
+            "templateData": "<div class=\"field-group\">\r\n\t<label class=\"field-label\" for=\"{{for}}\">{{ label }}</label>\r\n\t<ng-content></ng-content>\r\n\t<small class=\"field-help\" *ngIf=\"help\">{{ help }}</small>\r\n</div>\r\n"
+        },
+        {
+            "name": "InputCheckboxComponent",
+            "id": "component-InputCheckboxComponent-12bccddeb840f8b5f23af23370b00443ae1ccc85119d4b139e9cdc4c13500bcdf036d64eb710703714b2bb19b33f1b196b5878a78957871f1c8ce9f4295301f9",
+            "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-checkbox/input-checkbox.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "sh-input-checkbox",
+            "styleUrls": [
+                "./input-checkbox.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./input-checkbox.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "control",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "FormControl",
+                    "decorators": []
+                },
+                {
+                    "name": "help",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "id",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "name",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "options",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "CheckboxOption[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 20,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\nimport { FormControl } from '@angular/forms';\nimport { CheckboxOption } from '../../interfaces/checkbox-option';\n\n@Component({\n  selector: 'sh-input-checkbox',\n  templateUrl: './input-checkbox.component.html',\n  styleUrls: ['./input-checkbox.component.scss']\n})\nexport class InputCheckboxComponent implements OnInit {\n\t@Input() id: string = '';\n\t@Input() control!: FormControl;\n\t@Input() name: string = '';\n\t@Input() label: string = '';\n\t@Input() help: string = '';\n\t@Input() options: CheckboxOption[] = [];\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./input-checkbox.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 16
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<sh-field-container [for]=\"id\" [label]=\"label\" [help]=\"help\">\n    <div class=\"fields-inputs\">\n        <label *ngFor=\"let option of options\" for=\"{{ option.id }}\" class=\"flex\">\n            <input type=\"radio\" value=\"{{ option.value }}\" id=\"{{ option.id }}\" name=\"{{name}}\" />\n            {{ option.text }}\n        </label>\n    </div>\n</sh-field-container>\n"
+        },
+        {
+            "name": "InputDateComponent",
+            "id": "component-InputDateComponent-822ff10d77544e311dc935ec211e9641b21512cd51cdbd9efc99fdf29c286630c8bb6b093314317741c0d06023e0ffab67c1f685d266578cc0843be4c27fde4c",
+            "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-date/input-date.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "sh-input-date",
+            "styleUrls": [
+                "./input-date.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./input-date.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "control",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "FormControl",
+                    "decorators": []
+                },
+                {
+                    "name": "help",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "name",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\nimport { FormControl } from '@angular/forms';\n\n@Component({\n  selector: 'sh-input-date',\n  templateUrl: './input-date.component.html',\n  styleUrls: ['./input-date.component.scss']\n})\nexport class InputDateComponent implements OnInit {\n\t@Input() control!: FormControl;\n\t@Input() name: string = '';\n\t@Input() label: string = '';\n\t@Input() help: string = '';\n\t@Input() placeholder: string = '';\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./input-date.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 14
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"field-group\">\n    <div class=\"inline-field\">\n       <input type=\"date\" class=\"date-term\" name=\"{{ name }}\" placeholder=\"{{ placeholder }}\">\n       <svg\n        width=\"24\"\n        height=\"24\"\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        xmlns=\"http://www.w3.org/2000/svg\"\n        >\n        <path\n            d=\"M8 9C7.44772 9 7 9.44771 7 10C7 10.5523 7.44772 11 8 11H16C16.5523 11 17 10.5523 17 10C17 9.44771 16.5523 9 16 9H8Z\"\n            fill=\"currentColor\"\n        />\n        <path\n            fill-rule=\"evenodd\"\n            clip-rule=\"evenodd\"\n            d=\"M6 3C4.34315 3 3 4.34315 3 6V18C3 19.6569 4.34315 21 6 21H18C19.6569 21 21 19.6569 21 18V6C21 4.34315 19.6569 3 18 3H6ZM5 18V7H19V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18Z\"\n            fill=\"currentColor\"\n        />\n        </svg> \n    </div>\n </div>"
+        },
+        {
+            "name": "InputFileComponent",
+            "id": "component-InputFileComponent-766c7db6a078236b9440e2de339a030f10e47d9762d69d9aefbebf19dbaa141908291f9f01ce5c08f31b8960851dce02f6c812b0ac497a0d2e4f1f8edbffad4e",
+            "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-file/input-file.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "sh-input-file",
+            "styleUrls": [
+                "./input-file.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./input-file.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "control",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "FormControl",
+                    "decorators": []
+                },
+                {
+                    "name": "help",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "id",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "name",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\nimport { FormControl } from '@angular/forms';\n\n@Component({\n  selector: 'sh-input-file',\n  templateUrl: './input-file.component.html',\n  styleUrls: ['./input-file.component.scss']\n})\nexport class InputFileComponent implements OnInit {\n\t@Input() id: string = '';\n\t@Input() control!: FormControl;\n\t@Input() name: string = '';\n\t@Input() label: string = '';\n\t@Input() help: string = '';\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./input-file.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 14
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<sh-field-container [for]=\"id\" [label]=\"label\" [help]=\"help\">\n    <input type=\"file\" id=\"{{id}}\" name=\"{{name}}\" />\n</sh-field-container>\n"
+        },
+        {
+            "name": "InputPasswordComponent",
+            "id": "component-InputPasswordComponent-0b99008aa008b8ad574a80e7974326945f8f868de1ce7fa99253c28be834b20d95f23c80bb65c8194164f7767b1156afc271ae6cc701e579e5d74755c6e82527",
+            "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-password/input-password.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "host": {},
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "sh-input-password",
+            "styleUrls": [
+                "./input-password.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./input-password.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "control",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "FormControl",
+                    "decorators": []
+                },
+                {
+                    "name": "help",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "id",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "showPassword",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 22,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "triggerPassword",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 25,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit, Output } from '@angular/core';\nimport { FormControl } from '@angular/forms';\n\n@Component({\n  selector: 'sh-input-password',\n  templateUrl: './input-password.component.html',\n  styleUrls: ['./input-password.component.scss'],\n  host: {'class': 'field'}\n})\n\nexport class InputPasswordComponent implements OnInit {\n\t@Input() id: string = '';\n\t@Input() control!: FormControl;\n\t@Input() placeholder: string = '';\n\t@Input() label: string = '';\n\t@Input() help: string = '';\n\t\n  showPassword: boolean = false;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n  triggerPassword(){\n    this.showPassword = !this.showPassword;\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".input-password{\r\n    display: flex;\r\n    align-items: center;\r\n    position: relative;\r\n\r\n    input{\r\n        padding-right: 30px;\r\n    }\r\n\r\n    .trigger-password{\r\n        margin-top: 5px;\r\n        background: none;\r\n        border: none;\r\n        position: absolute;\r\n        display: inline-block;\r\n        right: 3px;\r\n        padding: 7px 8px;\r\n        cursor: pointer;\r\n        border-radius: 100%;\r\n\r\n        &:hover{\r\n            background: rgb(239, 239, 239);\r\n        }\r\n    }\r\n}",
+                    "styleUrl": "./input-password.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 18
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<sh-field-container [for]=\"id\" [label]=\"label\" [help]=\"help\">\n    <div class=\"input-password\">\n        <input [type]=\"showPassword ? 'text' : 'password'\" type=\"text\" [id]=\"id\" [formControl]=\"control\" placeholder=\"{{placeholder}}\">\n        <button class=\"trigger-password\" (click)=\"triggerPassword()\">\n            <ng-container *ngIf=\"!showPassword\">\n                <!-- Afficher le mot de passe -->\n                <svg width=\"15\" height=\"15\" viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7.5 11C4.80285 11 2.52952 9.62184 1.09622 7.50001C2.52952 5.37816 4.80285 4 7.5 4C10.1971 4 12.4705 5.37816 13.9038 7.50001C12.4705 9.62183 10.1971 11 7.5 11ZM7.5 3C4.30786 3 1.65639 4.70638 0.0760002 7.23501C-0.0253338 7.39715 -0.0253334 7.60288 0.0760014 7.76501C1.65639 10.2936 4.30786 12 7.5 12C10.6921 12 13.3436 10.2936 14.924 7.76501C15.0253 7.60288 15.0253 7.39715 14.924 7.23501C13.3436 4.70638 10.6921 3 7.5 3ZM7.5 9.5C8.60457 9.5 9.5 8.60457 9.5 7.5C9.5 6.39543 8.60457 5.5 7.5 5.5C6.39543 5.5 5.5 6.39543 5.5 7.5C5.5 8.60457 6.39543 9.5 7.5 9.5Z\" fill=\"currentColor\" fill-rule=\"evenodd\" clip-rule=\"evenodd\"></path></svg>\n            </ng-container>\n            <ng-container *ngIf=\"showPassword\">\n                <!-- Masquer le mot de passe -->\n                <svg width=\"15\" height=\"15\" viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M13.3536 2.35355C13.5488 2.15829 13.5488 1.84171 13.3536 1.64645C13.1583 1.45118 12.8417 1.45118 12.6464 1.64645L10.6828 3.61012C9.70652 3.21671 8.63759 3 7.5 3C4.30786 3 1.65639 4.70638 0.0760002 7.23501C-0.0253338 7.39715 -0.0253334 7.60288 0.0760014 7.76501C0.902945 9.08812 2.02314 10.1861 3.36061 10.9323L1.64645 12.6464C1.45118 12.8417 1.45118 13.1583 1.64645 13.3536C1.84171 13.5488 2.15829 13.5488 2.35355 13.3536L4.31723 11.3899C5.29348 11.7833 6.36241 12 7.5 12C10.6921 12 13.3436 10.2936 14.924 7.76501C15.0253 7.60288 15.0253 7.39715 14.924 7.23501C14.0971 5.9119 12.9769 4.81391 11.6394 4.06771L13.3536 2.35355ZM9.90428 4.38861C9.15332 4.1361 8.34759 4 7.5 4C4.80285 4 2.52952 5.37816 1.09622 7.50001C1.87284 8.6497 2.89609 9.58106 4.09974 10.1931L9.90428 4.38861ZM5.09572 10.6114L10.9003 4.80685C12.1039 5.41894 13.1272 6.35031 13.9038 7.50001C12.4705 9.62183 10.1971 11 7.5 11C6.65241 11 5.84668 10.8639 5.09572 10.6114Z\" fill=\"currentColor\" fill-rule=\"evenodd\" clip-rule=\"evenodd\"></path></svg>\n            </ng-container>\n        </button>\n    </div>\n</sh-field-container>\n"
+        },
+        {
+            "name": "InputRadioComponent",
+            "id": "component-InputRadioComponent-1a733fae5a004522362a352cee8bdaaa1959380404518aafdf76ee948dcb848689d9e71b8bef5844273d0d1ea643fa6fc1e29f50356de19fed66d5a6c9b3b3c8",
+            "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-radio/input-radio.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "sh-input-radio",
+            "styleUrls": [
+                "./input-radio.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./input-radio.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "control",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "FormControl",
+                    "decorators": []
+                },
+                {
+                    "name": "help",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "id",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "name",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "options",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "RadioOption[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 20,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\nimport { FormControl } from '@angular/forms';\nimport { RadioOption } from '../../interfaces/radio-option';\n\n@Component({\n  selector: 'sh-input-radio',\n  templateUrl: './input-radio.component.html',\n  styleUrls: ['./input-radio.component.scss']\n})\nexport class InputRadioComponent implements OnInit {\n\t@Input() id: string = '';\n\t@Input() control!: FormControl;\n\t@Input() name: string = '';\n\t@Input() label: string = '';\n\t@Input() help: string = '';\n\t@Input() options: RadioOption[] = [];\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./input-radio.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 16
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<sh-field-container [for]=\"id\" [label]=\"label\" [help]=\"help\">\n    <div class=\"fields-inputs\">\n        <label *ngFor=\"let option of options\" for=\"{{ option.id }}\" class=\"flex\">\n            <input type=\"radio\" value=\"{{ option.value }}\" id=\"{{ option.id }}\" name=\"{{name}}\" />\n            {{ option.text }}\n        </label>\n    </div>\n</sh-field-container>\n"
+        },
+        {
+            "name": "InputSearchComponent",
+            "id": "component-InputSearchComponent-e35bc50818a18131b87b99dd8176456022c6446daba85d9f6cc484346af92fbb28c7354568421801fd557374d8beb6267fc8c3a7b38e15379e8e6f875ec5a3e9",
+            "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-search/input-search.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "sh-input-search",
+            "styleUrls": [
+                "./input-search.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./input-search.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "name",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 14,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\n\n@Component({\n  selector: 'sh-input-search',\n  templateUrl: './input-search.component.html',\n  styleUrls: ['./input-search.component.scss']\n})\nexport class InputSearchComponent implements OnInit {\n\t@Input() name: string = '';\n\t@Input() placeholder: string = '';\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./input-search.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 10
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"field-group\">\n    <div class=\"inline-field search\">\n       <input type=\"text\" class=\"search-term\" name=\"{{ name }}\" placeholder=\"{{ placeholder }}\">\n        <button type=\"submit\" class=\"search-button\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M23.822 20.88l-6.353-6.354c.93-1.465 1.467-3.2 1.467-5.059.001-5.219-4.247-9.467-9.468-9.467s-9.468 4.248-9.468 9.468c0 5.221 4.247 9.469 9.468 9.469 1.768 0 3.421-.487 4.839-1.333l6.396 6.396 3.119-3.12zm-20.294-11.412c0-3.273 2.665-5.938 5.939-5.938 3.275 0 5.94 2.664 5.94 5.938 0 3.275-2.665 5.939-5.94 5.939-3.274 0-5.939-2.664-5.939-5.939z\"/></svg>\n        </button>\n    </div>\n </div>"
         },
         {
             "name": "InputSelectComponent",
-            "id": "component-InputSelectComponent-00caeb5436699ad3b0eb6d97b49318e114d4028b9e8658ad3f8197df18723804bdb938c1b685064b12b50067ad54cee17422da23de47cad10f1fbe61e02637bf",
+            "id": "component-InputSelectComponent-b2b4497f4d684535a5dfe450f17e5cc8038d672df407a9e78080e9b9f66e5c186631edb896adc5f8f57eba030f311b510f7f7040aff078d91a5f3af09c884b63",
             "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-select/input-select.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -386,7 +1071,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { FormControl } from '@angular/forms';\nimport { SelectOption } from '../../interfaces/select-option';\n\n@Component({\n  selector: 'sh-input-select',\n  templateUrl: './input-select.component.html',\n  styleUrls: ['./input-select.component.scss'],\n\thost: {'class': 'field'}\n})\nexport class InputSelectComponent implements OnInit {\n\t@Input() id: string = '';\n\t@Input() control!: FormControl;\n\t@Input() label: string = '';\n\t@Input() options: SelectOption[] = [];\n\t@Input() help: string = '';\n\n\tconstructor() {}\n\n\tngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\r\nimport { FormControl } from '@angular/forms';\r\nimport { SelectOption } from '../../interfaces/select-option';\r\n\r\n@Component({\r\n  selector: 'sh-input-select',\r\n  templateUrl: './input-select.component.html',\r\n  styleUrls: ['./input-select.component.scss'],\r\n\thost: {'class': 'field'}\r\n})\r\nexport class InputSelectComponent implements OnInit {\r\n\t@Input() id: string = '';\r\n\t@Input() control!: FormControl;\r\n\t@Input() label: string = '';\r\n\t@Input() options: SelectOption[] = [];\r\n\t@Input() help: string = '';\r\n\r\n\tconstructor() {}\r\n\r\n\tngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -406,11 +1091,130 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<sh-field-container [for]=\"id\" [label]=\"label\" [help]=\"help\">\n\t<select [id]=\"id\" [formControl]=\"control\">\n\t\t<option *ngFor=\"let o of options\" [value]=\"o\" >{{o.name}}</option>\n\t</select>\n</sh-field-container>\n"
+            "templateData": "<sh-field-container [for]=\"id\" [label]=\"label\" [help]=\"help\">\r\n\t<select [id]=\"id\" [formControl]=\"control\">\r\n\t\t<option *ngFor=\"let o of options\" [value]=\"o\" >{{o.name}}</option>\r\n\t</select>\r\n</sh-field-container>\r\n"
+        },
+        {
+            "name": "InputSwitchComponent",
+            "id": "component-InputSwitchComponent-add28ee0b61b0c9e6a10b7c9daf83945e863949f6362a1b2fa57a3d31a992f9fc7a954401d9b0bf4dcd0780d3aafbbcb1e12d52083ade0fb6186e33bf0162d16",
+            "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-switch/input-switch.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "host": {},
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "sh-input-switch",
+            "styleUrls": [
+                "./input-switch.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./input-switch.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "control",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "FormControl",
+                    "decorators": []
+                },
+                {
+                    "name": "for",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "help",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "id",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "isChecked",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { FormControl } from '@angular/forms';\n\n@Component({\n  selector: 'sh-input-switch',\n  templateUrl: './input-switch.component.html',\n  styleUrls: ['./input-switch.component.scss'],\n\thost: {'class': 'field'}\n})\nexport class InputSwitchComponent implements OnInit {\n\t@Input() id: string = '';\n\t@Input() control!: FormControl;\n\t@Input() label: string = '';\n\t@Input() help: string = '';\n\t@Input() for: string = '';\n  \n  isChecked: boolean = false;\n\n\tconstructor() {}\n\n\tngOnInit(): void {}\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".switch {\r\n\tposition: relative;\r\n\tdisplay: block;\r\n\twidth: 50px;\r\n\theight: 26px;\r\n    margin-right: 5px;\r\n}\r\n\r\n.switch input {\r\n\topacity: 0;\r\n\twidth: 0;\r\n\theight: 0;\r\n}\r\n\r\n.slider {\r\n\tposition: absolute;\r\n\tcursor: pointer;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\tright: 0;\r\n\tbottom: 0;\r\n\tbackground-color: white;\r\n\t-webkit-transition: .4s;\r\n\ttransition: .4s;\r\n    border: 2px solid #064663;\r\n}\r\n\r\n.slider:before {\r\n\tposition: absolute;\r\n\tcontent: \"\";\r\n\theight: 19px;\r\n\twidth: 19px;\r\n\tleft: 2px;\r\n\tbottom: 1.5px;\r\n\tbackground-color: #064663;\r\n\t-webkit-transition: .4s;\r\n\ttransition: .4s;\r\n}\r\n\r\ninput:checked+.slider {\r\n\tbackground-color: white;\r\n}\r\n\r\ninput:focus+.slider {\r\n\tbox-shadow: 0 0 1px #064663;\r\n}\r\n\r\ninput:checked+.slider:before {\r\n\t-webkit-transform: translateX(24px);\r\n\t-ms-transform: translateX(24px);\r\n\ttransform: translateX(24px);\r\n}\r\n\r\n/* Rounded sliders */\r\n.slider.round {\r\n\tborder-radius: 34px;\r\n}\r\n\r\n.slider.round:before {\r\n\tborder-radius: 50%;\r\n}\r\n\r\n.inline-field{\r\n    display: flex;\r\n    align-items: center;\r\n\r\n}",
+                    "styleUrl": "./input-switch.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 17
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"field-group\">\n    <div class=\"inline-field\">\n        <div class=\"switch\">\n            <input type=\"checkbox\" [checked]=\"isChecked\">\n            <span class=\"slider round\"></span>\n        </div>\n        <label class=\"field-label\" for=\"{{for}}\">{{ label }}</label>\n    </div>\n\t<small class=\"field-help\" *ngIf=\"help\">{{ help }}</small>\n</div>\n"
         },
         {
             "name": "InputTextareaComponent",
-            "id": "component-InputTextareaComponent-64c5791fe151a05788bfed3ffe18bc9fc9a29ed4e1c404eff5062c4151f308d86922533f7ad7c4526b6c7e531c9d9591b752802e353a45c489a2b43cd782f2ef",
+            "id": "component-InputTextareaComponent-50aaac11c4546992172effb807429d0f82c6ed06dd6e53781194a34df3ee690453c0fd53c9405b99d67fded0c77dc2fc11a3dc41bdde4c83b183d0444b33160a",
             "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-textarea/input-textarea.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -494,12 +1298,12 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';\r\n\r\n@Component({\r\n\tselector: 'sh-field-container',\r\n\ttemplateUrl: './field-container.component.html',\r\n\tstyleUrls: ['./field-container.component.scss'],\r\n\tencapsulation: ViewEncapsulation.None\r\n})\r\nexport class FieldContainerComponent implements OnInit {\r\n\t@Input() label: string = \"\";\r\n\t@Input() for: string = \"\";\r\n\r\n\tconstructor() {}\r\n\r\n\tngOnInit(): void {}\r\n}\r\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\r\nimport { FormControl } from '@angular/forms';\r\n\r\n@Component({\r\n\tselector: 'sh-input-textarea',\r\n\ttemplateUrl: './input-textarea.component.html',\r\n\tstyleUrls: ['./input-textarea.component.scss'],\r\n\thost: {'class': 'field'}\r\n})\r\nexport class InputTextareaComponent implements OnInit {\r\n\t@Input() id: string = '';\r\n\t@Input() control!: FormControl;\r\n\t@Input() label: string = '';\r\n\t@Input() placeholder: string = '';\r\n\t@Input() help: string = '';\r\n\r\n\tconstructor() {}\r\n\r\n\tngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "app-field-container {\r\n\tlabel {\r\n\t\tfont-weight: bold;\r\n\t\tcolor: #000;\r\n\t}\r\n\r\n\tinput,\r\n\ttextarea,\r\n\tselect {\r\n\t\tborder-radius: 10px;\r\n\t\twidth: 100%;\r\n\t\tpadding: 10px;\r\n\t\tmargin-top: 5px;\r\n\r\n\t\tborder: 1px solid #6489ac;\r\n\r\n\t\t&:focus {\r\n\t\t\toutline: none;\r\n\t\t}\r\n\t}\r\n}\r\n",
-                    "styleUrl": "./field-container.component.scss"
+                    "data": "",
+                    "styleUrl": "./input-textarea.component.scss"
                 }
             ],
             "stylesData": "",
@@ -514,11 +1318,11 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div>\r\n\t<label>{{ label }}</label>\r\n\t<ng-content></ng-content>\r\n</div>\r\n"
+            "templateData": "<sh-field-container [for]=\"id\" [label]=\"label\" [help]=\"help\">\r\n\t<textarea [id]=\"id\" [formControl]=\"control\" [placeholder]=\"placeholder\"></textarea>\r\n</sh-field-container>\r\n"
         },
         {
             "name": "InputTextComponent",
-            "id": "component-InputTextComponent-4bdb6fc1c6ecc0d8394c7c47684a1957c732a34d37a35d758b4a67f040d23907916e3531bf1cdc9d200782e568df84cf0ef2107b3e45bc1e18b52adf895ce3b7",
+            "id": "component-InputTextComponent-a16d2c19e10e29c717c4102799ace2595fae22cf13f351fc85188f9637f2945020e94a80f2dcd7552cc5e06b1706bc2745e91abe5d40883813ccf05c0052759c",
             "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-text/input-text.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -602,7 +1406,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit, Output } from '@angular/core';\r\nimport { FormControl } from '@angular/forms';\r\n\r\n@Component({\r\n  selector: 'sh-input-text',\r\n  templateUrl: './input-text.component.html',\r\n  styleUrls: ['./input-text.component.scss'],\r\n  host: {'class': 'field'}\r\n})\r\nexport class InputTextComponent implements OnInit {\r\n\t@Input() id: string = '';\r\n\t@Input() control!: FormControl;\r\n\t@Input() placeholder: string = '';\r\n\t@Input() label: string = '';\r\n\r\n\tconstructor() {}\r\n\r\n\tngOnInit(): void {}\r\n}\r\n",
+            "sourceCode": "import { Component, Input, OnInit, Output } from '@angular/core';\r\nimport { FormControl } from '@angular/forms';\r\n\r\n@Component({\r\n  selector: 'sh-input-text',\r\n  templateUrl: './input-text.component.html',\r\n  styleUrls: ['./input-text.component.scss'],\r\n  host: {'class': 'field'}\r\n})\r\n\r\nexport class InputTextComponent implements OnInit {\r\n\t@Input() id: string = '';\r\n\t@Input() control!: FormControl;\r\n\t@Input() placeholder: string = '';\r\n\t@Input() label: string = '';\r\n\t@Input() help: string = '';\r\n\r\n\tconstructor() {}\r\n\r\n\tngOnInit(): void {}\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -622,193 +1426,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<sh-field-container [for]=\"id\" [label]=\"label\">\r\n\t<input type=\"text\" [id]=\"id\" [formControl]=\"control\" placeholder=\"{{placeholder}}\">\r\n</sh-field-container>\r\n"
-        },
-        {
-            "name": "NavbarComponent",
-            "id": "component-NavbarComponent-b5a7dce98bdaf9995f8114aea2e90747c3b91383a42dfa5d64643a023133702c59f8fe4a0ff6dea6c1aa42413fb15f6593d8ad804c0dd7c6864bbb9c85a902b5",
-            "file": "projects/ngx-ds-secret-house/src/lib/components/navbar/navbar.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "sh-navbar",
-            "styleUrls": [
-                "./navbar.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./navbar.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 12,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'sh-navbar',\r\n  templateUrl: './navbar.component.html',\r\n  styleUrls: ['./navbar.component.scss']\r\n})\r\nexport class NavbarComponent implements OnInit {\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".sidebar {\r\n\ttop: 0;\r\n\tz-index: 20;\r\n\tposition: fixed;\r\n\theight: 100%;\r\n\tbackground-color: #04293A;\r\n\tcolor: white;\r\n\twidth: 300px;\r\n\tpadding: 1rem;\r\n\ttransform: translateX(-275px);\r\n\ttransition: 1s;\r\n\toverflow-x: hidden;\r\n\toverflow-y: scroll;\r\n\timg.logo {\r\n\t\tdisplay: block;\r\n\t\tmargin: 10px auto 0;\r\n\t\theight: 50px;\r\n\t}\r\n\t.sidebar-footer {\r\n\t\tposition: absolute;\r\n\t\tbottom: 50px;\r\n\t\twidth: 300px;\r\n\t\ttext-align: center;\r\n\t\tfont-size: small;\r\n\t\tcolor: #9CA3AF;\r\n\t}\r\n\th3 {\r\n\t\topacity: 0;\r\n\t}\r\n\tul {\r\n\t\tbackground-color: red;\r\n\t\ttransform: translateX(262px);\r\n\t\theight: 80%;\r\n\t\tmargin-top: 25px;\r\n\t\ttransition: 1s transform;\r\n\t\tdisplay: flex;\r\n\t\tflex-direction: column;\r\n\t\tli {\r\n\t\t\twidth: 100%;\r\n\t\t\tlist-style: none;\r\n\t\t\tdisplay: flex;\r\n\t\t\ttransition: 1s width;\r\n\t\t\tmargin-top: 2px;\r\n\t\t\ta {\r\n\t\t\t\ttext-decoration: none;\r\n\t\t\t\theight: 36px;\r\n\t\t\t\tpadding: 0.3rem 0.7rem;\r\n\t\t\t\tborder-radius: 5px;\r\n\t\t\t\tbackground-color: #064663;\r\n\t\t\t\tborder: 2px #064663 solid;\r\n\t\t\t\tspan {\r\n\t\t\t\t\tdisplay: none;\r\n\t\t\t\t\ttransition: 1s;\r\n\t\t\t\t}\r\n\t\t\t\timg {\r\n\t\t\t\t\tmargin-top: 5px;\r\n\t\t\t\t}\r\n\t\t\t\t&:hover {\r\n\t\t\t\t\tcolor: #ECB365;\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t\tli + li {\r\n\t\t\tmargin-top: 5px;\r\n\t\t}\r\n\t\tli + h3 {\r\n\t\t\theight: 50px;\r\n\t\t}\r\n\t}\r\n\t.hamburger-menu {\r\n\t\tposition: absolute;\r\n\t\tright: 10px;\r\n\t\ttop: 10px;\r\n\t\theight: 36px;\r\n\t\twidth: 36px;\r\n\t\ttransition: 1s;\r\n\t\tcursor:pointer;\r\n\t\tdiv {\r\n\t\t\tbackground-color: white;\r\n\t\t\twidth: 100%;\r\n\t\t\theight: 3px;\r\n\t\t\tmargin-top: 7px;\r\n\t\t\ttransition: 1s;\r\n\t\t\t&#second-hambar {\r\n\t\t\t\tdisplay: block;\r\n\t\t\t\ttransition: 1s;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n\t&.opened {\r\n\t\ttransform: translateX(0px);\r\n\t\t.hamburger-menu > div {\r\n\t\t\tbackground-color: white;\r\n\t\t\twidth: 100%;\r\n\t\t\theight: 3px;\r\n\t\t\ttransition: 1s;\r\n\t\t\t&#first-hambar {\r\n\t\t\t\ttransform: rotate(45deg) translateY(7px) translateX(7px);\r\n\t\t\t}\r\n\t\t\t&#second-hambar {\r\n\t\t\t\topacity: 0;\r\n\t\t\t\ttransition: 0.5s opacity;\r\n\t\t\t}\r\n\t\t\t&#third-hambar {\r\n\t\t\t\ttransform: rotate(-45deg) translateY(-7px) translateX(7px);\r\n\t\t\t}\r\n\t\t}\r\n\t\th3 {\r\n\t\t\topacity: 100;\r\n\t\t\tpadding: 0.5rem 0;\r\n\t\t\tfont-size: 15px;\r\n\t\t\ttext-transform: uppercase;\r\n\t\t}\r\n\t\tul {\r\n\t\t\ttransform: translateX(0px);\r\n\t\t\twidth: 302px;\r\n\t\t\theight: 80%;\r\n\t\t\tmargin-top: 0;\r\n\t\t\ttransition: 1s transform;\r\n\t\t\talign-content: center;\r\n\t\t\tpadding-left: 0;\r\n\t\t\tli {\r\n\t\t\t\ttransform: translateX(0px);\r\n\t\t\t\tlist-style: none;\r\n\t\t\t\ttransition: 1s width;\r\n\t\t\t\tmargin-top: 0;\r\n\t\t\t\ta {\r\n\t\t\t\t\ttext-decoration: none;\r\n\t\t\t\t\theight: 36px;\r\n\t\t\t\t\twidth: 100%;\r\n\t\t\t\t\tpadding: 0.3rem 0.7rem;\r\n\t\t\t\t\tborder-radius: 5px;\r\n\t\t\t\t\tbackground-color: #064663;\r\n\t\t\t\t\tborder: 2px #064663 solid;\r\n\t\t\t\t\tspan {\r\n\t\t\t\t\t\tdisplay: inline-block;\r\n\t\t\t\t\t\tmargin-left: 1rem;\r\n\t\t\t\t\t\tcolor: #fff;\r\n\t\t\t\t\t\tvertical-align: 6px;\r\n\t\t\t\t\t}\r\n\t\t\t\t\timg {\r\n\t\t\t\t\t\tmargin-top: 5px;\r\n\t\t\t\t\t}\r\n\t\t\t\t\t&:hover {\r\n\t\t\t\t\t\tborder: 2px #ECB365 solid;\r\n\t\t\t\t\t\tspan {\r\n\t\t\t\t\t\t\tfont-weight: 600;\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t\tli + li {\r\n\t\t\t\tmargin-top: 5px;\r\n\t\t\t}\r\n\t\t\tli + h3 {\r\n\t\t\t\theight: 20px;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n",
-                    "styleUrl": "./navbar.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [],
-                "line": 8
-            },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<section class='sidebar opened'>\r\n<div class=\"hamburger-menu\" onClick=\"toggleSidebar\">\r\n\t<div class=\"hambar\" id='first-hambar'></div>\r\n\t<div class=\"hambar\" id='second-hambar'></div>\r\n\t<div class=\"hambar\" id='third-hambar'></div>\r\n</div>\r\n<img class=\"logo\" src='/assets/logo.png' alt=\"logo\"/>\r\n<ul class=\"sidebar-section\">\r\n\t<sh-navbar-section>\r\n\t</sh-navbar-section>\r\n</ul>\r\n<span class=\"sidebar-footer\">\r\n          &copy; Secret House 2022. <br/>\r\n          Tous droits réservés.\r\n        </span>\r\n</section>\r\n"
-        },
-        {
-            "name": "NavbarLinkComponent",
-            "id": "component-NavbarLinkComponent-c505a78e695b9c85cef5e8f376bcc00ead4cbfd15be581a2c8d210231b04843b05b5f1ebcaf7f21a288a131da01cfc3749a5a2e50b738cc026f89ade651acc1e",
-            "file": "projects/ngx-ds-secret-house/src/lib/components/navbar/navbar-link/navbar-link.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "sh-navbar-link",
-            "styleUrls": [
-                "./navbar-link.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./navbar-link.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 12,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'sh-navbar-link',\r\n  templateUrl: './navbar-link.component.html',\r\n  styleUrls: ['./navbar-link.component.scss']\r\n})\r\nexport class NavbarLinkComponent implements OnInit {\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "",
-                    "styleUrl": "./navbar-link.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [],
-                "line": 8
-            },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<p>navbar-link works!</p>\r\n"
-        },
-        {
-            "name": "NavbarSectionComponent",
-            "id": "component-NavbarSectionComponent-d193792a3d228c93f4387d3f0f73d5c31f34ace1faed0b0070142bf92eac97719f4f1d7e7d2cb3dc4808a277dbc5f19df33071edda1abc155ed87e30aebfcbd8",
-            "file": "projects/ngx-ds-secret-house/src/lib/components/navbar/navbar-section/navbar-section.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "sh-navbar-section",
-            "styleUrls": [
-                "./navbar-section.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./navbar-section.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 12,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'sh-navbar-section',\r\n  templateUrl: './navbar-section.component.html',\r\n  styleUrls: ['./navbar-section.component.scss']\r\n})\r\nexport class NavbarSectionComponent implements OnInit {\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "",
-                    "styleUrl": "./navbar-section.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "args": [],
-                "line": 8
-            },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<h3>La maison des secrets</h3>\r\n<sh-navbar-link></sh-navbar-link>\r\n"
+            "templateData": "<sh-field-container [for]=\"id\" [label]=\"label\" [help]=\"help\">\r\n\t<input type=\"text\" [id]=\"id\" [formControl]=\"control\" placeholder=\"{{placeholder}}\">\r\n</sh-field-container>\r\n"
         },
         {
             "name": "NgxDsSecretHouseComponent",
@@ -867,13 +1485,13 @@
     "modules": [
         {
             "name": "NgxDsSecretHouseModule",
-            "id": "module-NgxDsSecretHouseModule-474c5239ec2eec0dfc6c96f496cea9ddf2d3825a5786a2573152716cbd252f335f3fd7ba8618ff9b863cc4a8bc3fd0c05db703576619ab60b99aa7cb3694f097",
+            "id": "module-NgxDsSecretHouseModule-4934f2d5a8372e37e4a151146626e57e3b8779f282fdb1dd7a8fccecaa972b8c4363d7833bfc0207dd5dc5dfba6bba15d3b87d9e18f894994f00dc06961f9b28",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/ngx-ds-secret-house/src/lib/ngx-ds-secret-house.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { ReactiveFormsModule } from \"@angular/forms\";\r\nimport { NgxDsSecretHouseComponent } from './ngx-ds-secret-house.component';\r\n\r\n// Forms\r\nimport { FieldContainerComponent } from \"./components/form/field-container/field-container.component\";\r\nimport { InputTextComponent } from './components/form/input-text/input-text.component';\r\nimport { NavbarComponent } from './components/navbar/navbar.component';\r\nimport { NavbarLinkComponent } from './components/navbar/navbar-link/navbar-link.component';\r\nimport { NavbarSectionComponent } from './components/navbar/navbar-section/navbar-section.component';\r\n\r\n@NgModule({\r\n\tdeclarations: [\r\n\t\tNgxDsSecretHouseComponent,\r\n  \t\tInputTextComponent,\r\n  \t\tNavbarComponent,\r\n\t\tNavbarLinkComponent,\r\n\t\tNavbarSectionComponent,\r\n\t\tFieldContainerComponent,\r\n\t],\r\n\timports: [\r\n\t\tReactiveFormsModule\r\n\t],\r\n\texports: [\r\n\t\tNgxDsSecretHouseComponent,\r\n\t\tFieldContainerComponent,\r\n\t\tInputTextComponent\r\n\t]\r\n})\r\nexport class NgxDsSecretHouseModule {\r\n}\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { ReactiveFormsModule, FormsModule } from \"@angular/forms\";\r\nimport { NgxDsSecretHouseComponent } from './ngx-ds-secret-house.component';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n// Forms\r\nimport { FieldContainerComponent } from \"./components/form/field-container/field-container.component\";\r\nimport { InputTextComponent } from './components/form/input-text/input-text.component';\r\nimport { InputTextareaComponent } from './components/form/input-textarea/input-textarea.component';\r\nimport { InputSelectComponent } from './components/form/input-select/input-select.component';\r\nimport { InputPasswordComponent } from './components/form/input-password/input-password.component';\r\n\r\n// Buttons\r\nimport { BtnPrimaryComponent } from './components/buttons/btn-primary/btn-primary.component';\r\nimport { InputSwitchComponent } from './components/form/input-switch/input-switch.component';\r\nimport { InputRadioComponent } from './components/form/input-radio/input-radio.component';\r\nimport { InputCheckboxComponent } from './components/form/input-checkbox/input-checkbox.component';\r\nimport { InputDateComponent } from './components/form/input-date/input-date.component';\r\nimport { InputSearchComponent } from './components/form/input-search/input-search.component';\r\nimport { InputFileComponent } from './components/form/input-file/input-file.component';\r\n\r\nconst COMPONENTS = [\r\n\tFieldContainerComponent,\r\n\tInputTextComponent,\r\n\tInputPasswordComponent,\r\n\tInputTextareaComponent,\r\n\tInputSelectComponent,\r\n\tInputSwitchComponent,\r\n\tBtnPrimaryComponent,\r\n\tInputRadioComponent,\r\n\tInputCheckboxComponent,\r\n\tInputDateComponent,\r\n\tInputSearchComponent,\r\n\tInputFileComponent,\r\n]\r\n\r\n@NgModule({\r\n\tdeclarations: [\r\n\t\tNgxDsSecretHouseComponent,\r\n\t\t...COMPONENTS,\r\n\t],\r\n\timports: [\r\n\t\tBrowserModule,\r\n\t\tFormsModule,\r\n\t\tReactiveFormsModule,\r\n\t\tCommonModule,\r\n\t],\r\n\texports: [\r\n\t\tNgxDsSecretHouseComponent,\r\n\t\t...COMPONENTS\r\n\t]\r\n})\r\nexport class NgxDsSecretHouseModule {\r\n}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -883,19 +1501,40 @@
                     "type": "declarations",
                     "elements": [
                         {
+                            "name": "BtnPrimaryComponent"
+                        },
+                        {
                             "name": "FieldContainerComponent"
+                        },
+                        {
+                            "name": "InputCheckboxComponent"
+                        },
+                        {
+                            "name": "InputDateComponent"
+                        },
+                        {
+                            "name": "InputFileComponent"
+                        },
+                        {
+                            "name": "InputPasswordComponent"
+                        },
+                        {
+                            "name": "InputRadioComponent"
+                        },
+                        {
+                            "name": "InputSearchComponent"
+                        },
+                        {
+                            "name": "InputSelectComponent"
+                        },
+                        {
+                            "name": "InputSwitchComponent"
                         },
                         {
                             "name": "InputTextComponent"
                         },
                         {
-                            "name": "NavbarComponent"
-                        },
-                        {
-                            "name": "NavbarLinkComponent"
-                        },
-                        {
-                            "name": "NavbarSectionComponent"
+                            "name": "InputTextareaComponent"
                         },
                         {
                             "name": "NgxDsSecretHouseComponent"
@@ -910,10 +1549,40 @@
                     "type": "exports",
                     "elements": [
                         {
+                            "name": "BtnPrimaryComponent"
+                        },
+                        {
                             "name": "FieldContainerComponent"
                         },
                         {
+                            "name": "InputCheckboxComponent"
+                        },
+                        {
+                            "name": "InputDateComponent"
+                        },
+                        {
+                            "name": "InputFileComponent"
+                        },
+                        {
+                            "name": "InputPasswordComponent"
+                        },
+                        {
+                            "name": "InputRadioComponent"
+                        },
+                        {
+                            "name": "InputSearchComponent"
+                        },
+                        {
+                            "name": "InputSelectComponent"
+                        },
+                        {
+                            "name": "InputSwitchComponent"
+                        },
+                        {
                             "name": "InputTextComponent"
+                        },
+                        {
+                            "name": "InputTextareaComponent"
                         },
                         {
                             "name": "NgxDsSecretHouseComponent"
@@ -941,7 +1610,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "[]",
-                "defaultValue": "[\n\tFieldContainerComponent,\n\tInputTextComponent,\n\tInputTextareaComponent,\n\tInputSelectComponent,\n\tButtonComponent\n]"
+                "defaultValue": "[\r\n\tFieldContainerComponent,\r\n\tInputTextComponent,\r\n\tInputPasswordComponent,\r\n\tInputTextareaComponent,\r\n\tInputSelectComponent,\r\n\tInputSwitchComponent,\r\n\tBtnPrimaryComponent,\r\n\tInputRadioComponent,\r\n\tInputCheckboxComponent,\r\n\tInputDateComponent,\r\n\tInputSearchComponent,\r\n\tInputFileComponent,\r\n]"
             },
             {
                 "name": "context",
@@ -957,7 +1626,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/buttons/Button.stories.ts",
+                "file": "stories/buttons/ButtonPrimary.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -967,7 +1636,47 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/form/InputText.stories.ts",
+                "file": "stories/form/InputCheckbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/form/InputDate.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/form/InputPassword.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/form/InputRadio.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/form/InputSearch.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -987,17 +1696,27 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/form/InputTextarea.stories.ts",
+                "file": "stories/form/InputSwitch.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "Primary",
+                "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/NavBar.stories.ts",
+                "file": "stories/form/InputText.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/form/InputTextarea.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1016,11 +1735,81 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/buttons/Button.stories.ts",
+                "file": "stories/buttons/ButtonPrimary.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args) => ({\n\tprops: args,\n})"
+                "type": "Story<BtnPrimaryComponent>",
+                "defaultValue": "(args) => ({\r\n\tprops: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/form/InputCheckbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<InputCheckboxComponent>",
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/form/InputDate.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<InputDateComponent>",
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/form/InputPassword.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<InputPasswordComponent>",
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/form/InputRadio.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<InputRadioComponent>",
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/form/InputSearch.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<InputSearchComponent>",
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/form/InputSelect.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<InputSelectComponent>",
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/form/InputSwitch.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<InputSwitchComponent>",
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -1030,17 +1819,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<InputTextComponent>",
-                "defaultValue": "(args: InputTextComponent) => ({\r\n  props: args,\r\n})"
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/NavBar.stories.ts",
+                "file": "stories/form/InputTextarea.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<NavbarComponent>",
-                "defaultValue": "(args: NavbarComponent) => ({\r\n  props: args,\r\n})"
+                "type": "Story<InputTextareaComponent>",
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
             }
         ],
         "functions": [],
@@ -1056,7 +1845,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "[]",
-                    "defaultValue": "[\n\tFieldContainerComponent,\n\tInputTextComponent,\n\tInputTextareaComponent,\n\tInputSelectComponent,\n\tButtonComponent\n]"
+                    "defaultValue": "[\r\n\tFieldContainerComponent,\r\n\tInputTextComponent,\r\n\tInputPasswordComponent,\r\n\tInputTextareaComponent,\r\n\tInputSelectComponent,\r\n\tInputSwitchComponent,\r\n\tBtnPrimaryComponent,\r\n\tInputRadioComponent,\r\n\tInputCheckboxComponent,\r\n\tInputDateComponent,\r\n\tInputSearchComponent,\r\n\tInputFileComponent,\r\n]"
                 }
             ],
             "projects/ngx-ds-secret-house/src/test.ts": [
@@ -1080,12 +1869,12 @@
                     "type": "literal type"
                 }
             ],
-            "stories/buttons/Button.stories.ts": [
+            "stories/buttons/ButtonPrimary.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "stories/buttons/Button.stories.ts",
+                    "file": "stories/buttons/ButtonPrimary.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1095,11 +1884,165 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "stories/buttons/Button.stories.ts",
+                    "file": "stories/buttons/ButtonPrimary.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<ButtonComponent>",
-                    "defaultValue": "(args) => ({\n\tprops: args,\n})"
+                    "type": "Story<BtnPrimaryComponent>",
+                    "defaultValue": "(args) => ({\r\n\tprops: args,\r\n})"
+                }
+            ],
+            "stories/form/InputCheckbox.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputCheckbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputCheckbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<InputCheckboxComponent>",
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "stories/form/InputDate.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputDate.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputDate.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<InputDateComponent>",
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "stories/form/InputPassword.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputPassword.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputPassword.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<InputPasswordComponent>",
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "stories/form/InputRadio.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputRadio.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputRadio.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<InputRadioComponent>",
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "stories/form/InputSearch.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputSearch.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputSearch.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<InputSearchComponent>",
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "stories/form/InputSelect.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputSelect.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputSelect.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<InputSelectComponent>",
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "stories/form/InputSwitch.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputSwitch.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputSwitch.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<InputSwitchComponent>",
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "stories/form/InputText.stories.ts": [
@@ -1121,15 +2064,15 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<InputTextComponent>",
-                    "defaultValue": "(args: InputTextComponent) => ({\r\n  props: args,\r\n})"
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
                 }
             ],
-            "stories/NavBar.stories.ts": [
+            "stories/form/InputTextarea.stories.ts": [
                 {
-                    "name": "Primary",
+                    "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "stories/NavBar.stories.ts",
+                    "file": "stories/form/InputTextarea.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1139,11 +2082,11 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "stories/NavBar.stories.ts",
+                    "file": "stories/form/InputTextarea.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<NavbarComponent>",
-                    "defaultValue": "(args: NavbarComponent) => ({\r\n  props: args,\r\n})"
+                    "type": "Story<InputTextareaComponent>",
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
                 }
             ]
         },
@@ -1166,15 +2109,6 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/ngx-ds-secret-house/src/lib/components/buttons/button/button.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "ButtonComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/3",
-                "status": "low"
-            },
-            {
                 "filePath": "projects/ngx-ds-secret-house/src/lib/components/form/field-container/field-container.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -1184,12 +2118,75 @@
                 "status": "low"
             },
             {
+                "filePath": "projects/ngx-ds-secret-house/src/lib/components/form/input-checkbox/input-checkbox.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputCheckboxComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-ds-secret-house/src/lib/components/form/input-date/input-date.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputDateComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-ds-secret-house/src/lib/components/form/input-file/input-file.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputFileComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-ds-secret-house/src/lib/components/form/input-password/input-password.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputPasswordComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/10",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-ds-secret-house/src/lib/components/form/input-radio/input-radio.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputRadioComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-ds-secret-house/src/lib/components/form/input-search/input-search.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputSearchComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
                 "filePath": "projects/ngx-ds-secret-house/src/lib/components/form/input-select/input-select.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "InputSelectComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-ds-secret-house/src/lib/components/form/input-switch/input-switch.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputSwitchComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
                 "status": "low"
             },
             {
@@ -1211,39 +2208,30 @@
                 "status": "low"
             },
             {
+                "filePath": "projects/ngx-ds-secret-house/src/lib/components/interfaces/checkbox-option.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "CheckboxOption",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-ds-secret-house/src/lib/components/interfaces/radio-option.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "RadioOption",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
                 "filePath": "projects/ngx-ds-secret-house/src/lib/components/interfaces/select-option.ts",
                 "type": "interface",
                 "linktype": "interface",
                 "name": "SelectOption",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/ngx-ds-secret-house/src/lib/components/navbar/navbar-link/navbar-link.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "NavbarLinkComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/3",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/ngx-ds-secret-house/src/lib/components/navbar/navbar-section/navbar-section.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "NavbarSectionComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/3",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/ngx-ds-secret-house/src/lib/components/navbar/navbar.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "NavbarComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -1304,7 +2292,7 @@
                 "status": "low"
             },
             {
-                "filePath": "stories/buttons/Button.stories.ts",
+                "filePath": "stories/buttons/ButtonPrimary.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1314,7 +2302,7 @@
                 "status": "low"
             },
             {
-                "filePath": "stories/buttons/Button.stories.ts",
+                "filePath": "stories/buttons/ButtonPrimary.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1324,17 +2312,17 @@
                 "status": "low"
             },
             {
-                "filePath": "stories/NavBar.stories.ts",
+                "filePath": "stories/form/InputCheckbox.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Primary",
+                "name": "Default",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "stories/NavBar.stories.ts",
+                "filePath": "stories/form/InputCheckbox.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1344,10 +2332,161 @@
                 "status": "low"
             },
             {
-                "filePath": "stories/User.ts",
-                "type": "interface",
-                "linktype": "interface",
-                "name": "User",
+                "filePath": "stories/form/InputDate.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/form/InputDate.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/form/InputPassword.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/form/InputPassword.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/form/InputRadio.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/form/InputRadio.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/form/InputSearch.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/form/InputSearch.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/form/InputSelect.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/form/InputSelect.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/form/InputSwitch.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/form/InputSwitch.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/form/InputText.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/form/InputText.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/form/InputTextarea.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/form/InputTextarea.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

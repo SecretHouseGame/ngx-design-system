@@ -10,10 +10,17 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavbarLinkComponent } from './components/navbar/navbar-link/navbar-link.component';
 import { NavbarSectionComponent } from './components/navbar/navbar-section/navbar-section.component';
 import { RouterModule } from '@angular/router';
+
+// Input
 import { InputTextareaComponent } from './components/form/input-textarea/input-textarea.component';
 import { InputSelectComponent } from './components/form/input-select/input-select.component';
 import { InputPasswordComponent } from './components/form/input-password/input-password.component';
 import { InputSwitchComponent } from './components/form/input-switch/input-switch.component';
+import { InputRadioComponent } from './components/form/input-radio/input-radio.component';
+import { InputCheckboxComponent } from './components/form/input-checkbox/input-checkbox.component';
+import { InputDateComponent } from './components/form/input-date/input-date.component';
+import { InputSearchComponent } from './components/form/input-search/input-search.component';
+import { InputFileComponent } from './components/form/input-file/input-file.component';
 
 // Buttons
 import { ButtonComponent } from './components/buttons/button/button.component';
@@ -25,6 +32,11 @@ const COMPONENTS = [
 	InputTextareaComponent,
 	InputSelectComponent,
 	InputSwitchComponent,
+	InputRadioComponent,
+	InputCheckboxComponent,
+	InputDateComponent,
+	InputSearchComponent,
+	InputFileComponent,
 	ButtonComponent,
 	NavbarComponent,
 	NavbarLinkComponent,
