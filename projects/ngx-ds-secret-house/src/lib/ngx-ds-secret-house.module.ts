@@ -1,8 +1,7 @@
+import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgxDsSecretHouseComponent } from './ngx-ds-secret-house.component';
-import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
 
 // Forms
 import { FieldContainerComponent } from './components/form/field-container/field-container.component';
@@ -35,13 +34,12 @@ const COMPONENTS = [
 @NgModule({
 	declarations: [NgxDsSecretHouseComponent, ...COMPONENTS],
 	imports: [
-		BrowserModule,
 		FormsModule,
 		ReactiveFormsModule,
 		RouterModule,
 		CommonModule,
 	],
-	exports: [NgxDsSecretHouseComponent],
+	exports: [NgxDsSecretHouseComponent, ...COMPONENTS],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class NgxDsSecretHouseModule {}
