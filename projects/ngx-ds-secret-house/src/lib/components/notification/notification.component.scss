@@ -1,0 +1,54 @@
+@import '../../../../assets/styles';
+
+.notif-main {
+    background-color: $gray-50;
+    display: flex;
+    min-width: 15%;
+    max-width: 25%;
+    box-shadow: 0px 2px 10px rgba(25, 1, 52, 0.12);
+    // & > svg {
+    //     padding: 0px 5px 0px 0px;
+    // }
+    div {
+        width: 10%;
+        box-shadow:none;
+    }
+    
+    .notif-content {
+        padding: 0px 0px 0px 15px;
+        width:80%;
+    }
+}
+
+.notif-close {
+    // padding: 20px 10px 0px 10px; 
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    margin-right: 10px;
+    
+}
+
+.info {
+    background-color: $light-blue;
+    // padding: 0px 5px 0px 5px;
+}
+
+.error {
+    background-color: $red;
+}
+
+.success {
+    background-color: $green;
+}
+
+.notif-icon {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    margin-left: 8px;
+}
+
+.notif-svg {
+    display:flex;
+}
