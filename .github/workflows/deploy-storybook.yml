@@ -39,6 +39,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: |
          npm ci
+         pwd
          cd projets/ngx-ds-secret-house
       - run: npm publish
         env:
