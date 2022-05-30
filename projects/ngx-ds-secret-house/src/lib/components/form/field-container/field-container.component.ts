@@ -10,8 +10,9 @@ export class FieldContainerComponent implements OnInit {
 	@Input() label: string = "";
 	@Input() for: string = "";
 	@Input() help: string = "";
-	error: boolean = false;
-	success: boolean = false;
+	@Input() error: boolean = false;
+	@Input() success: boolean = false;
+	@Input() disabled: boolean = false;
 
 	constructor() {}
 

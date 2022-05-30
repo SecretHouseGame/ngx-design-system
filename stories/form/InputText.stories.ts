@@ -5,6 +5,7 @@ import { InputTextComponent } from '../../projects/ngx-ds-secret-house/src/lib/c
 import { FieldContainerComponent } from '../../projects/ngx-ds-secret-house/src/lib/components/form/field-container/field-container.component';
 
 import { CommonModule } from '@angular/common';
+import {PrimaryOutline} from "../buttons/Button.stories";
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
@@ -21,6 +22,7 @@ export default {
   ],
   // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes
   argTypes: {
+    // disabled: { control: {type: 'switch'} }
     // backgroundColor: { control: 'color' },
   },
 } as Meta;
@@ -30,16 +32,61 @@ const Template: Story<InputTextComponent> = (args) => ({
   props: args,
 });
 
-export const Default = Template.bind({});
-
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
+export const Default = Template.bind({});
 Default.args = {
-  placeholder: "Ceci est le placeholder",
-  label: "Quelle est ma question ?",
-  id: "form-id",
-  help: "Ceci est une indication pour aider l'utilisateur",
-};
-
+	label: 'Label exemple',
+	placeholder: 'Placeholder exemple',
+	help: 'Help exemple',
+	disabled: false,
+	success: false,
+	error: false
+}
 Default.decorators = [
-  componentWrapperDecorator((story) => `<sh-field-container> ${story} </sh-field-container>`),
+  componentWrapperDecorator((story) =>
+	  `<sh-field-container [disabled]="true"> ${story} </sh-field-container>`
+  ),
+];
+
+export const Success = Template.bind({});
+Success.args = {
+	label: 'Label exemple',
+	placeholder: 'Placeholder exemple',
+	help: 'Help exemple',
+	disabled: false,
+	success: true,
+	error: false,
+}
+Success.decorators = [
+	componentWrapperDecorator((story) =>
+		`<sh-field-container [success]="true" [error]="false" [disabled]="true"> ${story} </sh-field-container>`
+	),
+];
+
+export const Error = Template.bind({});
+Error.args = {
+	label: 'Label exemple',
+	placeholder: 'Placeholder exemple',
+	help: 'Help exemple',
+	disabled: false,
+	success: false,
+	error: true,
+}
+Error.decorators = [
+	componentWrapperDecorator((story) =>
+		`<sh-field-container [success]="false" [error]="true" [disabled]="true"> ${story} </sh-field-container>`
+	),
+];
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+	label: 'Label exemple',
+	placeholder: 'Placeholder exemple',
+	help: 'Help exemple',
+	disabled: true
+}
+Disabled.decorators = [
+	componentWrapperDecorator((story) =>
+		`<sh-field-container [success]="false" [error]="false" [disabled]="true"> ${story} </sh-field-container>`
+	),
 ];
