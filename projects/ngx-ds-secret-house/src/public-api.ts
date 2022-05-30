@@ -29,3 +29,4 @@ export * from './lib/components/form/input-date/input-date.component';
 
 // Buttons
 export * from './lib/components/buttons/button/button.component';
+export * from './lib/components/buttons/button-action/button-action.component';
