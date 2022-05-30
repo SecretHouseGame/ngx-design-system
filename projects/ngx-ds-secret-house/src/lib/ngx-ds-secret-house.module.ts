@@ -24,6 +24,8 @@ import { InputFileComponent } from './components/form/input-file/input-file.comp
 
 // Buttons
 import { ButtonComponent } from './components/buttons/button/button.component';
+import { TooltipComponent } from './components/ui/tooltip/tooltip.component';
+import { BadgeComponent } from './components/ui/badge/badge.component';
 
 const COMPONENTS = [
 	FieldContainerComponent,
@@ -44,7 +46,7 @@ const COMPONENTS = [
 ];
 
 @NgModule({
-	declarations: [NgxDsSecretHouseComponent, ...COMPONENTS],
+	declarations: [NgxDsSecretHouseComponent, ...COMPONENTS, TooltipComponent, BadgeComponent],
 	imports: [
 		FormsModule,
 		ReactiveFormsModule,
