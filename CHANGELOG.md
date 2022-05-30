@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.2](https://github.com/SecretHouseGame/ngx-design-system/compare/v1.0.1...v1.0.2) (2022-05-30)
+
+
+### Bug Fixes
+
+* remove auto-merge release ([#60](https://github.com/SecretHouseGame/ngx-design-system/issues/60)) ([47d9cb9](https://github.com/SecretHouseGame/ngx-design-system/commit/47d9cb921043bb89692588758a0e6abe205e4163))
+
 ### [1.0.1](https://github.com/SecretHouseGame/ngx-design-system/compare/v1.0.0...v1.0.1) (2022-05-30)
 
 
