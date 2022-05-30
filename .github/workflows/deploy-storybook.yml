@@ -1,4 +1,4 @@
-name: deploy storybook
+name: deploy storybook on firebase and npm
 
 # Run this workflow every time a new commit pushed on develop to update storybook and use it on other feature
 on:
