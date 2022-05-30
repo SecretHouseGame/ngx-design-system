@@ -11,7 +11,7 @@ export class InputCheckboxComponent implements OnInit {
 	@Input() id: string = '';
 	@Input() control!: FormControl;
 	@Input() name: string = '';
-	@Input() legend: string = '';
+	@Input() label: string = '';
 	@Input() help: string = '';
 	@Input() options: CheckboxOption[] = [];
 

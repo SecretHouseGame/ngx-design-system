@@ -33,7 +33,7 @@ const Template: Story<InputCheckboxComponent> = (args) => ({
 export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
 Default.args = {
-  legend: 'Quelle option choisir ?',
+  label: 'Quelle option choisir ?',
   id: 'form-id',
   help: "Ceci est une indication pour aider l'utilisateur",
   name: "option-select",

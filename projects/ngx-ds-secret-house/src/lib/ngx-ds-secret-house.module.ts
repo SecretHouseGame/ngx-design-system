@@ -16,6 +16,9 @@ import { BtnPrimaryComponent } from './components/buttons/btn-primary/btn-primar
 import { InputSwitchComponent } from './components/form/input-switch/input-switch.component';
 import { InputRadioComponent } from './components/form/input-radio/input-radio.component';
 import { InputCheckboxComponent } from './components/form/input-checkbox/input-checkbox.component';
+import { InputDateComponent } from './components/form/input-date/input-date.component';
+import { InputSearchComponent } from './components/form/input-search/input-search.component';
+import { InputFileComponent } from './components/form/input-file/input-file.component';
 
 const COMPONENTS = [
 	FieldContainerComponent,
@@ -27,6 +30,9 @@ const COMPONENTS = [
 	BtnPrimaryComponent,
 	InputRadioComponent,
 	InputCheckboxComponent,
+	InputDateComponent,
+	InputSearchComponent,
+	InputFileComponent,
 ]
 
 @NgModule({
