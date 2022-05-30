@@ -13,6 +13,7 @@ export class AlertComponent implements OnInit {
 
   @Input() content: string = "Content";
   @Input() type: string = "info";
+  @Input() title: string = "Titre par défaut";
   
   constructor() { }
 

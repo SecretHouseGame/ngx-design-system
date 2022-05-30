@@ -21,18 +21,23 @@ const Template: Story<AlertComponent> = (args: AlertComponent) => ({
 export const Information = Template.bind({});
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
 Information.args = {
+  content: "Content",
+  type: "info",
+  title: "Titre Info"
 };
 
 export const Success = Template.bind({});
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
 Success.args = {
   content: " SuccessSu ccessSu ccess SuccessSuc cessSucce ssSuccess SuccessSucce ssSuccess SuccessSuccessSuccessSuccess SuccessSuccess SuccessSuccess  !",
-  type: "success"
+  type: "success",
+  title: "Titre Succes"
 };
 
 export const Error = Template.bind({});
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
 Error.args = {
   content: "Error ! ",
-  type: "error"
+  type: "error",
+  title: "Titre Erreur"
 };
