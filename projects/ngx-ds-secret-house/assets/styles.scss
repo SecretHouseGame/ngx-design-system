@@ -1,0 +1,101 @@
+@import "scss/variables";
+
+/*
+   ##########################
+   ###### Secret House ######
+   ##########################
+*/
+
+@font-face {
+	font-family: 'Montserrat';
+	src: url('/projects/ngx-ds-secret-house/assets/fonts/Montserrat.ttf') format('truetype');
+}
+
+/**
+ ***** Colors *****
+ */
+
+$success: $green;
+$danger: $red;
+
+$brand-primary: $yellow;
+$brand-primary-light: $yellow-light;
+
+$brand-secondary: $blue;
+$brand-secondary-light: $blue-light;
+
+$text-primary: $blue-dark;
+$text-secondary: $orange;
+$text-tertiary: $salmon;
+$text-success: $success;
+$text-error: $danger;
+$text-link: $blue-light;
+
+$element-primary: $white;
+$element-secondary: $orange;
+$element-tertiary: $salmon;
+$element-success: $success;
+$element-error: $danger;
+$element-neutral: $neutral;
+$element-overlay: $overlay;
+
+/**
+ ***** Font Sizes *****
+ */
+
+$size-normal: 16px;
+$size-sm: 12px;
+$size-lg: 18px;
+
+/**
+ ***** Spacing *****
+ */
+
+$space-small: 8px;
+$space-medium: 16px;
+$space-large: 24px;
+$space-big: 40px;
+
+/**
+ ***** Typography *****
+ */
+
+html {
+	font-family: 'Montserrat', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+h5 {
+	font-size: 14px;
+}
+
+h6 {
+	font-size: 12px;
+}
+
+p {
+	font-size: $size-normal;
+}
+
+small {
+	font-size: $size-sm;
+}
