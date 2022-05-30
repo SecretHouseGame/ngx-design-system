@@ -14,6 +14,8 @@ import { InputPasswordComponent } from './components/form/input-password/input-p
 // Buttons
 import { BtnPrimaryComponent } from './components/buttons/btn-primary/btn-primary.component';
 import { InputSwitchComponent } from './components/form/input-switch/input-switch.component';
+import { InputRadioComponent } from './components/form/input-radio/input-radio.component';
+import { InputCheckboxComponent } from './components/form/input-checkbox/input-checkbox.component';
 
 const COMPONENTS = [
 	FieldContainerComponent,
@@ -22,7 +24,9 @@ const COMPONENTS = [
 	InputTextareaComponent,
 	InputSelectComponent,
 	InputSwitchComponent,
-	BtnPrimaryComponent
+	BtnPrimaryComponent,
+	InputRadioComponent,
+	InputCheckboxComponent,
 ]
 
 @NgModule({

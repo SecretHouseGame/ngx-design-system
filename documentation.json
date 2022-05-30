@@ -239,6 +239,68 @@
             "templateData": "<div class=\"field-group\">\r\n\t<label class=\"field-label\" for=\"{{for}}\">{{ label }}</label>\r\n\t<ng-content></ng-content>\r\n\t<small class=\"field-help\" *ngIf=\"help\">{{ help }}</small>\r\n</div>\r\n"
         },
         {
+            "name": "InputCheckboxComponent",
+            "id": "component-InputCheckboxComponent-6fb4784e4148ab06a3f47af01e344cffd6e1083a70b11d603e3ea7ad5e5f7c07be7e3a10aee6b894b296ce34c6a8ed8dbe209b493793a3e5fca129b0562b6ee0",
+            "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-checkbox/input-checkbox.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "sh-input-checkbox",
+            "styleUrls": [
+                "./input-checkbox.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./input-checkbox.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'sh-input-checkbox',\n  templateUrl: './input-checkbox.component.html',\n  styleUrls: ['./input-checkbox.component.scss']\n})\nexport class InputCheckboxComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./input-checkbox.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>input-checkbox works!</p>\n"
+        },
+        {
             "name": "InputPasswordComponent",
             "id": "component-InputPasswordComponent-0b99008aa008b8ad574a80e7974326945f8f868de1ce7fa99253c28be834b20d95f23c80bb65c8194164f7767b1156afc271ae6cc701e579e5d74755c6e82527",
             "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-password/input-password.component.ts",
@@ -368,6 +430,68 @@
             "templateData": "<sh-field-container [for]=\"id\" [label]=\"label\" [help]=\"help\">\n    <div class=\"input-password\">\n        <input [type]=\"showPassword ? 'text' : 'password'\" type=\"text\" [id]=\"id\" [formControl]=\"control\" placeholder=\"{{placeholder}}\">\n        <button class=\"trigger-password\" (click)=\"triggerPassword()\">\n            <ng-container *ngIf=\"!showPassword\">\n                <!-- Afficher le mot de passe -->\n                <svg width=\"15\" height=\"15\" viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7.5 11C4.80285 11 2.52952 9.62184 1.09622 7.50001C2.52952 5.37816 4.80285 4 7.5 4C10.1971 4 12.4705 5.37816 13.9038 7.50001C12.4705 9.62183 10.1971 11 7.5 11ZM7.5 3C4.30786 3 1.65639 4.70638 0.0760002 7.23501C-0.0253338 7.39715 -0.0253334 7.60288 0.0760014 7.76501C1.65639 10.2936 4.30786 12 7.5 12C10.6921 12 13.3436 10.2936 14.924 7.76501C15.0253 7.60288 15.0253 7.39715 14.924 7.23501C13.3436 4.70638 10.6921 3 7.5 3ZM7.5 9.5C8.60457 9.5 9.5 8.60457 9.5 7.5C9.5 6.39543 8.60457 5.5 7.5 5.5C6.39543 5.5 5.5 6.39543 5.5 7.5C5.5 8.60457 6.39543 9.5 7.5 9.5Z\" fill=\"currentColor\" fill-rule=\"evenodd\" clip-rule=\"evenodd\"></path></svg>\n            </ng-container>\n            <ng-container *ngIf=\"showPassword\">\n                <!-- Masquer le mot de passe -->\n                <svg width=\"15\" height=\"15\" viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M13.3536 2.35355C13.5488 2.15829 13.5488 1.84171 13.3536 1.64645C13.1583 1.45118 12.8417 1.45118 12.6464 1.64645L10.6828 3.61012C9.70652 3.21671 8.63759 3 7.5 3C4.30786 3 1.65639 4.70638 0.0760002 7.23501C-0.0253338 7.39715 -0.0253334 7.60288 0.0760014 7.76501C0.902945 9.08812 2.02314 10.1861 3.36061 10.9323L1.64645 12.6464C1.45118 12.8417 1.45118 13.1583 1.64645 13.3536C1.84171 13.5488 2.15829 13.5488 2.35355 13.3536L4.31723 11.3899C5.29348 11.7833 6.36241 12 7.5 12C10.6921 12 13.3436 10.2936 14.924 7.76501C15.0253 7.60288 15.0253 7.39715 14.924 7.23501C14.0971 5.9119 12.9769 4.81391 11.6394 4.06771L13.3536 2.35355ZM9.90428 4.38861C9.15332 4.1361 8.34759 4 7.5 4C4.80285 4 2.52952 5.37816 1.09622 7.50001C1.87284 8.6497 2.89609 9.58106 4.09974 10.1931L9.90428 4.38861ZM5.09572 10.6114L10.9003 4.80685C12.1039 5.41894 13.1272 6.35031 13.9038 7.50001C12.4705 9.62183 10.1971 11 7.5 11C6.65241 11 5.84668 10.8639 5.09572 10.6114Z\" fill=\"currentColor\" fill-rule=\"evenodd\" clip-rule=\"evenodd\"></path></svg>\n            </ng-container>\n        </button>\n    </div>\n</sh-field-container>\n"
         },
         {
+            "name": "InputRadioComponent",
+            "id": "component-InputRadioComponent-69589f379ebd7189cc0aee710a3d926ef8b639df3ad7fc5f86b235caf8433f0aa747134697e0ec6f5e358b7f511924f8793fb02be4cd661777c763ac1e1b6d61",
+            "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-radio/input-radio.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "sh-input-radio",
+            "styleUrls": [
+                "./input-radio.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./input-radio.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'sh-input-radio',\n  templateUrl: './input-radio.component.html',\n  styleUrls: ['./input-radio.component.scss']\n})\nexport class InputRadioComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./input-radio.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<p>input-radio works!</p>\n"
+        },
+        {
             "name": "InputSelectComponent",
             "id": "component-InputSelectComponent-b2b4497f4d684535a5dfe450f17e5cc8038d672df407a9e78080e9b9f66e5c186631edb896adc5f8f57eba030f311b510f7f7040aff078d91a5f3af09c884b63",
             "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-select/input-select.component.ts",
@@ -477,7 +601,7 @@
         },
         {
             "name": "InputSwitchComponent",
-            "id": "component-InputSwitchComponent-26f4c47cb0a4f32bad3f5f99be569c05e6b246dbd81b9e3c562b0cedcff45219e4be955a28cf7ea2797dd945e2aa0dddb493dad7de7b568f2aa18207de01d40b",
+            "id": "component-InputSwitchComponent-add28ee0b61b0c9e6a10b7c9daf83945e863949f6362a1b2fa57a3d31a992f9fc7a954401d9b0bf4dcd0780d3aafbbcb1e12d52083ade0fb6186e33bf0162d16",
             "file": "projects/ngx-ds-secret-house/src/lib/components/form/input-switch/input-switch.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -501,6 +625,15 @@
                     "deprecationMessage": "",
                     "line": 12,
                     "type": "FormControl",
+                    "decorators": []
+                },
+                {
+                    "name": "for",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "string",
                     "decorators": []
                 },
                 {
@@ -535,13 +668,13 @@
             "propertiesClass": [
                 {
                     "name": "isChecked",
-                    "defaultValue": "true",
+                    "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 16
+                    "line": 17
                 }
             ],
             "methodsClass": [
@@ -551,7 +684,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 20,
+                    "line": 21,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -563,11 +696,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { FormControl } from '@angular/forms';\n\n@Component({\n  selector: 'sh-input-switch',\n  templateUrl: './input-switch.component.html',\n  styleUrls: ['./input-switch.component.scss'],\n\thost: {'class': 'field'}\n})\nexport class InputSwitchComponent implements OnInit {\n\t@Input() id: string = '';\n\t@Input() control!: FormControl;\n\t@Input() label: string = '';\n\t@Input() help: string = '';\n  \n  isChecked: boolean = true;\n\n\tconstructor() {}\n\n\tngOnInit(): void {}\n}\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { FormControl } from '@angular/forms';\n\n@Component({\n  selector: 'sh-input-switch',\n  templateUrl: './input-switch.component.html',\n  styleUrls: ['./input-switch.component.scss'],\n\thost: {'class': 'field'}\n})\nexport class InputSwitchComponent implements OnInit {\n\t@Input() id: string = '';\n\t@Input() control!: FormControl;\n\t@Input() label: string = '';\n\t@Input() help: string = '';\n\t@Input() for: string = '';\n  \n  isChecked: boolean = false;\n\n\tconstructor() {}\n\n\tngOnInit(): void {}\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".switch {\r\n\tposition: relative;\r\n\tdisplay: block;\r\n\twidth: 50px;\r\n\theight: 26px;\r\n}\r\n\r\n.switch input {\r\n\topacity: 0;\r\n\twidth: 0;\r\n\theight: 0;\r\n}\r\n\r\n.slider {\r\n\tposition: absolute;\r\n\tcursor: pointer;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\tright: 0;\r\n\tbottom: 0;\r\n\tbackground-color: white;\r\n\t-webkit-transition: .4s;\r\n\ttransition: .4s;\r\n    border: 2px solid #064663;\r\n}\r\n\r\n.slider:before {\r\n\tposition: absolute;\r\n\tcontent: \"\";\r\n\theight: 19px;\r\n\twidth: 19px;\r\n\tleft: 2px;\r\n\tbottom: 1.5px;\r\n\tbackground-color: #064663;\r\n\t-webkit-transition: .4s;\r\n\ttransition: .4s;\r\n}\r\n\r\ninput:checked+.slider {\r\n\tbackground-color: white;\r\n}\r\n\r\ninput:focus+.slider {\r\n\tbox-shadow: 0 0 1px #064663;\r\n}\r\n\r\ninput:checked+.slider:before {\r\n\t-webkit-transform: translateX(24px);\r\n\t-ms-transform: translateX(24px);\r\n\ttransform: translateX(24px);\r\n}\r\n\r\n/* Rounded sliders */\r\n.slider.round {\r\n\tborder-radius: 34px;\r\n}\r\n\r\n.slider.round:before {\r\n\tborder-radius: 50%;\r\n}\r\n",
+                    "data": ".switch {\r\n\tposition: relative;\r\n\tdisplay: block;\r\n\twidth: 50px;\r\n\theight: 26px;\r\n    margin-right: 5px;\r\n}\r\n\r\n.switch input {\r\n\topacity: 0;\r\n\twidth: 0;\r\n\theight: 0;\r\n}\r\n\r\n.slider {\r\n\tposition: absolute;\r\n\tcursor: pointer;\r\n\ttop: 0;\r\n\tleft: 0;\r\n\tright: 0;\r\n\tbottom: 0;\r\n\tbackground-color: white;\r\n\t-webkit-transition: .4s;\r\n\ttransition: .4s;\r\n    border: 2px solid #064663;\r\n}\r\n\r\n.slider:before {\r\n\tposition: absolute;\r\n\tcontent: \"\";\r\n\theight: 19px;\r\n\twidth: 19px;\r\n\tleft: 2px;\r\n\tbottom: 1.5px;\r\n\tbackground-color: #064663;\r\n\t-webkit-transition: .4s;\r\n\ttransition: .4s;\r\n}\r\n\r\ninput:checked+.slider {\r\n\tbackground-color: white;\r\n}\r\n\r\ninput:focus+.slider {\r\n\tbox-shadow: 0 0 1px #064663;\r\n}\r\n\r\ninput:checked+.slider:before {\r\n\t-webkit-transform: translateX(24px);\r\n\t-ms-transform: translateX(24px);\r\n\ttransform: translateX(24px);\r\n}\r\n\r\n/* Rounded sliders */\r\n.slider.round {\r\n\tborder-radius: 34px;\r\n}\r\n\r\n.slider.round:before {\r\n\tborder-radius: 50%;\r\n}\r\n\r\n.inline-field{\r\n    display: flex;\r\n    align-items: center;\r\n\r\n}",
                     "styleUrl": "./input-switch.component.scss"
                 }
             ],
@@ -578,12 +711,12 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 16
+                "line": 17
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<sh-field-container [for]=\"id\" [label]=\"label\" [help]=\"help\">\n    <div class=\"switch\">\n        <input type=\"checkbox\" [checked]=\"isChecked\">\n        <span class=\"slider round\"></span>\n    </div>\n</sh-field-container>\n"
+            "templateData": "<div class=\"field-group\">\n    <div class=\"inline-field\">\n        <div class=\"switch\">\n            <input type=\"checkbox\" [checked]=\"isChecked\">\n            <span class=\"slider round\"></span>\n        </div>\n        <label class=\"field-label\" for=\"{{for}}\">{{ label }}</label>\n    </div>\n\t<small class=\"field-help\" *ngIf=\"help\">{{ help }}</small>\n</div>\n"
         },
         {
             "name": "InputTextareaComponent",
@@ -858,13 +991,13 @@
     "modules": [
         {
             "name": "NgxDsSecretHouseModule",
-            "id": "module-NgxDsSecretHouseModule-df31d7e0fee1764f9ea0fbe6a6bcfff5ded70a0654282bbcee1888b5bd87b5689bd655cb9aeb916f84c475cf9c8e3e12c2396bdef3e29e1df17ae1b4ef310e44",
+            "id": "module-NgxDsSecretHouseModule-1dffde726505d886db8531cbaa46aa548601f7b21aa71b0b738ec95026ccf835f3749d7adba71d4394cf60c5907085021f15d209c8f56d90b0e8699496c595cd",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/ngx-ds-secret-house/src/lib/ngx-ds-secret-house.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { ReactiveFormsModule, FormsModule } from \"@angular/forms\";\r\nimport { NgxDsSecretHouseComponent } from './ngx-ds-secret-house.component';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n// Forms\r\nimport { FieldContainerComponent } from \"./components/form/field-container/field-container.component\";\r\nimport { InputTextComponent } from './components/form/input-text/input-text.component';\r\nimport { InputTextareaComponent } from './components/form/input-textarea/input-textarea.component';\r\nimport { InputSelectComponent } from './components/form/input-select/input-select.component';\r\nimport { InputPasswordComponent } from './components/form/input-password/input-password.component';\r\n\r\n// Buttons\r\nimport { BtnPrimaryComponent } from './components/buttons/btn-primary/btn-primary.component';\r\nimport { InputSwitchComponent } from './components/form/input-switch/input-switch.component';\r\n\r\nconst COMPONENTS = [\r\n\tFieldContainerComponent,\r\n\tInputTextComponent,\r\n\tInputPasswordComponent,\r\n\tInputTextareaComponent,\r\n\tInputSelectComponent,\r\n\tInputSwitchComponent,\r\n\tBtnPrimaryComponent\r\n]\r\n\r\n@NgModule({\r\n\tdeclarations: [\r\n\t\tNgxDsSecretHouseComponent,\r\n\t\t...COMPONENTS,\r\n\t],\r\n\timports: [\r\n\t\tBrowserModule,\r\n\t\tFormsModule,\r\n\t\tReactiveFormsModule,\r\n\t\tCommonModule,\r\n\t],\r\n\texports: [\r\n\t\tNgxDsSecretHouseComponent,\r\n\t\t...COMPONENTS\r\n\t]\r\n})\r\nexport class NgxDsSecretHouseModule {\r\n}\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { ReactiveFormsModule, FormsModule } from \"@angular/forms\";\r\nimport { NgxDsSecretHouseComponent } from './ngx-ds-secret-house.component';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n// Forms\r\nimport { FieldContainerComponent } from \"./components/form/field-container/field-container.component\";\r\nimport { InputTextComponent } from './components/form/input-text/input-text.component';\r\nimport { InputTextareaComponent } from './components/form/input-textarea/input-textarea.component';\r\nimport { InputSelectComponent } from './components/form/input-select/input-select.component';\r\nimport { InputPasswordComponent } from './components/form/input-password/input-password.component';\r\n\r\n// Buttons\r\nimport { BtnPrimaryComponent } from './components/buttons/btn-primary/btn-primary.component';\r\nimport { InputSwitchComponent } from './components/form/input-switch/input-switch.component';\r\nimport { InputRadioComponent } from './components/form/input-radio/input-radio.component';\r\nimport { InputCheckboxComponent } from './components/form/input-checkbox/input-checkbox.component';\r\n\r\nconst COMPONENTS = [\r\n\tFieldContainerComponent,\r\n\tInputTextComponent,\r\n\tInputPasswordComponent,\r\n\tInputTextareaComponent,\r\n\tInputSelectComponent,\r\n\tInputSwitchComponent,\r\n\tBtnPrimaryComponent,\r\n\tInputRadioComponent,\r\n\tInputCheckboxComponent,\r\n]\r\n\r\n@NgModule({\r\n\tdeclarations: [\r\n\t\tNgxDsSecretHouseComponent,\r\n\t\t...COMPONENTS,\r\n\t],\r\n\timports: [\r\n\t\tBrowserModule,\r\n\t\tFormsModule,\r\n\t\tReactiveFormsModule,\r\n\t\tCommonModule,\r\n\t],\r\n\texports: [\r\n\t\tNgxDsSecretHouseComponent,\r\n\t\t...COMPONENTS\r\n\t]\r\n})\r\nexport class NgxDsSecretHouseModule {\r\n}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -880,7 +1013,13 @@
                             "name": "FieldContainerComponent"
                         },
                         {
+                            "name": "InputCheckboxComponent"
+                        },
+                        {
                             "name": "InputPasswordComponent"
+                        },
+                        {
+                            "name": "InputRadioComponent"
                         },
                         {
                             "name": "InputSelectComponent"
@@ -913,7 +1052,13 @@
                             "name": "FieldContainerComponent"
                         },
                         {
+                            "name": "InputCheckboxComponent"
+                        },
+                        {
                             "name": "InputPasswordComponent"
+                        },
+                        {
+                            "name": "InputRadioComponent"
                         },
                         {
                             "name": "InputSelectComponent"
@@ -953,7 +1098,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "[]",
-                "defaultValue": "[\r\n\tFieldContainerComponent,\r\n\tInputTextComponent,\r\n\tInputPasswordComponent,\r\n\tInputTextareaComponent,\r\n\tInputSelectComponent,\r\n\tInputSwitchComponent,\r\n\tBtnPrimaryComponent\r\n]"
+                "defaultValue": "[\r\n\tFieldContainerComponent,\r\n\tInputTextComponent,\r\n\tInputPasswordComponent,\r\n\tInputTextareaComponent,\r\n\tInputSelectComponent,\r\n\tInputSwitchComponent,\r\n\tBtnPrimaryComponent,\r\n\tInputRadioComponent,\r\n\tInputCheckboxComponent,\r\n]"
             },
             {
                 "name": "context",
@@ -1108,7 +1253,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "[]",
-                    "defaultValue": "[\r\n\tFieldContainerComponent,\r\n\tInputTextComponent,\r\n\tInputPasswordComponent,\r\n\tInputTextareaComponent,\r\n\tInputSelectComponent,\r\n\tInputSwitchComponent,\r\n\tBtnPrimaryComponent\r\n]"
+                    "defaultValue": "[\r\n\tFieldContainerComponent,\r\n\tInputTextComponent,\r\n\tInputPasswordComponent,\r\n\tInputTextareaComponent,\r\n\tInputSelectComponent,\r\n\tInputSwitchComponent,\r\n\tBtnPrimaryComponent,\r\n\tInputRadioComponent,\r\n\tInputCheckboxComponent,\r\n]"
                 }
             ],
             "projects/ngx-ds-secret-house/src/test.ts": [
@@ -1293,12 +1438,30 @@
                 "status": "low"
             },
             {
+                "filePath": "projects/ngx-ds-secret-house/src/lib/components/form/input-checkbox/input-checkbox.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputCheckboxComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
                 "filePath": "projects/ngx-ds-secret-house/src/lib/components/form/input-password/input-password.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "InputPasswordComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/10",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-ds-secret-house/src/lib/components/form/input-radio/input-radio.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputRadioComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
@@ -1316,7 +1479,7 @@
                 "linktype": "component",
                 "name": "InputSwitchComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/8",
+                "coverageCount": "0/9",
                 "status": "low"
             },
             {
