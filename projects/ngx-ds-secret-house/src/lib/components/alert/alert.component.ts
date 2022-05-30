@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
+
+const ioniconsUrl =
+    'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js';
+
 
 @Component({
   selector: 'sh-alert',
@@ -7,6 +11,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlertComponent implements OnInit {
 
+  @Input() content: string = "Content";
+  @Input() type: string = "info";
+  
   constructor() { }
 
   ngOnInit(): void {
