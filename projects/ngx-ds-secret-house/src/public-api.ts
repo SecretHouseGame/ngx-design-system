@@ -21,3 +21,4 @@ export * from './lib/components/form/input-switch/input-switch.component';
 
 // Buttons
 export * from './lib/components/buttons/button/button.component';
+export * from './lib/components/buttons/button-action/button-action.component';

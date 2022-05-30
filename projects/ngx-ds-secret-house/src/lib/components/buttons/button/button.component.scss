@@ -1,106 +1,65 @@
-@import "../../../../../assets/styles";
+@import "../../../../../assets/scss/buttons";
 
-.btn {
-	position: relative;
-	padding: $space-small $space-medium;
-	min-width: 65px;
-	border: 1px solid transparent;
+.btn--primary {
+	background-color: $brand-primary;
 
-	font-weight: bold;
-	font-size: $size-normal;
-
-	transition: all .3s;
-
-	cursor: pointer;
-
-	color: $white;
-
-	&:active:not(:disabled) {
-		transform: scale(.9);
+	&:hover {
+		background-color: $brand-primary-light;
 	}
 
-	&--primary {
-		background-color: $brand-primary;
+	&:disabled {
+		background-color: $brand-primary-light;
+		cursor: not-allowed;
+	}
 
-		&.btn--outline {
-			background-color: $white;
-			color: $brand-primary;
+	&.btn--outline {
+		background-color: $white;
+		color: $brand-primary;
 
-			border-color: $brand-primary;
+		border-color: $brand-primary;
 
-			&:hover {
-				background-color: $brand-primary;
-				color: $white;
-			}
-		}
-
-		&:hover {
-			background-color: $brand-primary-light;
+		&:hover:not(:disabled) {
+			background-color: $brand-primary;
+			color: $white;
 		}
 
 		&:disabled {
-			background-color: $brand-primary-light;
 			cursor: not-allowed;
+
+			color: $brand-primary-light;
+			border-color: $brand-primary-light;
 		}
 	}
+}
 
-	&--secondary {
-		background-color: $brand-secondary;
+.btn--secondary {
+	background-color: $brand-secondary;
 
-		&.btn--outline {
-			background-color: $white;
-			color: $brand-secondary;
+	&:hover {
+		background-color: $brand-secondary-light;
+	}
 
-			border-color: $brand-secondary;
+	&:disabled {
+		background-color: $brand-secondary-light;
+		cursor: not-allowed;
+	}
 
-			&:hover {
-				background-color: $brand-secondary;
-				color: $white;
-			}
-		}
+	&.btn--outline {
+		background-color: $white;
+		color: $brand-secondary;
 
-		&:hover {
-			background-color: $brand-secondary-light;
+		border-color: $brand-secondary;
+
+		&:hover:not(:disabled) {
+			background-color: $brand-secondary;
+			color: $white;
 		}
 
 		&:disabled {
-			background-color: $brand-secondary-light;
 			cursor: not-allowed;
-		}
-	}
 
-	&--loading {
-		.btn__content {
-			opacity: .15;
-		}
-
-		.btn__loader {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			ion-icon {
-				margin: auto;
-				font-size: 20px;
-				--ionicon-stroke-width: 46px;
-
-				animation: spin 1s linear infinite;
-
-				@keyframes spin {
-					from {
-						transform: rotate(0deg);
-					}
-					to {
-						transform: rotate(360deg);
-					}
-				}
-			}
+			color: $brand-secondary-light;
+			border-color: $brand-secondary-light;
 		}
 	}
 }

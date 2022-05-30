@@ -17,6 +17,7 @@ import { InputSwitchComponent } from './components/form/input-switch/input-switc
 
 // Buttons
 import { ButtonComponent } from './components/buttons/button/button.component';
+import { ButtonActionComponent } from './components/buttons/button-action/button-action.component';
 
 const COMPONENTS = [
 	FieldContainerComponent,
@@ -29,6 +30,7 @@ const COMPONENTS = [
 	NavbarComponent,
 	NavbarLinkComponent,
 	NavbarSectionComponent,
+	ButtonActionComponent
 ];
 
 @NgModule({

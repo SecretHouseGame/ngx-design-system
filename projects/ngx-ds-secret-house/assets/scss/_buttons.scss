@@ -1,0 +1,68 @@
+@import "../styles";
+
+$btn-min-width: 60px;
+$btn-height: 36px;
+
+.btn {
+	position: relative;
+	padding: $space-small $space-medium;
+	border: 1px solid transparent;
+
+	min-width: $btn-min-width;
+	min-height: $btn-height;
+	max-height: $btn-height;
+
+	font-weight: bold;
+	font-size: $size-normal;
+
+	transition: all .3s;
+
+	cursor: pointer;
+
+	color: $white;
+
+	&:active:not(:disabled) {
+		transform: scale(.9);
+	}
+
+	.btn__content {
+		display: flex;
+	}
+
+	ion-icon {
+		margin: auto;
+		font-size: 20px;
+		--ionicon-stroke-width: 46px;
+	}
+
+	&--loading {
+		.btn__content {
+			opacity: .15;
+		}
+
+		.btn__loader {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			ion-icon {
+				animation: spin 1s linear infinite;
+
+				@keyframes spin {
+					from {
+						transform: rotate(0deg);
+					}
+					to {
+						transform: rotate(360deg);
+					}
+				}
+			}
+		}
+	}
+}
