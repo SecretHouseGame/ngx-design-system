@@ -40,10 +40,5 @@ jobs:
 
     steps:
       - name: Setup node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '16.x'
-          registry-url: 'https://registry.npmjs.org'
-          
-#        run: |
-#          npm publish
+        run: |
+          npm publish
