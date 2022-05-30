@@ -11,7 +11,15 @@
 		"storybook": "npm run docs:json && start-storybook -p 6006",
 		"build-storybook": "npm run docs:json && build-storybook"
 	},
-	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/SecretHouseGame/ngx-design-system"
+	},
+	"bugs": {
+		"url": "https://github.com/SecretHouseGame/ngx-design-system/issues"
+	},
+	"homepage": "https://storybook.secrethouse.online/",
+	"private": false,
 	"dependencies": {
 		"@angular/animations": "~13.3.0",
 		"@angular/common": "~13.3.0",
