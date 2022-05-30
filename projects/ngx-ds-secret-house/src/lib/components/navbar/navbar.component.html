@@ -1,0 +1,19 @@
+<section class="sidebar" [ngClass]="{ 'opened': isOpened }">
+	<div class="hamburger-menu" (click)="toggleSidebar()">
+		<div class="hambar" id='first-hambar'></div>
+		<div class="hambar" id='second-hambar'></div>
+		<div class="hambar" id='third-hambar'></div>
+	</div>
+
+	<img class="logo" src='/assets/logo.png' alt="logo" />
+
+	<div class="sidebar-sections">
+		<sh-navbar-section *ngFor="let section of navbarSections" [title]="section.title" [elements]="section.elements">
+		</sh-navbar-section>
+	</div>
+
+	<span class="sidebar-footer">
+		&copy; Secret House 2022. <br />
+		Tous droits réservés.
+	</span>
+</section>
