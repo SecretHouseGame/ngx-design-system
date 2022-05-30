@@ -1,3 +1,5 @@
+@import "../../../../../assets/scss/variables";
+
 :host {
 	text-decoration: none;
 	padding: 6px 18px;
@@ -31,7 +33,7 @@
 			height: 3px;
 			border-radius: 10px;
 			width: 0;
-			background-color: #ecb365;
+			background-color: $yellow;
 			position: absolute;
 			bottom: -2px;
 			transform: translateX(-4px);
@@ -40,7 +42,7 @@
 	}
 
 	&:hover, &.active {
-		color: #ecb365;
+		color: $yellow;
 
 		> div::before {
 			width: 140%;
