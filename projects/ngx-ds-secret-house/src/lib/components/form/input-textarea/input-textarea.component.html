@@ -1,3 +1,3 @@
 <sh-field-container [for]="id" [label]="label" [help]="help">
-	<textarea [id]="id" [formControl]="control" [placeholder]="placeholder"></textarea>
+	<textarea [disabled]="disabled" [id]="id" [formControl]="control" [placeholder]="placeholder" [ngClass]="{ 'success': success, 'error': error }"></textarea>
 </sh-field-container>

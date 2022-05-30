@@ -1,4 +1,8 @@
+@import '../../../../../assets/styles';
+@import url('https://css.gg/check.css');
+
 sh-field-container {
+	font-family: 'Montserrat', sans-serif;
 	label {
 		font-weight: bold;
 		color: #000;
@@ -7,15 +11,79 @@ sh-field-container {
 	input,
 	textarea,
 	select {
-		border-radius: 10px;
-		width: 100%;
+		font-size: 16px;
+		display: block;
+		width: calc(100% - 1.2rem);
 		padding: 10px;
 		margin-top: 5px;
+		border-radius: 0;
+		border: 1px solid $border;
 
-		border: 1px solid #6489ac;
-
-		&:focus {
+		&:hover {
 			outline: none;
+			border: 1px solid $yellow
+		}
+		&:focus, &:active {
+			outline: none;
+			border: 2px solid $yellow
+		}
+		&:disabled {
+			cursor: default;
+			background-color: rgba(239, 239, 239, 0.3);
+			color: rgb(170, 170, 170);
+			border-color: rgba(118, 118, 118, 0.3);
+		}
+	}
+
+	.field-group {
+		&.success {
+			input,
+			textarea,
+			select
+			{
+				border: 2px solid $green;
+			}
+			&:before {
+				box-sizing: border-box;
+				position: relative;
+				display: block;
+				transform: scale(var(--ggs,1));
+				width: 22px;
+				height: 22px;
+				border: 2px solid transparent;
+				border-radius: 100px
+			}
+			&:after {
+				content: "";
+				display: block;
+				box-sizing: border-box;
+				position: absolute;
+				right: 35px;
+				top: 45px;
+				width: 10px;
+				height: 17px;
+				border: $green solid;
+				border-width: 0 2px 2px 0;
+				transform-origin: bottom left;
+				transform: rotate(45deg);
+			}
+		}
+		&.error {
+			input,
+			textarea,
+			select
+			{
+				border: 2px solid $red;
+				background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAA+FJREFUaEO1Wlly2zAMhQ5Qub1ZM3b/7JnqBr1RPCP/xZnmSj1BHV2AHZlaQBCrauvLkShsD3gAqTRArwYA0nqT/ElW608r2YDXS7/rt/IdXtd4V/BBMq6+H3VDMjFqyeyWXx5amY32mP6oNdjMVSaLQNQjj4laGkT1UVd87xMrh+P+OzTNKwB8/U/jbpBS117eP3yGlKsaqTi04h5OP34CpNH4XPCbcKS4NV3bv52jToRVF8aLBOA0IwE0DSa9yQl/Tmqxq2mONX4zAiLndO3l7ZypXKeK8akbATnyJfQRkl1lKuk0JnmSGc/lgJI2XdtfzwHEq5IzA2MINx3ACkpZtOhCbhTENetgEuYeIK2jq514OB1Wtimk+BjD3+wATCQEXhAR2CrQyT9sUIcjouei6zfdF4FiiQM5ZpuNNwrO41xUd4XA1GF/MyEKNZrhdEAzLUDbX+umuThcahOdSOmFduzagdPh7zoezIJ9OY/N4B3gBzJuGhCcuO3667c5MlMfKNmDKgYIGI9ErXLyzV1/Hek8dN2dSOkVd6uM5HrlPxbFDQynPQO9ohe9i4cCG4GCSasJbd5UWXK4FIo5IGSFpbgMnBwgq5Z0BxJAeykh8+aAywHifB4ZSEEfD3nfNF04hdhZKKxY8MiW4+vclhwzhfTik40oFHuQFCkV0fEiZ9XLOoDNolXv3QDRyC2B8AV+wXVwpRBLf1lG7YCvCsIIbEzFapSgNLqFv0dbrNyt7GWRsWndyUIK7sIjDXofhnmVFQh/ETtzd15mKZ6dyOtr4fP94bhnaNQoYhyhh9QAriViq5A5S0OgtbS7lCNJNSE+CnqaJpahUlqJbDa9YKaQhAAegZYO6kyzp9eA3gd86r01YEmjGUFZ0WxknnGaC3zMAR46a5wuZiHEHjcA2JWRwXsCoefTIYzsyOp+ouebsKH5bPtrPoudXq8RyIe2T9pSSglTOiMeeKX0sru8f5AdWS00urG28jjyXNW9HDmuEisEZnQ+8Ql0YUFgixmx/N51+WMVrQ5ZB2a9WwTmd/X+iv1aa680HvVa9TREcSCLkE+kRyTGYz+UkdyWCjUcaVNvnb3ioNDfSyeWppE8UEnQQtdertNReDBfpuUelLUurqYQNolXdH+9gNjfjMdR2XH2KglcadTH62NaS2eXPnL0IkR6DklRmqULAnrk1qccElLJek1GpBg6vpzowg86y074E5P5uUnTNUcer7FD4/9KSUeF3LHHjw9k7NBolCNQ+AMp/XrOZ9YQOEot1UGNZ5fwhslCIR/Yf8mISoj5ZjoQE/eE1VoTyAHTWtgTDHqwyH+DLIFVN6nkzgAAAABJRU5ErkJggg==") no-repeat;
+				background-position-x: right;
+				background-position-y: top;
+				background-size: 3%;
+				background-origin: content-box;
+			}
+		}
+		.small {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 14px;
 		}
 	}
 }
