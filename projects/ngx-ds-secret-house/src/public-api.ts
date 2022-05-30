@@ -6,6 +6,11 @@ export * from './lib/ngx-ds-secret-house.service';
 export * from './lib/ngx-ds-secret-house.component';
 export * from './lib/ngx-ds-secret-house.module';
 
+// Navigation
+export * from './lib/components/navbar/navbar.component';
+export * from './lib/components/navbar/navbar-section/navbar-section.component';
+export * from './lib/components/navbar/navbar-link/navbar-link.component';
+
 // Forms
 export * from './lib/components/form/field-container/field-container.component';
 export * from './lib/components/form/input-text/input-text.component';
@@ -20,4 +25,4 @@ export * from './lib/components/form/input-file/input-file.component';
 export * from './lib/components/form/input-date/input-date.component';
 
 // Buttons
-export * from './lib/components/buttons/btn-primary/btn-primary.component';
+export * from './lib/components/buttons/button/button.component';

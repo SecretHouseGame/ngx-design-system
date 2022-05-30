@@ -1,0 +1,3 @@
+<h3>{{ title }}</h3>
+<sh-navbar-link *ngFor="let element of elements" [icon]="element.icon" [title]="element.title"
+	[isActive]="element.isActive" [routerLink]="element.url"></sh-navbar-link>

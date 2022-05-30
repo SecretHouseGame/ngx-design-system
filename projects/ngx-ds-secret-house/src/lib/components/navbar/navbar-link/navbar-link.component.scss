@@ -1,0 +1,51 @@
+@import "../../../../../assets/scss/variables";
+
+:host {
+	text-decoration: none;
+	padding: 6px 18px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	border-bottom: 4px transparent solid;
+	cursor: pointer;
+
+	.navbar-link-text {
+		display: none;
+		margin-left: 1rem;
+		vertical-align: 6px;
+		font-weight: bold;
+		transition: 0.3s;
+	}
+
+	ion-icon {
+		transition: 0.3s;
+		font-size: 1.2rem;
+	}
+
+	> div {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding-bottom: 5px;
+
+		&::before {
+			content: '';
+			height: 3px;
+			border-radius: 10px;
+			width: 0;
+			background-color: $yellow;
+			position: absolute;
+			bottom: -2px;
+			transform: translateX(-4px);
+			transition: .3s;
+		}
+	}
+
+	&:hover, &.active {
+		color: $yellow;
+
+		> div::before {
+			width: 140%;
+		}
+	}
+}
