@@ -4,20 +4,20 @@ name: deploy staging
 on:
   workflow_dispatch:
     inputs:
-        logLevel:
-            description: 'Log level'
-            required: true
-            default: 'warning'
-        tags:
-            required: true
-            description: 'Test scenario tags'
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+      tags:
+        required: true
+        description: 'Test scenario tags'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [ 16.x ]
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}

@@ -2,9 +2,9 @@ name: deploy storybook
 
 # Run this workflow every time a new commit pushed on develop to update storybook and use it on other feature
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: # This configuration does not affect the page_build event above
+      - published
 
 jobs:
   build:
@@ -12,8 +12,6 @@ jobs:
     strategy:
       matrix:
         node-version: [ 16.x ]
-    env:
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
