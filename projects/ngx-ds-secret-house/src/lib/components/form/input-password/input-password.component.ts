@@ -14,7 +14,8 @@ export class InputPasswordComponent implements OnInit {
 	@Input() placeholder: string = '';
 	@Input() label: string = '';
 	@Input() help: string = '';
-	
+	@Input() disabled: boolean = false;
+
   showPassword: boolean = false;
 
   constructor() { }

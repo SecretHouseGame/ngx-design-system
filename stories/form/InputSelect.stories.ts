@@ -49,9 +49,12 @@ Default.args = {
       value: "option-three",
       name: "Option 3",
     },
-  ]
+  ],
+	disabled: false,
 };
 
 Default.decorators = [
-  componentWrapperDecorator((story) => `<sh-field-container> ${story} </sh-field-container>`),
+  componentWrapperDecorator((story) =>
+	  `<sh-field-container [disabled]="disabled"> ${story} </sh-field-container>`
+  ),
 ];

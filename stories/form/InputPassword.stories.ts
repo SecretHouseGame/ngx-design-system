@@ -37,8 +37,11 @@ Default.args = {
   label: 'Quel est votre mot de passe ?',
   id: 'form-id',
   help: "Le bouton de droite vous permet d'afficher ou de masquer votre mot de passe",
+  disabled: false,
 };
 
 Default.decorators = [
-  componentWrapperDecorator((story) => `<sh-field-container> ${story} </sh-field-container>`),
+  componentWrapperDecorator((story) =>
+	  `<sh-field-container [disabled]="disabled"> ${story} </sh-field-container>`
+  ),
 ];

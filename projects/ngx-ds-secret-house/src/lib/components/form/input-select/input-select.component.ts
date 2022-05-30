@@ -14,6 +14,7 @@ export class InputSelectComponent implements OnInit {
 	@Input() label: string = '';
 	@Input() options: SelectOption[] = [];
 	@Input() help: string = '';
+	@Input() disabled: boolean = false;
 
 	constructor() {}
 
