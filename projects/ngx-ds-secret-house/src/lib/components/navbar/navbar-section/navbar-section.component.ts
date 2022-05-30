@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NavbarLink } from '../../../interfaces/navbar';
 
 @Component({
   selector: 'sh-navbar-section',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar-section.component.scss']
 })
 export class NavbarSectionComponent implements OnInit {
+	@Input() title: string = '';
+	@Input() elements: NavbarLink[] = [];
 
   constructor() { }
 
