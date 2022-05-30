@@ -1,4 +1,5 @@
-<div>
-	<label>{{ label }}</label>
+<div class="field-group">
+	<label class="field-label" for="{{for}}">{{ label }}</label>
 	<ng-content></ng-content>
+	<small class="field-help" *ngIf="help">{{ help }}</small>
 </div>

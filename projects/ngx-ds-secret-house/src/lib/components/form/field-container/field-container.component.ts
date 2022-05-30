@@ -9,6 +9,7 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 export class FieldContainerComponent implements OnInit {
 	@Input() label: string = "";
 	@Input() for: string = "";
+	@Input() help: string = "";
 
 	constructor() {}
 

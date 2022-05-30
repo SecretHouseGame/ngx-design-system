@@ -6,6 +6,9 @@
 	},
 	"assets": [
 		"./assets/",
-		"./assets/styles.scss"
+		"./assets/styles.scss",
+		"./assets/scss/_variables.scss",
+		"./assets/scss/_buttons.scss",
+		"./assets/fonts/Montserrat.ttf"
 	]
 }
