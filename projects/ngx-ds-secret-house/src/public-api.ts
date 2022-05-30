@@ -21,3 +21,7 @@ export * from './lib/components/form/input-switch/input-switch.component';
 
 // Buttons
 export * from './lib/components/buttons/button/button.component';
+
+// Table
+export * from './lib/components/table/table.component';
+export * from './lib/interfaces/table';

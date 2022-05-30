@@ -1,0 +1,19 @@
+<table>
+	<thead>
+		<tr>
+			<th *ngFor="let col of columns">{{ col.title }}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let row of rows">
+			<td *ngFor="let col of columns">
+				<ng-template *ngIf="col.prop; else action_content">{{ row[col.prop] }}</ng-template>
+				<ng-template #action_content>
+					<div *ngIf="col.template;">
+						{{ col.template }}
+					</div>
+				</ng-template>
+			</td>
+		</tr>
+	</tbody>
+</table>

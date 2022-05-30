@@ -18,6 +18,10 @@ import { InputSwitchComponent } from './components/form/input-switch/input-switc
 // Buttons
 import { ButtonComponent } from './components/buttons/button/button.component';
 
+// Table
+import { TableComponent } from './components/table/table.component';
+import { TableConfig } from './interfaces/table';
+
 const COMPONENTS = [
 	FieldContainerComponent,
 	InputTextComponent,
@@ -29,6 +33,7 @@ const COMPONENTS = [
 	NavbarComponent,
 	NavbarLinkComponent,
 	NavbarSectionComponent,
+	TableComponent
 ];
 
 @NgModule({
