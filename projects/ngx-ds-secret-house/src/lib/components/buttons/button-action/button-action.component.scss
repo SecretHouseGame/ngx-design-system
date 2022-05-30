@@ -1,0 +1,27 @@
+@import "../../../../../assets/scss/buttons";
+
+.btn--success{
+	background-color: $success;
+
+	&:hover {
+		background-color: $success-light;
+	}
+
+	&:disabled {
+		background-color: $success-light;
+		cursor: not-allowed;
+	}
+}
+
+.btn--danger {
+	background-color: $danger;
+
+	&:hover {
+		background-color: $danger-light;
+	}
+
+	&:disabled {
+		background-color: $danger-light;
+		cursor: not-allowed;
+	}
+}

@@ -24,6 +24,7 @@ import { InputFileComponent } from './components/form/input-file/input-file.comp
 
 // Buttons
 import { ButtonComponent } from './components/buttons/button/button.component';
+import { ButtonActionComponent } from './components/buttons/button-action/button-action.component';
 
 const COMPONENTS = [
 	FieldContainerComponent,
@@ -41,6 +42,7 @@ const COMPONENTS = [
 	NavbarComponent,
 	NavbarLinkComponent,
 	NavbarSectionComponent,
+	ButtonActionComponent
 ];
 
 @NgModule({
