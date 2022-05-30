@@ -18,7 +18,21 @@ const Template: Story<AlertComponent> = (args: AlertComponent) => ({
   props: args,
 });
 
-export const Primary = Template.bind({});
+export const Information = Template.bind({});
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
-Primary.args = {
+Information.args = {
+};
+
+export const Success = Template.bind({});
+// More on args: https://storybook.js.org/docs/angular/writing-stories/args
+Success.args = {
+  content: " SuccessSu ccessSu ccess SuccessSuc cessSucce ssSuccess SuccessSucce ssSuccess SuccessSuccessSuccessSuccess SuccessSuccess SuccessSuccess  !",
+  type: "success"
+};
+
+export const Error = Template.bind({});
+// More on args: https://storybook.js.org/docs/angular/writing-stories/args
+Error.args = {
+  content: "Error ! ",
+  type: "error"
 };
