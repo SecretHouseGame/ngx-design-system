@@ -28,6 +28,7 @@ import { ButtonActionComponent } from './components/buttons/button-action/button
 
 // Alert & Notifications 
 import { AlertComponent } from './components/alert/alert.component';
+import { NotificationComponent } from './components/notification/notification.component';
 
 const COMPONENTS = [
 	FieldContainerComponent,
@@ -46,7 +47,8 @@ const COMPONENTS = [
 	NavbarLinkComponent,
 	NavbarSectionComponent,
 	ButtonActionComponent,
-	AlertComponent
+	AlertComponent,
+	NotificationComponent
 ];
 
 @NgModule({
