@@ -29,6 +29,7 @@ import { ButtonActionComponent } from './components/buttons/button-action/button
 // Alert & Notifications
 import { AlertComponent } from './components/alert/alert.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { CardComponent } from './components/card/card.component';
 
 // Table
 import { TableComponent } from './components/table/table.component';
@@ -53,7 +54,8 @@ const COMPONENTS = [
 	NavbarSectionComponent,
 	TableComponent,
 	AlertComponent,
-	NotificationComponent
+	NotificationComponent,
+	CardComponent
 ];
 
 @NgModule({
