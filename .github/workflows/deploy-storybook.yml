@@ -36,8 +36,9 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm ci
-      - run: cd projects/ngx-ds-secret-house
+      - run: |
+          npm ci
+          cd projects/ngx-ds-secret-house
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
