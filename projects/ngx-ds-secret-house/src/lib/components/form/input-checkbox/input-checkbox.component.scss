@@ -1,0 +1,68 @@
+@import "../../../../../assets/scss/inputs";
+
+:host {
+	input[type="checkbox"] {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+
+		border-radius: 4px;
+		background: #fff;
+		border: 1px solid $gray-500;
+		padding: 7.5px;
+	}
+
+	input[type="checkbox"]:checked {
+		background: $brand-primary;
+		position: relative;
+		border-color: transparent;
+		box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+
+		& + .fields-inputs__checkmark {
+			display: block;
+			position: absolute;
+			top: 5px;
+			left: 5px;
+			color: $white;
+		}
+	}
+}
+
+.fields-inputs {
+	&__container {
+		margin-bottom: .5rem;
+	}
+
+	&__checkbox {
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		width: auto;
+		max-width: min-content;
+		margin-bottom: -.25rem;
+
+		input {
+			transition: .3s;
+		}
+
+		.fields-inputs__checkmark {
+			display: none;
+			transition: .3s;
+		}
+
+		span:not(.fields-inputs__checkmark) {
+			margin-left: .5rem;
+			margin-top: .125rem;
+			font-size: 14px;
+			font-weight: 300;
+		}
+	}
+
+
+
+	small {
+		font-weight: 300;
+		color: $gray-700;
+		margin-left: .25rem;
+	}
+}
