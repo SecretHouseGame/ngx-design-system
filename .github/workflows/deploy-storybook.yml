@@ -26,15 +26,15 @@ jobs:
         run: npm i firebase-tools -g
       - name: deploy
         run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
-
-  publish-npm:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: npm install
-      - uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+      - name: build app
+        run: |
+          npm install -g @angular/cli
+          npm ci
+      - name: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm ci
+          ls projects/
+          cd projects/ngx-ds-secret-house
+          npm publish
