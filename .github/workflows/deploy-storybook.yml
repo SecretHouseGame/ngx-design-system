@@ -39,6 +39,6 @@ jobs:
       - run: |
           npm ci
           cd projects/ngx-ds-secret-house
-      - run: npm publish
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
