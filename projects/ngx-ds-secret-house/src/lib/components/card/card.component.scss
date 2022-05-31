@@ -1,0 +1,16 @@
+@import "../../../../assets/styles";
+
+.card {
+	background-color: $white;
+	border: #EAEAEA solid 1px;
+	padding: 1rem;
+	&.shadow {
+		box-shadow: 0 2px 10px rgba(25, 1, 52, 0.12);
+	}
+	&.bigShadow {
+		box-shadow: 0 4px 10px rgba(25, 1, 52, 0.16);
+	}
+	&.active {
+		border: 2px solid $yellow;
+	}
+}
