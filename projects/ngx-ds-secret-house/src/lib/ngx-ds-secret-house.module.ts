@@ -49,11 +49,12 @@ const COMPONENTS = [
 	NavbarSectionComponent,
 	ButtonActionComponent,
 	AlertComponent,
-	NotificationComponent
+	NotificationComponent,
+	CardComponent
 ];
 
 @NgModule({
-	declarations: [NgxDsSecretHouseComponent, ...COMPONENTS, CardComponent],
+	declarations: [NgxDsSecretHouseComponent, ...COMPONENTS],
 	imports: [
 		FormsModule,
 		ReactiveFormsModule,

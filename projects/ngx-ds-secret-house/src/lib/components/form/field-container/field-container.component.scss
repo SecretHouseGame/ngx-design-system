@@ -29,7 +29,7 @@ sh-field-container {
 		}
 		&:disabled {
 			cursor: not-allowed;
-			background-color: $disabled;
+			background-color: $grey;
 			color: rgb(170, 170, 170);
 			border-color: $border;
 			&:active {
