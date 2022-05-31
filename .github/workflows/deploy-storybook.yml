@@ -31,10 +31,10 @@ jobs:
           npm install -g @angular/cli
           npm ci
       - name: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           npm ci
           ls projects/
           cd projects/ngx-ds-secret-house
           npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
