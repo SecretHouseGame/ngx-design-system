@@ -1,0 +1,39 @@
+@import '../../../../../assets/styles';
+
+:host{
+    .fields-inputs{
+        .option-label{
+            input{
+                &:before {
+                    border-radius: 100px;
+                }
+
+                &:checked:after{
+                    background: white;
+                    background-image: none;
+                    border-radius: 100px;
+                    filter: none;
+                    width: 10px;
+                    height: 10px;
+                    top: 5px;
+                }
+            }
+
+            &.disabled{
+                opacity: .9;
+                pointer-events: none;
+
+                input{
+                    &:before{
+                        background: #808080;
+                        border: 1px solid #808080;
+                    }
+
+                    &:checked:after{
+                        opacity: .7;
+                    }
+                }
+            }
+        }
+    }
+}

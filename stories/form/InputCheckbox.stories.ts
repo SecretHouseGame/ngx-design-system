@@ -60,9 +60,9 @@ Default.args = {
       checked: false
     },
     {
-      id: "option-three",
-      value: "option-three",
-      text: "Option 3 désactivée et cochée",
+      id: "option-four",
+      value: "option-four",
+      text: "Option 4 désactivée et cochée",
       disabled: true,
       checked: true
     },
