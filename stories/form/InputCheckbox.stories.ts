@@ -42,16 +42,19 @@ Default.args = {
       id: "option-one",
       value: "option-one",
       text: "Option 1",
+      disabled: false,
     },
     {
       id: "option-two",
       value: "option-two",
       text: "Option 2",
+      disabled: false,
     },
     {
       id: "option-three",
       value: "option-three",
-      text: "Option 3",
+      text: "Option 3 (désactivée)",
+      disabled: true
     },
   ]
 };

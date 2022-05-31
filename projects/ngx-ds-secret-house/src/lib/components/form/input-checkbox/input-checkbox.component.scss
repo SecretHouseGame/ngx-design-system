@@ -1,0 +1,81 @@
+@import '../../../../../assets/styles';
+
+:host{
+    .fields-inputs{
+        margin: 10px 0;
+
+        .option-label{
+            display: flex;
+            margin: 5px 0;
+            font-weight: normal;
+            font-size: 14px;
+            align-items: center;
+            cursor: pointer;
+    
+            input{
+                width: max-content;
+                min-height: 20px;
+                min-width: 20px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: .75;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: -1px;
+                    top: -1px;
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid #808080;
+                    border-radius: 3px;
+                    background: #FFF;
+                    transition: all .2s;
+                    cursor: pointer;
+                }
+
+                &:hover{
+                    opacity: 1;
+                }
+
+                &:checked:before{
+                    background-color: $brand-primary;
+                    border-color: $brand-primary;
+                }
+
+                &:checked:after{
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yMSA2LjI4NWwtMTEuMTYgMTIuNzMzLTYuODQtNi4wMTggMS4zMTktMS40OSA1LjM0MSA0LjY4NiA5Ljg2NS0xMS4xOTYgMS40NzUgMS4yODV6Ii8+PC9zdmc+');
+                    background-size: 15px;
+                    background-position: center center;
+                    background-repeat: none;
+                    filter: invert(100%);
+                    top: 0;
+                    cursor: pointer;
+                }
+            }
+
+            .option-text{
+                margin-left: 10px;
+            }
+
+            &.disabled{
+                opacity: .9;
+                pointer-events: none;
+
+                input{
+                    &:before{
+                        background: #EAEAEA;
+                    }
+                }
+            }
+        }
+    }
+}
