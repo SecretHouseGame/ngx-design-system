@@ -26,21 +26,9 @@ jobs:
         run: npm i firebase-tools -g
       - name: deploy
         run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
-
-  deploy-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-          registry-url: 'https://registry.npmjs.org'
-      - run: |
-         npm ci
-          ls
-         cd ./projets/ngx-ds-secret-house/
-      - run: npm publish
+      - name: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          cd dist/ngx-ds-secret-house
+          npm publish
