@@ -35,8 +35,6 @@ import { CardComponent } from './components/card/card.component';
 import { TableComponent } from './components/table/table.component';
 import { TableConfig } from './interfaces/table';
 
-// Interfaces
-
 const COMPONENTS = [
 	FieldContainerComponent,
 	InputTextComponent,
@@ -59,10 +57,6 @@ const COMPONENTS = [
 	NotificationComponent,
 	CardComponent
 ];
-
-const interfaces = [
-
-]
 
 @NgModule({
 	declarations: [NgxDsSecretHouseComponent, ...COMPONENTS],
