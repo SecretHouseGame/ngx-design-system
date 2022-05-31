@@ -5,6 +5,5 @@ export interface TableConfig {
 
 export interface TableColumn {
 	title?: string;
-	prop?: string;
-	template?: string;
+	prop: string;
 }

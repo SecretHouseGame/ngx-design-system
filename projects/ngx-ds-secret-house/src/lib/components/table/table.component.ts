@@ -9,7 +9,7 @@ import { TableColumn, TableConfig } from '../../interfaces/table';
 export class TableComponent implements OnInit {
 	@Input() config?: TableConfig;
 	@Input() columns: TableColumn[] = [];
-	@Input() rows: [] = [];
+	@Input() rows: any[] = [];
 
   constructor() { }
 
