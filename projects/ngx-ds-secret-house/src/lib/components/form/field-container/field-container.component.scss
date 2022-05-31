@@ -28,10 +28,13 @@ sh-field-container {
 			border: 2px solid $yellow
 		}
 		&:disabled {
-			cursor: default;
-			background-color: rgba(239, 239, 239, 0.3);
+			cursor: not-allowed;
+			background-color: $grey;
 			color: rgb(170, 170, 170);
-			border-color: rgba(118, 118, 118, 0.3);
+			border-color: $border;
+			&:active {
+				border: 1px solid $border;
+			}
 		}
 	}
 

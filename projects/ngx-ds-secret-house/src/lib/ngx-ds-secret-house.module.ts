@@ -26,9 +26,10 @@ import { InputFileComponent } from './components/form/input-file/input-file.comp
 import { ButtonComponent } from './components/buttons/button/button.component';
 import { ButtonActionComponent } from './components/buttons/button-action/button-action.component';
 
-// Alert & Notifications 
+// Alert & Notifications
 import { AlertComponent } from './components/alert/alert.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { CardComponent } from './components/card/card.component';
 
 const COMPONENTS = [
 	FieldContainerComponent,
@@ -48,7 +49,8 @@ const COMPONENTS = [
 	NavbarSectionComponent,
 	ButtonActionComponent,
 	AlertComponent,
-	NotificationComponent
+	NotificationComponent,
+	CardComponent
 ];
 
 @NgModule({
