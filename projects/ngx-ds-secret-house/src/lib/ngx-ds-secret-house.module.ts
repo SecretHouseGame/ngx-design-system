@@ -25,6 +25,7 @@ import { InputFileComponent } from './components/form/input-file/input-file.comp
 // Buttons
 import { ButtonComponent } from './components/buttons/button/button.component';
 import { ButtonActionComponent } from './components/buttons/button-action/button-action.component';
+import { AvatarComponent } from './components/utils/avatar/avatar.component';
 
 // Alert & Notifications
 import { AlertComponent } from './components/alert/alert.component';
@@ -64,11 +65,12 @@ const COMPONENTS = [
 	ModalComponent,
 	CardComponent,
 	ListComponent,
-	ListItemComponent
+	ListItemComponent,
+	AvatarComponent
 ];
 
 @NgModule({
-	declarations: [NgxDsSecretHouseComponent, ...COMPONENTS],
+	declarations: [NgxDsSecretHouseComponent, ...COMPONENTS, AvatarComponent],
 	imports: [
 		FormsModule,
 		ReactiveFormsModule,
