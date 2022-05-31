@@ -26,6 +26,10 @@ import { InputFileComponent } from './components/form/input-file/input-file.comp
 import { ButtonComponent } from './components/buttons/button/button.component';
 import { ButtonActionComponent } from './components/buttons/button-action/button-action.component';
 
+// Alert & Notifications 
+import { AlertComponent } from './components/alert/alert.component';
+import { NotificationComponent } from './components/notification/notification.component';
+
 const COMPONENTS = [
 	FieldContainerComponent,
 	InputTextComponent,
@@ -42,7 +46,9 @@ const COMPONENTS = [
 	NavbarComponent,
 	NavbarLinkComponent,
 	NavbarSectionComponent,
-	ButtonActionComponent
+	ButtonActionComponent,
+	AlertComponent,
+	NotificationComponent
 ];
 
 @NgModule({
