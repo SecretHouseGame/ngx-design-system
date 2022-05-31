@@ -1,0 +1,33 @@
+:host{
+    .drag-area{
+        height: 130px;
+        width: 290px;
+        position: relative;
+        
+        input{
+            &:before{
+                content: "";
+                position: absolute;
+                background: white;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                border: 2px dashed grey;
+                border-radius: 2px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+
+        &.active{
+            input{
+                &:before{
+                    border: 2px solid red;
+                }
+            }
+        }
+      }
+}
