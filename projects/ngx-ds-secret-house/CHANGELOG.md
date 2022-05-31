@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.9](https://github.com/SecretHouseGame/ngx-design-system/compare/v1.0.8...v1.0.9) (2022-05-31)
+
+
+### Bug Fixes
+
+* ci test ([#76](https://github.com/SecretHouseGame/ngx-design-system/issues/76)) ([cf924b1](https://github.com/SecretHouseGame/ngx-design-system/commit/cf924b11d15ab67d086e615226c03f41f46aae85))
+
 ### [1.0.8](https://github.com/SecretHouseGame/ngx-design-system/compare/v1.0.7...v1.0.8) (2022-05-30)
 
 
