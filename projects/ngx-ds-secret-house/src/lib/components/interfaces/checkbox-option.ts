@@ -3,4 +3,5 @@ export interface CheckboxOption {
 	value: string;
     text: string;
     disabled: boolean;
+    checked: boolean;
 }

@@ -73,6 +73,12 @@
                 input{
                     &:before{
                         background: #EAEAEA;
+                        border: 1px solid #808080;
+                    }
+
+                    &:checked:after{
+                        filter: invert(0%);
+                        opacity: .5;
                     }
                 }
             }

@@ -41,20 +41,30 @@ Default.args = {
     {
       id: "option-one",
       value: "option-one",
-      text: "Option 1",
+      text: "Option 1 cochée",
       disabled: false,
+      checked: true
     },
     {
       id: "option-two",
       value: "option-two",
       text: "Option 2",
       disabled: false,
+      checked: false
     },
     {
       id: "option-three",
       value: "option-three",
       text: "Option 3 (désactivée)",
-      disabled: true
+      disabled: true,
+      checked: false
+    },
+    {
+      id: "option-three",
+      value: "option-three",
+      text: "Option 3 désactivée et cochée",
+      disabled: true,
+      checked: true
     },
   ]
 };
