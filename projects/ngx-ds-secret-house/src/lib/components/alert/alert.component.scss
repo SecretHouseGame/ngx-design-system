@@ -10,7 +10,7 @@
         width: 10%;
         box-shadow:none;
     }
-    
+
     .alert-content {
         display:block;
         padding: 0px 0px 0px 15px;
@@ -19,12 +19,12 @@
 }
 
 .alert-main-info {
-    border: 2px solid $light-blue;
+    border: 2px solid $blue-light;
 }
 
 .alert-main-success {
     border: 2px solid $green;
-}   
+}
 
 .alert-main-error {
     border: 2px solid $red;
@@ -38,7 +38,7 @@
 }
 
 .info {
-    background-color: $light-blue;
+    background-color: $blue-light;
 }
 
 .error {
