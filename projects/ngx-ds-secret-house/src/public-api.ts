@@ -35,3 +35,6 @@ export * from './lib/components/buttons/button-action/button-action.component';
 // Alert & Notifications
 export * from './lib/components/alert/alert.component';
 export * from './lib/components/notification/notification.component';
+
+// Interfaces
+export * from './lib/components/interfaces/checkbox-option';
