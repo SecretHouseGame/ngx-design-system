@@ -12,8 +12,9 @@ export class InputSwitchComponent implements OnInit {
 	@Input() control!: FormControl;
 	@Input() label: string = '';
 	@Input() help: string = '';
-
-	isChecked: boolean = false;
+	@Input() for: string = '';
+  
+  isChecked: boolean = false;
 
 	constructor() {}
 

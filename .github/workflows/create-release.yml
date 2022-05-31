@@ -1,0 +1,17 @@
+name: 📦 Create a release on merge
+
+# Run this workflow every time a new commit pushed to your repository
+on:
+  push:
+    branches: [ main ]
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: release-please-action
+        uses: google-github-actions/release-please-action@v3.1.1
+        with:
+          path: projects/ngx-ds-secret-house
+          token: ${{ secrets.TOKEN_GITHUB }}
+          release-type: node
+          default-branch: main

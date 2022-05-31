@@ -1,1 +1,65 @@
 @import "../../../../../assets/scss/buttons";
+
+.btn--primary {
+	background-color: $brand-primary;
+
+	&:hover {
+		background-color: $brand-primary-light;
+	}
+
+	&:disabled {
+		background-color: $brand-primary-light;
+		cursor: not-allowed;
+	}
+
+	&.btn--outline {
+		background-color: $white;
+		color: $brand-primary;
+
+		border-color: $brand-primary;
+
+		&:hover:not(:disabled) {
+			background-color: $brand-primary;
+			color: $white;
+		}
+
+		&:disabled {
+			cursor: not-allowed;
+
+			color: $brand-primary-light;
+			border-color: $brand-primary-light;
+		}
+	}
+}
+
+.btn--secondary {
+	background-color: $brand-secondary;
+
+	&:hover {
+		background-color: $brand-secondary-light;
+	}
+
+	&:disabled {
+		background-color: $brand-secondary-light;
+		cursor: not-allowed;
+	}
+
+	&.btn--outline {
+		background-color: $white;
+		color: $brand-secondary;
+
+		border-color: $brand-secondary;
+
+		&:hover:not(:disabled) {
+			background-color: $brand-secondary;
+			color: $white;
+		}
+
+		&:disabled {
+			cursor: not-allowed;
+
+			color: $brand-secondary-light;
+			border-color: $brand-secondary-light;
+		}
+	}
+}

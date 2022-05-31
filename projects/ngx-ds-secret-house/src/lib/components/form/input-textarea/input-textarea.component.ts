@@ -13,6 +13,9 @@ export class InputTextareaComponent implements OnInit {
 	@Input() label: string = '';
 	@Input() placeholder: string = '';
 	@Input() help: string = '';
+	@Input() error: boolean = false;
+	@Input() success: boolean = false;
+	@Input() disabled: boolean = false;
 
 	constructor() {}
 

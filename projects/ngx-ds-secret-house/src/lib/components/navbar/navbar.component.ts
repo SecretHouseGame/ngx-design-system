@@ -114,16 +114,17 @@ export class NavbarComponent implements OnInit {
 
 	isOpened: boolean = false;
 
-	constructor() {}
+	constructor () {
+	}
 
-	ngOnInit(): void {
+	ngOnInit (): void {
 		let node = document.createElement('script');
 		node.src = ioniconsUrl;
 		node.type = 'text/javascript';
 		document.getElementsByTagName('head')[0].appendChild(node);
 	}
 
-	toggleSidebar(): void {
+	toggleSidebar (): void {
 		this.isOpened = !this.isOpened;
 	}
 }

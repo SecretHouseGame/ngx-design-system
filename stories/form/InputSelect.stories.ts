@@ -38,20 +38,26 @@ Default.args = {
   help: "Ceci est une indication pour aider l'utilisateur",
   options: [
     {
+      id: "option-one",
       value: "option-one",
       name: "Option 1",
     },
     {
+      id: "option-two",
       value: "option-two",
       name: "Option 2",
     },
     {
+      id: "option-three",
       value: "option-three",
       name: "Option 3",
     },
-  ]
+  ],
+	disabled: false,
 };
 
 Default.decorators = [
-  componentWrapperDecorator((story) => `<sh-field-container> ${story} </sh-field-container>`),
+  componentWrapperDecorator((story) =>
+	  `<sh-field-container [disabled]="disabled"> ${story} </sh-field-container>`
+  ),
 ];
