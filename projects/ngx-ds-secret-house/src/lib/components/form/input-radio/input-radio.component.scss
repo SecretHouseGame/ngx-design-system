@@ -1,22 +1,68 @@
 @import '../../../../../assets/styles';
 
 :host{
+
     .fields-inputs{
+        margin: 10px 0;
+
         .option-label{
+            display: flex;
+            margin: 5px 0;
+            font-weight: normal;
+            font-size: 14px;
+            align-items: center;
+            cursor: pointer;
+    
             input{
+                width: max-content;
+                min-height: 20px;
+                min-width: 20px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: .75;
+
                 &:before {
+                    content: "";
+                    position: absolute;
+                    left: -1px;
+                    top: -1px;
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid #808080;
+                    border-radius: 3px;
+                    background: #FFF;
+                    transition: all .2s;
+                    cursor: pointer;
                     border-radius: 100px;
                 }
 
+                &:hover{
+                    opacity: 1;
+                }
+
+                &:checked:before{
+                    background-color: $brand-primary;
+                    border-color: $brand-primary;
+                }
+
                 &:checked:after{
-                    background: white;
-                    background-image: none;
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    cursor: pointer;
                     border-radius: 100px;
-                    filter: none;
+                    background: white;
                     width: 10px;
                     height: 10px;
                     top: 5px;
                 }
+            }
+
+            .option-text{
+                margin-left: 10px;
             }
 
             &.disabled{
@@ -25,15 +71,20 @@
 
                 input{
                     &:before{
-                        background: #808080;
+                        background: #EAEAEA;
                         border: 1px solid #808080;
                     }
 
+                    &:checked:before{
+                        background: #808080;
+                    }
+
                     &:checked:after{
-                        opacity: .7;
+                        background: #EAEAEA;
                     }
                 }
             }
         }
     }
+
 }
