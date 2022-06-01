@@ -1,8 +1,8 @@
 export interface CheckboxOption {
-    id: string;
-	  value: string;
-    text: string;
-    disabled: boolean;
-    checked: boolean;
-	  help?: string;
+	id: string;
+	value: string;
+	text: string;
+	disabled: boolean;
+	checked: boolean;
+	help?: string;
 }

@@ -47,7 +47,8 @@ $element-overlay: $overlay;
  */
 
 $size-normal: 16px;
-$size-sm: 12px;
+$size-xs: 12px;
+$size-sm: 14px;
 $size-lg: 18px;
 
 /**
@@ -100,10 +101,12 @@ h6 {
 
 p {
 	font-size: $size-normal;
-	line-height: 1;
 }
 
 small {
 	font-size: $size-sm;
+}
+
+p, small, span {
 	line-height: 1;
 }

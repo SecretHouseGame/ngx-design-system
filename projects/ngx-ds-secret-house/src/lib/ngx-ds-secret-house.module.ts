@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgxDsSecretHouseComponent } from './ngx-ds-secret-house.component';
+import { RouterModule } from '@angular/router';
 
 // Forms
 import { FieldContainerComponent } from './components/form/field-container/field-container.component';
@@ -9,7 +10,6 @@ import { InputTextComponent } from './components/form/input-text/input-text.comp
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavbarLinkComponent } from './components/navbar/navbar-link/navbar-link.component';
 import { NavbarSectionComponent } from './components/navbar/navbar-section/navbar-section.component';
-import { RouterModule } from '@angular/router';
 
 // Input
 import { InputTextareaComponent } from './components/form/input-textarea/input-textarea.component';
@@ -37,6 +37,10 @@ import { TableComponent } from './components/table/table.component';
 // Modal
 import { ModalComponent } from './components/modal/modal.component';
 
+// List
+import { ListComponent } from './components/list/list.component';
+import { ListItemComponent } from './components/list/list-item/list-item.component';
+
 const COMPONENTS = [
 	FieldContainerComponent,
 	InputTextComponent,
@@ -58,7 +62,9 @@ const COMPONENTS = [
 	AlertComponent,
 	NotificationComponent,
 	ModalComponent,
-	CardComponent
+	CardComponent,
+	ListComponent,
+	ListItemComponent
 ];
 
 @NgModule({
