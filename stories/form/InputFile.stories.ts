@@ -36,6 +36,7 @@ Default.args = {
   label: "Choisissez un fichier",
   help: "Ceci est une indication pour aider l'utilisateur",
   name: 'form-file',
+  id: 'form-file-input'
 };
 
 Default.decorators = [

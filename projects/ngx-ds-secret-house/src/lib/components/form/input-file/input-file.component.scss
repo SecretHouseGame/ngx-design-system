@@ -1,24 +1,68 @@
+$transition: .25s;
+
 :host{
     .drag-area{
         height: 130px;
         width: 290px;
         position: relative;
+        cursor: pointer;
+        border: 2px dashed grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 10px 0;
+        transition: all $transition;
+
+        .drag-text{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            color: grey;
+            transition: all $transition;
+            font-size: 15px;
+
+            svg{
+                width: 30px;
+                height: 30px;
+                fill: grey;
+                transition: all $transition;
+                margin-bottom: 5px;
+            }
+        }
+
+        &:hover{
+            border: 2px dashed black;
+
+            .drag-text{
+                color: black;
+
+                svg{
+                    fill: black;
+                }
+            }
+        }
         
         input{
+            z-index: -1;
+            display: none;
+
             &:before{
                 content: "";
                 position: absolute;
-                background: white;
+                // background: white;
                 left: 0;
                 top: 0;
                 width: 100%;
                 height: 100%;
-                border: 2px dashed grey;
+                // border: 2px dashed grey;
                 border-radius: 2px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
+                cursor: pointer;
             }
         }
 
