@@ -6,10 +6,6 @@ export * from './lib/ngx-ds-secret-house.service';
 export * from './lib/ngx-ds-secret-house.component';
 export * from './lib/ngx-ds-secret-house.module';
 
-export * from './lib/components/navbar/navbar.component';
-export * from './lib/components/navbar/navbar-section/navbar-section.component';
-export * from './lib/components/navbar/navbar-link/navbar-link.component';
-
 // Navigation
 export * from './lib/components/navbar/navbar.component';
 export * from './lib/components/navbar/navbar-section/navbar-section.component';
@@ -40,5 +36,12 @@ export * from './lib/interfaces/table';
 export * from './lib/components/alert/alert.component';
 export * from './lib/components/notification/notification.component';
 
+// Modal
+export * from './lib/components/modal/modal.component';
+export * from './lib/services/modal.service';
+
 // Interfaces
 export * from './lib/components/interfaces/checkbox-option';
+
+// Card
+export * from './lib/components/card/card.component';

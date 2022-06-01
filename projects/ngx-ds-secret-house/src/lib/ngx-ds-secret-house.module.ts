@@ -33,7 +33,9 @@ import { CardComponent } from './components/card/card.component';
 
 // Table
 import { TableComponent } from './components/table/table.component';
-import { TableConfig } from './interfaces/table';
+
+// Modal
+import { ModalComponent } from './components/modal/modal.component';
 
 const COMPONENTS = [
 	FieldContainerComponent,
@@ -55,6 +57,7 @@ const COMPONENTS = [
 	TableComponent,
 	AlertComponent,
 	NotificationComponent,
+	ModalComponent,
 	CardComponent
 ];
 

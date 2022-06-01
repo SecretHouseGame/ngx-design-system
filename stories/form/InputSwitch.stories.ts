@@ -33,11 +33,60 @@ const Template: Story<InputSwitchComponent> = (args) => ({
 export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/angular/writing-stories/args
 Default.args = {
-  label: 'Quelle est ma question ?',
-  id: 'form-id',
-  help: "Ceci est une indication pour aider l'utilisateur",
+	label: 'Accepter les cookies ?',
+	id: 'form-id',
+	help: "Ceci est une indication pour aider l'utilisateur",
 };
 
 Default.decorators = [
-  componentWrapperDecorator((story) => `<sh-field-container> ${story} </sh-field-container>`),
+	componentWrapperDecorator((story) =>
+		`<sh-field-container> ${story} </sh-field-container>`
+	),
+];
+
+export const Active = Template.bind({});
+// More on args: https://storybook.js.org/docs/angular/writing-stories/args
+Active.args = {
+	label: 'Accepter les cookies ?',
+	id: 'form-id',
+	help: "Ceci est une indication pour aider l'utilisateur",
+	isChecked: true
+};
+
+Active.decorators = [
+	componentWrapperDecorator((story) =>
+		`<sh-field-container> ${story} </sh-field-container>`
+	),
+];
+
+
+export const DefaultDisabled = Template.bind({});
+// More on args: https://storybook.js.org/docs/angular/writing-stories/args
+DefaultDisabled.args = {
+	label: 'Accepter les cookies ?',
+	id: 'form-id',
+	help: "Ceci est une indication pour aider l'utilisateur",
+	disabled: true
+};
+
+DefaultDisabled.decorators = [
+	componentWrapperDecorator((story) =>
+		`<sh-field-container > ${story} </sh-field-container>`
+	),
+];
+
+export const ActiveDisabled = Template.bind({});
+// More on args: https://storybook.js.org/docs/angular/writing-stories/args
+ActiveDisabled.args = {
+	label: 'Accepter les cookies ?',
+	id: 'form-id',
+	help: "Ceci est une indication pour aider l'utilisateur",
+	isChecked: true,
+	disabled: true
+};
+
+ActiveDisabled.decorators = [
+	componentWrapperDecorator((story) =>
+		`<sh-field-container > ${story} </sh-field-container>`
+	),
 ];
