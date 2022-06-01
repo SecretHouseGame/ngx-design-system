@@ -1,0 +1,138 @@
+@import '../../../../../assets/styles';
+
+
+@keyframes spinner {
+    0% { transform: rotate(0deg) }
+    to { transform: rotate(359deg) }
+}
+
+:host{
+
+    .drag-area{
+        height: 130px;
+        width: 290px;
+        position: relative;
+        cursor: pointer;
+        border: 2px dashed $gray-600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 10px 0;
+
+        .drag-text{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            color: $gray-600;
+            font-size: 15px;
+            transition: $transition;
+            text-align: center;
+
+            .icon-container{
+
+                .icon{
+                    width: 30px;
+                    height: 30px;
+                    fill: $gray-600;
+                    margin-bottom: 5px;
+                }
+
+                // Spinner
+
+                .gg-spinner {
+                    transform: scale(var(--ggs,1));
+                    margin-bottom: 10px;
+                }
+
+                .gg-spinner,
+                .gg-spinner::after,
+                .gg-spinner::before {
+                    box-sizing: border-box;
+                    position: relative;
+                    display: block;
+                    width: 30px;
+                    height: 30px
+                }
+
+                .gg-spinner::after,
+                .gg-spinner::before {
+                    content: "";
+                    position: absolute;
+                    border-radius: 50%
+                }
+
+                .gg-spinner::before {
+                    animation: spinner 1s
+                    cubic-bezier(.6,0,.4,1) infinite;
+                    border: 3px solid transparent;
+                    border-top-color: currentColor
+                }
+
+                .gg-spinner::after {
+                    border: 3px solid;
+                    opacity: .2
+                }
+            }
+        }
+
+        &:hover, &.uploading{
+            &:not(.failed-upload):not(.failed-type) {
+                border: 2px dashed $brand-primary;
+
+                .drag-text{
+                    color: $brand-primary;
+    
+                    svg{
+                        fill: $brand-primary;
+    
+                        * {
+                         fill: $brand-primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.failed-upload, &.failed-type{
+            border: 2px dashed $red;
+
+            .drag-text{
+                color: $red;
+
+                svg{
+                    fill: $red;
+                    color: $red;
+                }
+            }
+        }
+        
+        input{
+            display: none;
+        }
+    }
+
+    .file-preview{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        img{
+            width: 280px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            opacity: .9;
+        }
+
+        .icon{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            fill: white;
+            filter: drop-shadow(1px 2px 2px rgb(0 0 0 / 0.2));
+        }
+    }
+}

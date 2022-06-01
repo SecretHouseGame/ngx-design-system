@@ -1,0 +1,12 @@
+@import "../../../../assets/styles";
+
+.list {
+	display: flex;
+	flex-direction: column;
+
+	margin: .25rem;
+
+	&__title {
+		margin: 0 0 .25rem;
+	}
+}

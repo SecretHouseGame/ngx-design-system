@@ -1,0 +1,8 @@
+<div class="modal-container" *ngIf="modalState$ | async as modalState" [class.open]="modalState === 'open'"
+	(click)="closeModal()">
+	<div class="modal-content" (click)="$event.stopPropagation()">
+		<div class="btn-close" (click)="closeModal()">
+		</div>
+		<ng-content></ng-content>
+	</div>
+</div>

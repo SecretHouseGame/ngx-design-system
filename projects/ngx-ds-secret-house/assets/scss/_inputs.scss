@@ -1,0 +1,10 @@
+@import "../styles";
+
+.fields-inputs {
+	&__checkbox {
+		display: flex;
+		align-items: center;
+
+		width: auto;
+	}
+}

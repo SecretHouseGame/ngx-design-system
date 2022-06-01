@@ -1,0 +1,44 @@
+// also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
+import { Story, Meta} from '@storybook/angular/types-6-0';
+import { moduleMetadata, componentWrapperDecorator } from '@storybook/angular';
+import { InputDateComponent } from '../../projects/ngx-ds-secret-house/src/lib/components/form/input-date/input-date.component';
+import { FieldContainerComponent } from '../../projects/ngx-ds-secret-house/src/lib/components/form/field-container/field-container.component';
+
+import { CommonModule } from '@angular/common';
+
+// More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
+export default {
+  title: 'Form/Input Date',
+  component: InputDateComponent,
+  decorators: [
+    moduleMetadata({
+      //👇 Imports both components to allow component composition with Storybook
+      declarations: [FieldContainerComponent, InputDateComponent],
+      imports: [CommonModule],
+    }),
+    //👇 Wraps our stories with a decorator
+    componentWrapperDecorator(story => `<div>${story}</div>`),
+  ],
+  // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes
+  argTypes: {
+    // backgroundColor: { control: 'color' },
+  },
+} as Meta;
+
+// More on component templates: https://storybook.js.org/docs/angular/writing-stories/introduction#using-args
+const Template: Story<InputDateComponent> = (args) => ({
+  props: args,
+});
+
+export const Default = Template.bind({});
+// More on args: https://storybook.js.org/docs/angular/writing-stories/args
+Default.args = {
+  label: "Choisissez une date",
+  help: "Ceci est une indication pour aider l'utilisateur",
+  placeholder: 'DD/MM/YY',
+  name: 'form-date',
+};
+
+Default.decorators = [
+  componentWrapperDecorator((story) => `<sh-field-container> ${story} </sh-field-container>`),
+];

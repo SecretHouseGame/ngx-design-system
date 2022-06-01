@@ -1,0 +1,34 @@
+name: deploy staging
+
+# Run this workflow every time a new commit pushed on develop to update storybook and use it on other feature
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+      tags:
+        required: true
+        description: 'Test scenario tags'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 16.x ]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install libraries
+        run: npm install
+      - name: Build App
+        run: npm run build-storybook
+      - name: install firebase
+        run: npm i firebase-tools -g
+      - name: deploy
+        run: firebase hosting:channel:deploy ${{ github.ref_name }} --token ${{ secrets.FIREBASE_TOKEN }}

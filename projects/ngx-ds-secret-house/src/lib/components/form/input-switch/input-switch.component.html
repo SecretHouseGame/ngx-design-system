@@ -1,0 +1,10 @@
+<div class="field-group">
+    <div class="inline-field">
+        <div class="switch">
+            <input type="checkbox" [checked]="isChecked" [id]="id" [disabled]="disabled">
+            <span class="slider round" [ngClass]="{'disabled': disabled}"></span>
+        </div>
+        <label class="field-label" [for]="id">{{ label }}</label>
+    </div>
+	<small class="field-help" *ngIf="help">{{ help }}</small>
+</div>
