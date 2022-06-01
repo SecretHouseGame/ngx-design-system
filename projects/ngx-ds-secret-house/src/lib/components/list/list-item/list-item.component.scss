@@ -1,0 +1,79 @@
+@import "../../../../../assets/styles";
+
+.list__item {
+	background-color: $white;
+	color: $black;
+
+	padding: .75rem;
+	margin: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	transition: .3s;
+
+	&:hover {
+		cursor: pointer;
+		background-color: $gray-50;
+	}
+
+	&:active:not(.list__item--disabled) {
+		transform: scale(.98);
+	}
+
+	&__text {
+		display: flex;
+		align-items: center;
+
+		p {
+			margin: 0;
+		}
+
+		span {
+			color: $gray-500;
+			font-weight: 300;
+		}
+
+		img {
+			margin-right: .75rem;
+			max-width: 25px;
+
+			border-radius: 50%;
+		}
+	}
+
+	&__icon {
+		height: 16px;
+	}
+
+	&.list__item--tiny {
+		padding: .25rem .75rem;
+
+		* {
+			font-size: $size-sm;
+		}
+
+		img {
+			max-width: 20px;
+		}
+	}
+
+	&.list__item--disabled {
+		background-color: $gray-100;
+
+		* {
+			color: $gray-400;
+			font-style: italic;
+		}
+
+		img {
+			opacity: .5;
+			transform: rotate(15deg);
+		}
+
+		&:hover {
+			cursor: not-allowed;
+		}
+	}
+}
