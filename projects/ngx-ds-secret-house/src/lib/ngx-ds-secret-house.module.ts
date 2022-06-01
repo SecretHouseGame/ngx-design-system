@@ -56,7 +56,7 @@ const COMPONENTS = [
 ];
 
 @NgModule({
-	declarations: [NgxDsSecretHouseComponent, ...COMPONENTS, ModalComponent],
+	declarations: [NgxDsSecretHouseComponent, ...COMPONENTS],
 	imports: [
 		FormsModule,
 		ReactiveFormsModule,

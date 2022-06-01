@@ -34,3 +34,4 @@ export * from './lib/components/notification/notification.component';
 
 // Modal
 export * from './lib/components/modal/modal.component';
+export * from './lib/services/modal.service';
