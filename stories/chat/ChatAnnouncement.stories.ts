@@ -3,7 +3,7 @@ import {Meta, Story} from "@storybook/angular";
 import { ChatAnnouncementComponent } from "../../projects/ngx-ds-secret-house/src/lib/components/chat/chat-announcement/chat-announcement.component";
 
 export default {
-	title: "Chat Announcement",
+	title: "SecretHouse/Chat Announcement",
 	component: ChatAnnouncementComponent
 } as Meta;
 
