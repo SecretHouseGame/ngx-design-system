@@ -42,3 +42,6 @@ export * from './lib/services/modal.service';
 
 // Interfaces
 export * from './lib/components/interfaces/checkbox-option';
+
+// Card
+export * from './lib/components/card/card.component';
