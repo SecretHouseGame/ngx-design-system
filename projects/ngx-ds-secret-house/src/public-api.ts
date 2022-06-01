@@ -32,6 +32,13 @@ export * from './lib/components/form/input-date/input-date.component';
 export * from './lib/components/buttons/button/button.component';
 export * from './lib/components/buttons/button-action/button-action.component';
 
+// Table
+export * from './lib/components/table/table.component';
+export * from './lib/interfaces/table';
+
 // Alert & Notifications
 export * from './lib/components/alert/alert.component';
 export * from './lib/components/notification/notification.component';
+
+// Interfaces
+export * from './lib/components/interfaces/checkbox-option';
