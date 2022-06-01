@@ -39,3 +39,6 @@ export * from './lib/interfaces/table';
 // Alert & Notifications
 export * from './lib/components/alert/alert.component';
 export * from './lib/components/notification/notification.component';
+
+// Interfaces
+export * from './lib/components/interfaces/checkbox-option';

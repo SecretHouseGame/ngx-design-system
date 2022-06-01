@@ -1,8 +1,8 @@
 <sh-field-container [for]="id" [label]="label" [help]="help">
     <div class="fields-inputs">
-        <label *ngFor="let option of options" for="{{ option.id }}" class="flex">
-            <input type="radio" value="{{ option.value }}" id="{{ option.id }}" name="{{name}}" />
-            {{ option.text }}
+        <label *ngFor="let option of options" for="{{ option.id }}" [className]="option.disabled ? 'disabled flex option-label' : 'flex option-label'">
+            <input class="option-box" type="radio" value="{{ option.value }}" id="{{ option.id }}" name="{{name}}" [disabled]="option.disabled" [checked]="option.checked"/>
+            <span class="option-text">{{ option.text }}</span>
         </label>
     </div>
 </sh-field-container>
