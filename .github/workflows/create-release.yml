@@ -11,7 +11,7 @@ jobs:
       - name: release-please-action
         uses: google-github-actions/release-please-action@v3.1.1
         with:
-          path: dist/ngx-ds-secret-house
+          path: projects/ngx-ds-secret-house
           token: ${{ secrets.TOKEN_GITHUB }}
           release-type: node
           default-branch: main
