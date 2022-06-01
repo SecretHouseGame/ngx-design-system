@@ -13,8 +13,8 @@ export class InputSwitchComponent implements OnInit {
 	@Input() label: string = '';
 	@Input() help: string = '';
 	@Input() for: string = '';
-  
-  isChecked: boolean = false;
+	@Input() isChecked: boolean = false;
+	@Input() disabled: boolean = false;
 
 	constructor() {}
 
