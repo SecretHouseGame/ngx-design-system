@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'sh-input-file',
@@ -12,6 +12,8 @@ export class InputFileComponent implements OnInit {
   @Input() name: string = '';
   @Input() label: string = '';
   @Input() help: string = '';
+  @Input() state: string = '';
+  @Input() path: string = 'https://picsum.photos/seed/picsum/200/300';
 
   constructor() { }
 
