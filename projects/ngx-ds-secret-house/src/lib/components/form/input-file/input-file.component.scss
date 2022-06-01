@@ -78,7 +78,7 @@
         }
 
         &:hover, &.uploading{
-            &:not(.failed) {
+            &:not(.failed-upload):not(.failed-type) {
                 border: 2px dashed $brand-primary;
 
                 .drag-text{
@@ -95,7 +95,7 @@
             }
         }
 
-        &.failed{
+        &.failed-upload, &.failed-type{
             border: 2px dashed $red;
 
             .drag-text{
