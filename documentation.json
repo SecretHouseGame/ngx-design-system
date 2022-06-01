@@ -249,7 +249,7 @@
     "components": [
         {
             "name": "AvatarComponent",
-            "id": "component-AvatarComponent-8d821feee52ac696dff0dc05da0bfaa0daa3ec49adfa894cf01705a3371c9f3c73e363bd22d4653a6247c54a34aa01a9051153b01943f3672fce2bc2305b63ee",
+            "id": "component-AvatarComponent-85cdd2d24050223c1368be0068d8158cf770d7c22fa7d97967a4e8cbaae7e0d2c20942cf469364ac85d8649204f2984188e78032ff34255906c64d3f15d5f44b",
             "file": "projects/ngx-ds-secret-house/src/lib/components/utils/avatar/avatar.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -265,7 +265,26 @@
                 "./avatar.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "avatarAlt",
+                    "defaultValue": "\"Avatar Icon\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "link",
+                    "defaultValue": "\"https://upload.wikimedia.org/wikipedia/commons/9/9a/No_avatar.png\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
             "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [
@@ -275,7 +294,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 12,
+                    "line": 15,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -287,11 +306,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'sh-avatar',\n  templateUrl: './avatar.component.html',\n  styleUrls: ['./avatar.component.scss']\n})\nexport class AvatarComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, OnInit, Input } from '@angular/core';\n\n@Component({\n  selector: 'sh-avatar',\n  templateUrl: './avatar.component.html',\n  styleUrls: ['./avatar.component.scss']\n})\nexport class AvatarComponent implements OnInit {\n\n  @Input() link:string = \"https://upload.wikimedia.org/wikipedia/commons/9/9a/No_avatar.png\";\n  @Input() avatarAlt:string = \"Avatar Icon\";\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ":host{\r\n    img{\r\n        border-radius: 50%;\r\n    }\r\n}\r\n",
+                    "data": ":host{\r\n    .size{\r\n        &-1{\r\n            img{\r\n                height: 1rem;\r\n                width: 1rem;\r\n            }\r\n        }\r\n        &-2{\r\n            img{\r\n                height: 2rem;\r\n                width: 2rem;\r\n            }\r\n        }\r\n        &-3{\r\n            img{\r\n                height: 3rem;\r\n                width: 3rem;\r\n            }    \r\n        }\r\n        &-4{\r\n            img{\r\n                height: 4rem;\r\n                width: 4rem;\r\n            }\r\n        }\r\n        &-5{\r\n            img{\r\n                height: 5rem;\r\n                width: 5rem;\r\n            }\r\n        }\r\n        &-6{\r\n            img{\r\n                height: 6rem;\r\n                width: 6rem;\r\n            }\r\n        }\r\n        &-7{\r\n            img{\r\n                height: 7rem;\r\n                width: 7rem;\r\n            }\r\n        }\r\n    }\r\n    img{\r\n        height: 4rem;\r\n        width: 4rem;\r\n        border-radius: 50%;\r\n    }\r\n}\r\n",
                     "styleUrl": "./avatar.component.scss"
                 }
             ],
@@ -302,12 +321,12 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 8
+                "line": 11
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<img src=\"{{link}}\" alt=\"avatarIcon\">\n"
+            "templateData": "<img src=\"{{link}}\" alt=\"{{avatarAlt}}\">\r\n"
         },
         {
             "name": "ButtonActionComponent",
@@ -2120,13 +2139,13 @@
     "modules": [
         {
             "name": "NgxDsSecretHouseModule",
-            "id": "module-NgxDsSecretHouseModule-ce3bb35b19bcef98abf52af934205fbb34003ebfd8e0c190ca12a4c05dd10f78a6cb98c0343ebec7b2e0ec48df81fd91c66fd7d47e037010b7b66951ef6e76d4",
+            "id": "module-NgxDsSecretHouseModule-89f7a1a57403ca217c7ea04407cd5efc41e41762dd49c5fc046a283f38bcedf6a1710cc24752410658614412e3c8a0924858d645f39b786fca7b14632af8846d",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/ngx-ds-secret-house/src/lib/ngx-ds-secret-house.module.ts",
             "methods": [],
-            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';\r\nimport { ReactiveFormsModule, FormsModule } from '@angular/forms';\r\nimport { NgxDsSecretHouseComponent } from './ngx-ds-secret-house.component';\r\n\r\n// Forms\r\nimport { FieldContainerComponent } from './components/form/field-container/field-container.component';\r\nimport { InputTextComponent } from './components/form/input-text/input-text.component';\r\nimport { NavbarComponent } from './components/navbar/navbar.component';\r\nimport { NavbarLinkComponent } from './components/navbar/navbar-link/navbar-link.component';\r\nimport { NavbarSectionComponent } from './components/navbar/navbar-section/navbar-section.component';\r\nimport { RouterModule } from '@angular/router';\r\n\r\n// Input\r\nimport { InputTextareaComponent } from './components/form/input-textarea/input-textarea.component';\r\nimport { InputSelectComponent } from './components/form/input-select/input-select.component';\r\nimport { InputPasswordComponent } from './components/form/input-password/input-password.component';\r\nimport { InputSwitchComponent } from './components/form/input-switch/input-switch.component';\r\nimport { InputRadioComponent } from './components/form/input-radio/input-radio.component';\r\nimport { InputCheckboxComponent } from './components/form/input-checkbox/input-checkbox.component';\r\nimport { InputDateComponent } from './components/form/input-date/input-date.component';\r\nimport { InputSearchComponent } from './components/form/input-search/input-search.component';\r\nimport { InputFileComponent } from './components/form/input-file/input-file.component';\r\n\r\n// Buttons\r\nimport { ButtonComponent } from './components/buttons/button/button.component';\r\nimport { ButtonActionComponent } from './components/buttons/button-action/button-action.component';\nimport { AvatarComponent } from './avatar/avatar.component';\r\n\r\nconst COMPONENTS = [\r\n\tFieldContainerComponent,\r\n\tInputTextComponent,\r\n\tInputPasswordComponent,\r\n\tInputTextareaComponent,\r\n\tInputSelectComponent,\r\n\tInputSwitchComponent,\r\n\tInputRadioComponent,\r\n\tInputCheckboxComponent,\r\n\tInputDateComponent,\r\n\tInputSearchComponent,\r\n\tInputFileComponent,\r\n\tButtonComponent,\r\n\tNavbarComponent,\r\n\tNavbarLinkComponent,\r\n\tNavbarSectionComponent,\r\n\tButtonActionComponent\r\n];\r\n\r\n@NgModule({\r\n\tdeclarations: [NgxDsSecretHouseComponent, ...COMPONENTS, AvatarComponent],\r\n\timports: [\r\n\t\tFormsModule,\r\n\t\tReactiveFormsModule,\r\n\t\tRouterModule,\r\n\t\tCommonModule,\r\n\t],\r\n\texports: [NgxDsSecretHouseComponent, ...COMPONENTS],\r\n\tschemas: [CUSTOM_ELEMENTS_SCHEMA],\r\n})\r\nexport class NgxDsSecretHouseModule {}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';\r\nimport { ReactiveFormsModule, FormsModule } from '@angular/forms';\r\nimport { NgxDsSecretHouseComponent } from './ngx-ds-secret-house.component';\r\n\r\n// Forms\r\nimport { FieldContainerComponent } from './components/form/field-container/field-container.component';\r\nimport { InputTextComponent } from './components/form/input-text/input-text.component';\r\nimport { NavbarComponent } from './components/navbar/navbar.component';\r\nimport { NavbarLinkComponent } from './components/navbar/navbar-link/navbar-link.component';\r\nimport { NavbarSectionComponent } from './components/navbar/navbar-section/navbar-section.component';\r\nimport { RouterModule } from '@angular/router';\r\n\r\n// Input\r\nimport { InputTextareaComponent } from './components/form/input-textarea/input-textarea.component';\r\nimport { InputSelectComponent } from './components/form/input-select/input-select.component';\r\nimport { InputPasswordComponent } from './components/form/input-password/input-password.component';\r\nimport { InputSwitchComponent } from './components/form/input-switch/input-switch.component';\r\nimport { InputRadioComponent } from './components/form/input-radio/input-radio.component';\r\nimport { InputCheckboxComponent } from './components/form/input-checkbox/input-checkbox.component';\r\nimport { InputDateComponent } from './components/form/input-date/input-date.component';\r\nimport { InputSearchComponent } from './components/form/input-search/input-search.component';\r\nimport { InputFileComponent } from './components/form/input-file/input-file.component';\r\n\r\n// Buttons\r\nimport { ButtonComponent } from './components/buttons/button/button.component';\r\nimport { ButtonActionComponent } from './components/buttons/button-action/button-action.component';\r\nimport { AvatarComponent } from './components/utils/avatar/avatar.component';\r\n\r\nconst COMPONENTS = [\r\n\tFieldContainerComponent,\r\n\tInputTextComponent,\r\n\tInputPasswordComponent,\r\n\tInputTextareaComponent,\r\n\tInputSelectComponent,\r\n\tInputSwitchComponent,\r\n\tInputRadioComponent,\r\n\tInputCheckboxComponent,\r\n\tInputDateComponent,\r\n\tInputSearchComponent,\r\n\tInputFileComponent,\r\n\tButtonComponent,\r\n\tNavbarComponent,\r\n\tNavbarLinkComponent,\r\n\tNavbarSectionComponent,\r\n\tButtonActionComponent,\r\n\tAvatarComponent\r\n];\r\n\r\n@NgModule({\r\n\tdeclarations: [NgxDsSecretHouseComponent, ...COMPONENTS],\r\n\timports: [\r\n\t\tFormsModule,\r\n\t\tReactiveFormsModule,\r\n\t\tRouterModule,\r\n\t\tCommonModule,\r\n\t],\r\n\texports: [NgxDsSecretHouseComponent, ...COMPONENTS],\r\n\tschemas: [CUSTOM_ELEMENTS_SCHEMA],\r\n})\r\nexport class NgxDsSecretHouseModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -2198,6 +2217,9 @@
                 {
                     "type": "exports",
                     "elements": [
+                        {
+                            "name": "AvatarComponent"
+                        },
                         {
                             "name": "ButtonActionComponent"
                         },
@@ -2272,7 +2294,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "[]",
-                "defaultValue": "[\r\n\tFieldContainerComponent,\r\n\tInputTextComponent,\r\n\tInputPasswordComponent,\r\n\tInputTextareaComponent,\r\n\tInputSelectComponent,\r\n\tInputSwitchComponent,\r\n\tInputRadioComponent,\r\n\tInputCheckboxComponent,\r\n\tInputDateComponent,\r\n\tInputSearchComponent,\r\n\tInputFileComponent,\r\n\tButtonComponent,\r\n\tNavbarComponent,\r\n\tNavbarLinkComponent,\r\n\tNavbarSectionComponent,\r\n\tButtonActionComponent\r\n]"
+                "defaultValue": "[\r\n\tFieldContainerComponent,\r\n\tInputTextComponent,\r\n\tInputPasswordComponent,\r\n\tInputTextareaComponent,\r\n\tInputSelectComponent,\r\n\tInputSwitchComponent,\r\n\tInputRadioComponent,\r\n\tInputCheckboxComponent,\r\n\tInputDateComponent,\r\n\tInputSearchComponent,\r\n\tInputFileComponent,\r\n\tButtonComponent,\r\n\tNavbarComponent,\r\n\tNavbarLinkComponent,\r\n\tNavbarSectionComponent,\r\n\tButtonActionComponent,\r\n\tAvatarComponent\r\n]"
             },
             {
                 "name": "context",
@@ -2308,16 +2330,6 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/form/InputPassword.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "stories/form/InputRadio.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -2328,17 +2340,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/form/InputSwitch.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "stories/form/InputSelect.stories.ts",
+                "file": "stories/form/InputPassword.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -2368,7 +2370,37 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "stories/form/InputSwitch.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/form/InputSelect.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "stories/form/InputTextarea.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/utils/Avatar.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -2537,16 +2569,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/buttons/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args) => ({\r\n\tprops: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "stories/form/InputCheckbox.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -2567,16 +2589,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/form/InputPassword.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<InputPasswordComponent>",
-                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "stories/form/InputRadio.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -2587,20 +2599,10 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/form/InputSwitch.stories.ts",
+                "file": "stories/form/InputPassword.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<InputSwitchComponent>",
-                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "stories/form/InputSelect.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<InputSelectComponent>",
+                "type": "Story<InputPasswordComponent>",
                 "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
             },
             {
@@ -2627,11 +2629,51 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "stories/form/InputSwitch.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<InputSwitchComponent>",
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/form/InputSelect.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<InputSelectComponent>",
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "stories/form/InputTextarea.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<InputTextareaComponent>",
                 "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/utils/Avatar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<AvatarComponent>",
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/buttons/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args) => ({\r\n\tprops: args,\r\n})"
             }
         ],
         "functions": [],
@@ -2647,7 +2689,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "[]",
-                    "defaultValue": "[\r\n\tFieldContainerComponent,\r\n\tInputTextComponent,\r\n\tInputPasswordComponent,\r\n\tInputTextareaComponent,\r\n\tInputSelectComponent,\r\n\tInputSwitchComponent,\r\n\tInputRadioComponent,\r\n\tInputCheckboxComponent,\r\n\tInputDateComponent,\r\n\tInputSearchComponent,\r\n\tInputFileComponent,\r\n\tButtonComponent,\r\n\tNavbarComponent,\r\n\tNavbarLinkComponent,\r\n\tNavbarSectionComponent,\r\n\tButtonActionComponent\r\n]"
+                    "defaultValue": "[\r\n\tFieldContainerComponent,\r\n\tInputTextComponent,\r\n\tInputPasswordComponent,\r\n\tInputTextareaComponent,\r\n\tInputSelectComponent,\r\n\tInputSwitchComponent,\r\n\tInputRadioComponent,\r\n\tInputCheckboxComponent,\r\n\tInputDateComponent,\r\n\tInputSearchComponent,\r\n\tInputFileComponent,\r\n\tButtonComponent,\r\n\tNavbarComponent,\r\n\tNavbarLinkComponent,\r\n\tNavbarSectionComponent,\r\n\tButtonActionComponent,\r\n\tAvatarComponent\r\n]"
                 }
             ],
             "projects/ngx-ds-secret-house/src/test.ts": [
@@ -2715,28 +2757,6 @@
                     "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
                 }
             ],
-            "stories/form/InputPassword.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/form/InputPassword.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/form/InputPassword.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<InputPasswordComponent>",
-                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
-                }
-            ],
             "stories/form/InputRadio.stories.ts": [
                 {
                     "name": "Default",
@@ -2759,12 +2779,12 @@
                     "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
                 }
             ],
-            "stories/form/InputSwitch.stories.ts": [
+            "stories/form/InputPassword.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "stories/form/InputSwitch.stories.ts",
+                    "file": "stories/form/InputPassword.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -2774,32 +2794,10 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "stories/form/InputSwitch.stories.ts",
+                    "file": "stories/form/InputPassword.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<InputSwitchComponent>",
-                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
-                }
-            ],
-            "stories/form/InputSelect.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/form/InputSelect.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/form/InputSelect.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<InputSelectComponent>",
+                    "type": "Story<InputPasswordComponent>",
                     "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
                 }
             ],
@@ -2877,6 +2875,50 @@
                     "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
                 }
             ],
+            "stories/form/InputSwitch.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputSwitch.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputSwitch.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<InputSwitchComponent>",
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "stories/form/InputSelect.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputSelect.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/form/InputSelect.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<InputSelectComponent>",
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+                }
+            ],
             "stories/form/InputTextarea.stories.ts": [
                 {
                     "name": "Default",
@@ -2926,6 +2968,28 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<InputTextareaComponent>",
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "stories/utils/Avatar.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/utils/Avatar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/utils/Avatar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<AvatarComponent>",
                     "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
                 }
             ],
@@ -3244,7 +3308,7 @@
                 "linktype": "component",
                 "name": "AvatarComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -3634,6 +3698,26 @@
             },
             {
                 "filePath": "stories/form/InputTextarea.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/utils/Avatar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/utils/Avatar.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

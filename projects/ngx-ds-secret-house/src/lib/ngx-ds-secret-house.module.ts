@@ -70,7 +70,7 @@ const COMPONENTS = [
 ];
 
 @NgModule({
-	declarations: [NgxDsSecretHouseComponent, ...COMPONENTS, AvatarComponent],
+	declarations: [NgxDsSecretHouseComponent, ...COMPONENTS],
 	imports: [
 		FormsModule,
 		ReactiveFormsModule,
