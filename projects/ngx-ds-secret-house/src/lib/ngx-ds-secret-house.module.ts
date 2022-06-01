@@ -29,6 +29,10 @@ import { ButtonActionComponent } from './components/buttons/button-action/button
 // Alert & Notifications
 import { AlertComponent } from './components/alert/alert.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { CardComponent } from './components/card/card.component';
+
+// Table
+import { TableComponent } from './components/table/table.component';
 
 // Modal
 import { ModalComponent } from './components/modal/modal.component';
@@ -46,13 +50,15 @@ const COMPONENTS = [
 	InputSearchComponent,
 	InputFileComponent,
 	ButtonComponent,
+	ButtonActionComponent,
 	NavbarComponent,
 	NavbarLinkComponent,
 	NavbarSectionComponent,
-	ButtonActionComponent,
+	TableComponent,
 	AlertComponent,
 	NotificationComponent,
-	ModalComponent
+	ModalComponent,
+	CardComponent
 ];
 
 @NgModule({

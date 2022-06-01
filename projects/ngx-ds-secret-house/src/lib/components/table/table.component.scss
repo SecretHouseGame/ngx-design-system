@@ -1,0 +1,25 @@
+@import "../../../../assets/scss/variables";
+
+table {
+	background-color: $white;
+	color: $blue-dark;
+	border-collapse: collapse;
+
+	thead {
+		th {
+			text-align: left;
+		}
+	}
+
+	tbody {
+		tr:nth-child(2n - 1) {
+			background-color: $gray-100;
+		}
+	}
+
+	th,
+	td {
+		padding: 15px 15px;
+		min-width: 100px;
+	}
+}

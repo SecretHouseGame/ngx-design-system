@@ -39,6 +39,7 @@ testem.log
 
 # StoryBook static file
 /storybook-static/
+documentation.json
 
 # System files
 .DS_Store

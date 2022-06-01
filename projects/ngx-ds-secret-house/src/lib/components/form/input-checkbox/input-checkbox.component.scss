@@ -1,0 +1,93 @@
+@import "../../../../../assets/scss/inputs";
+
+:host {
+	input[type="checkbox"] {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+        opacity: .75;
+		border-radius: 4px;
+		background: #fff;
+		border: 1px solid $gray-400;
+		padding: 7.5px;
+        cursor: pointer;
+
+        &:hover{
+            opacity: 1;
+        }
+
+        &:disabled {
+            opacity: .9;
+            pointer-events: none;
+            background: #EAEAEA;
+            cursor: default;
+
+            &:checked{
+                background: #EAEAEA;
+                border: 1px solid $gray-400;
+
+                & + .fields-inputs__checkmark {
+                    color: $gray-400;
+                }
+            }
+        }
+	}
+
+	input[type="checkbox"]:checked {
+		background: $brand-primary;
+		position: relative;
+		border-color: transparent;
+		box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+
+		& + .fields-inputs__checkmark {
+			display: flex;
+            justify-content: center;
+            align-items: center;
+			position: absolute;
+            width: 28px;
+            height: 28px;
+			color: $white;
+		}
+	}
+}
+
+.fields-inputs {
+	&__container {
+		margin: .5rem 0;
+	}
+
+	&__checkbox {
+		display: flex;
+		align-items: center;
+		position: relative;
+        cursor: pointer;
+		width: auto;
+		margin-bottom: -.25rem;
+
+		input {
+			transition: .3s;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+		}
+
+		.fields-inputs__checkmark {
+			display: none;
+			transition: .3s;
+		}
+
+		span:not(.fields-inputs__checkmark) {
+			margin-left: .5rem;
+			margin-top: .125rem;
+			font-size: 14px;
+			font-weight: 300;
+		}
+	}
+
+	small {
+		font-weight: 300;
+		color: $gray-700;
+		margin-left: .25rem;
+	}
+}

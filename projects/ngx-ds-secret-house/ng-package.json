@@ -9,6 +9,7 @@
 		"./assets/styles.scss",
 		"./assets/scss/_variables.scss",
 		"./assets/scss/_buttons.scss",
+		"./assets/scss/_inputs.scss",
 		"./assets/fonts/Montserrat.ttf"
 	]
 }

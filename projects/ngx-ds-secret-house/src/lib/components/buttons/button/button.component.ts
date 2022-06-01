@@ -23,5 +23,4 @@ export class ButtonComponent implements OnInit {
 		node.type = 'text/javascript';
 		document.getElementsByTagName('head')[0].appendChild(node);
 	}
-
 }
