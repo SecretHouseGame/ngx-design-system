@@ -75,26 +75,122 @@
     "directives": [],
     "components": [
         {
-            "name": "BtnPrimaryComponent",
-            "id": "component-BtnPrimaryComponent-c567f5f07c9dc0b681d0840793c95e8dcda09b069acb60af036eec29700ad7187702c66c97b2aaff8c43fc5e945ab11d04cf90c3e1a2fdf705b9ce4df7774f36",
-            "file": "projects/ngx-ds-secret-house/src/lib/components/buttons/btn-primary/btn-primary.component.ts",
+            "name": "ChatAnnouncementComponent",
+            "id": "component-ChatAnnouncementComponent-463e452e195736fa6b1572a20c5e818b5f2829a6f403993a75cd84da92b7cfc34109b393cebd90caf0980544084e885fbf222cf13f191c060e3af5f749f64b5c",
+            "file": "projects/ngx-ds-secret-house/src/lib/components/chat/chat-announcement/chat-announcement.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "sh-btn-primary",
+            "selector": "sh-chat-announcement",
             "styleUrls": [
-                "./btn-primary.component.scss"
+                "./chat-announcement.component.scss"
             ],
             "styles": [],
             "templateUrl": [
-                "./btn-primary.component.html"
+                "./chat-announcement.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "cashPrize",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "content",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "dare",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "secret",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "targetName",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
             "outputsClass": [],
-            "propertiesClass": [],
+            "propertiesClass": [
+                {
+                    "name": "isAnnouncement",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "isDare",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                },
+                {
+                    "name": "isElimination",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 20
+                },
+                {
+                    "name": "isVote",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                }
+            ],
             "methodsClass": [
                 {
                     "name": "ngOnInit",
@@ -102,7 +198,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 13,
+                    "line": 24,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -114,12 +210,12 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, OnInit, Output } from '@angular/core';\n\n@Component({\n\tselector: 'sh-btn-primary',\n\ttemplateUrl: './btn-primary.component.html',\n\tstyleUrls: ['./btn-primary.component.scss']\n})\nexport class BtnPrimaryComponent implements OnInit {\n\n\tconstructor () {\n\t}\n\n\tngOnInit (): void {\n\t}\n}\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'sh-chat-announcement',\n  templateUrl: './chat-announcement.html',\n  styleUrls: ['./chat-announcement.component.scss']\n})\nexport class ChatAnnouncementComponent implements OnInit {\n\n\t@Input() type: string = \"\";\n\t@Input() targetName: string = \"\";\n\t@Input() dare: string = \"\";\n\t@Input() cashPrize: string = \"\";\n\t@Input() secret: string = \"\";\n\t@Input() content: string = \"\";\n\n\tisAnnouncement: boolean = false;\n\tisDare: boolean = false;\n\tisVote: boolean = false;\n\tisElimination: boolean = false;\n\n\tconstructor() { }\n\n\tngOnInit(): void {\n\t\tif (this.type === \"announcement\") {\n\t\t\tthis.isAnnouncement = true;\n\t\t} else if (this.type === \"dare\") {\n\t\t\tthis.isDare = true;\n\t\t} else if (this.type === \"vote\") {\n\t\t\tthis.isVote = true;\n\t\t} else if (this.type === \"elimination\") {\n\t\t\tthis.isElimination = true;\n\t\t} else {\n\t\t\tthis.isAnnouncement = true;\n\t\t}\n\n\t\tif (this.targetName !== \"\") {\n\t\t\tthis.targetName = this.targetName.charAt(0).toUpperCase() + this.targetName.slice(1);\n\t\t}\n\t}\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import \"../../../../../assets/scss/buttons\";\n",
-                    "styleUrl": "./btn-primary.component.scss"
+                    "data": ".announcement {\r\n\ttext-align: center;\r\n\tfont-style: italic;\r\n\r\n\t&.elimination {\r\n\t\tline-height: 5px;\r\n\t}\r\n}\r\n",
+                    "styleUrl": "./chat-announcement.component.scss"
                 }
             ],
             "stylesData": "",
@@ -129,12 +225,142 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 8
+                "line": 20
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<button class=\"btn btn-primary\">\n\t<ng-content></ng-content>\n</button>\n"
+            "templateData": "<div *ngIf=\"isAnnouncement\" class=\"announcement\">\n\t<p>{{content}}</p>\n</div>\n\n<div *ngIf=\"isDare\" class=\"announcement dare\">\n\t<p><strong>{{targetName}}</strong>, tu dois {{dare}} pour {{cashPrize}}€.</p>\n</div>\n\n<div *ngIf=\"isVote\" class=\"announcement vote\">\n\t<p>Un nouveau vote va commencer !</p>\n</div>\n\n<div *ngIf=\"isElimination\" class=\"announcement elimination\">\n\t<p><strong>{{targetName}}</strong> a été éliminé.</p>\n\t<p>Son secret était... </p>\n\t<p><strong>{{secret}}</strong></p>\n</div>\n"
+        },
+        {
+            "name": "ChatMessageComponent",
+            "id": "component-ChatMessageComponent-2a29067a060532698d1c209b3e25c3e30bbef8fd08535e88e66b2e6689da09d3b0fb8fe4cb9aaab78221037c8970f1a1e5323881071c59c38cb366bc91962dce",
+            "file": "projects/ngx-ds-secret-house/src/lib/components/chat/chat-message/chat-message.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "sh-chat-message",
+            "styleUrls": [
+                "./chat-message.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./chat-message.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "content",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "imageUrl",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "isCurrentUser",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "isActing",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "isAnnouncing",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "isTalking",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'sh-chat-message',\n  templateUrl: './chat-message.component.html',\n  styleUrls: ['./chat-message.component.scss']\n})\nexport class ChatMessageComponent implements OnInit {\n\n\t@Input() content : string = \"\";\n\t@Input() imageUrl : string = \"\";\n\t@Input() type : string = \"\";\n\t@Input() isCurrentUser : boolean = true;\n\n\tisTalking: boolean = false;\n\tisActing: boolean = false;\n\tisAnnouncing: boolean = false;\n\n\tconstructor() {\n\n\t}\n\n\tngOnInit() {\n\t\tif (this.imageUrl === \"\") {\n\t\t\tthis.imageUrl = \"assets/images/default-pp.jpg\"\n\t\t}\n\n\t\tif (this.type === \"talk\") {\n\t\t\tthis.isTalking = true;\n\t\t} else if (this.type === \"acting\") {\n\t\t\tthis.isActing = true;\n\t\t\tthis.content = this.content.replace(/[*]/, \"\")\n\t\t\tthis.content = this.content.substring(0, this.content.length - 1);\n\t\t} else {\n\t\t\tthis.isTalking = true;\n\t\t}\n\t}\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".message-content {\r\n\tdisplay: flex;\r\n\tflex-direction: row;\r\n\talign-items: center;\r\n\timg {\r\n\t\theight: 30px;\r\n\t\twidth: 30px;\r\n\t\tborder-radius: 15px;\r\n\t}\r\n\tp{\r\n\t\tmax-width: 300px;\r\n\t\tpadding: 7px 20px;\r\n\t}\r\n}\r\n\r\n.left {\r\n\timg {\r\n\t\tmargin-right: 7px;\r\n\t}\r\n\tp {\r\n\t\tborder-radius: 7px 7px 7px 0;\r\n\t\tbackground-color: #f6f6f6;\r\n\t}\r\n\t&.acting p {\r\n\t\tbackground-color: #eeeeee;\r\n\t}\r\n}\r\n\r\n.right {\r\n\timg {\r\n\t\tmargin-left: 7px;\r\n\t}\r\n\tp {\r\n\t\tborder-radius: 7px 7px 0 7px;\r\n\t\tbackground-color: #ECB365;\r\n\t\tcolor: black;\r\n\t}\r\n\t&.acting p {\r\n\t\tbackground-color: #F9CC8E;\r\n\t\tcolor: #5c5c5c;\r\n\t}\r\n}\r\n\r\n.acting {\r\n\tcolor: gray;\r\n\tfont-style: italic;\r\n}\r\n",
+                    "styleUrl": "./chat-message.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 17
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div *ngIf=\"isTalking\">\n\t<div *ngIf=\"isCurrentUser; else showThis\">\n\t\t<div class=\"message-content talk right\">\n\t\t\t<p>{{content}}</p>\n\t\t\t<img src=\"{{imageUrl}}\" alt=\"pp\">\n\t\t</div>\n\t</div>\n\t<ng-template #showThis>\n\t\t<div class=\"message-content talk left\">\n\t\t\t<img src=\"{{imageUrl}}\" alt=\"pp\">\n\t\t\t<p>{{content}}</p>\n\t\t</div>\n\t</ng-template>\n</div>\n\n<div *ngIf=\"isActing\">\n\t<div *ngIf=\"isCurrentUser; else showThis\">\n\t\t<div class=\"message-content acting right\">\n\t\t\t<p>{{content.replace(\"/[*]/\",'')}}</p>\n\t\t\t<img src=\"{{imageUrl}}\" alt=\"pp\">\n\t\t</div>\n\t</div>\n\t<ng-template #showThis>\n\t\t<div class=\"message-content acting left\">\n\t\t\t<img src=\"{{imageUrl}}\" alt=\"pp\">\n\t\t\t<p>{{content}}</p>\n\t\t</div>\n\t</ng-template>\n</div>\n"
         },
         {
             "name": "FieldContainerComponent",
@@ -334,7 +560,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<sh-field-container [for]=\"id\" [label]=\"label\" [help]=\"help\">\n\t<select [id]=\"id\" [formControl]=\"control\">\n\t\t<option *ngFor=\"let o of options\" [value]=\"o\" >{{o.name}}</option>\n\t</select>\n</sh-field-container>\n"
+            "templateData": "<sh-field-container [for]=\"id\" [label]=\"label\" [help]=\"help\">\n\t<select [id]=\"id\" [formControl]=\"control\">\n\t\t<option *ngFor=\"let o of options\" [value]=\"o | json\" >{{o.name}}</option>\n\t</select>\n</sh-field-container>\n"
         },
         {
             "name": "InputTextareaComponent",
@@ -609,13 +835,13 @@
     "modules": [
         {
             "name": "NgxDsSecretHouseModule",
-            "id": "module-NgxDsSecretHouseModule-b461658ca44da8f70f3572e14816d153666cb9e3be78127c7615f4aba407ad6e4049e91d5b93a2cb0f27246912d0b5c826b289e93461098609884fc492853a1b",
+            "id": "module-NgxDsSecretHouseModule-da396211a48084b06200f7dd94790067defd48ef289e356b2b61dbb1633d428f60b704fe391b5086cede4a5b7c2fc837e573fa479b9a187936186c6ddc1b1b24",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "projects/ngx-ds-secret-house/src/lib/ngx-ds-secret-house.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { ReactiveFormsModule } from \"@angular/forms\";\nimport { NgxDsSecretHouseComponent } from './ngx-ds-secret-house.component';\n\n// Forms\nimport { FieldContainerComponent } from \"./components/form/field-container/field-container.component\";\nimport { InputTextComponent } from './components/form/input-text/input-text.component';\nimport { InputTextareaComponent } from './components/form/input-textarea/input-textarea.component';\nimport { InputSelectComponent } from './components/form/input-select/input-select.component';\n\n// Buttons\nimport { BtnPrimaryComponent } from './components/buttons/btn-primary/btn-primary.component';\n\nconst COMPONENTS = [\n\tFieldContainerComponent,\n\tInputTextComponent,\n\tInputTextareaComponent,\n\tInputSelectComponent,\n\tBtnPrimaryComponent\n]\n\n@NgModule({\n\tdeclarations: [\n\t\tNgxDsSecretHouseComponent,\n\t\t...COMPONENTS,\n\t],\n\timports: [\n\t\tReactiveFormsModule\n\t],\n\texports: [\n\t\tNgxDsSecretHouseComponent,\n\t\t...COMPONENTS\n\t]\n})\nexport class NgxDsSecretHouseModule {\n}\n",
+            "sourceCode": "import {NgModule} from '@angular/core';\nimport {ReactiveFormsModule} from \"@angular/forms\";\nimport {NgxDsSecretHouseComponent} from './ngx-ds-secret-house.component';\n\n// Forms\nimport {FieldContainerComponent} from \"./components/form/field-container/field-container.component\";\nimport {InputTextComponent} from './components/form/input-text/input-text.component';\nimport {InputTextareaComponent} from './components/form/input-textarea/input-textarea.component';\nimport {InputSelectComponent} from './components/form/input-select/input-select.component';\nimport {ChatMessageComponent} from './components/chat/chat-message/chat-message.component';\nimport {ChatAnnouncementComponent} from './components/chat/chat-announcement/chat-announcement.component';\n\n@NgModule({\n\tdeclarations: [\n\t\tNgxDsSecretHouseComponent,\n\t\tFieldContainerComponent,\n\t\tInputTextComponent,\n\t\tInputTextareaComponent,\n\t\tInputSelectComponent,\n\t\tChatMessageComponent,\n\t\tChatAnnouncementComponent,\n\t],\n\timports: [\n\t\tReactiveFormsModule\n\t],\n\texports: [\n\t\tNgxDsSecretHouseComponent,\n\t\tFieldContainerComponent,\n\t\tInputTextComponent\n\t]\n})\nexport class NgxDsSecretHouseModule {\n}\n",
             "children": [
                 {
                     "type": "providers",
@@ -625,7 +851,10 @@
                     "type": "declarations",
                     "elements": [
                         {
-                            "name": "BtnPrimaryComponent"
+                            "name": "ChatAnnouncementComponent"
+                        },
+                        {
+                            "name": "ChatMessageComponent"
                         },
                         {
                             "name": "FieldContainerComponent"
@@ -652,19 +881,10 @@
                     "type": "exports",
                     "elements": [
                         {
-                            "name": "BtnPrimaryComponent"
-                        },
-                        {
                             "name": "FieldContainerComponent"
                         },
                         {
-                            "name": "InputSelectComponent"
-                        },
-                        {
                             "name": "InputTextComponent"
-                        },
-                        {
-                            "name": "InputTextareaComponent"
                         },
                         {
                             "name": "NgxDsSecretHouseComponent"
@@ -685,14 +905,34 @@
     "miscellaneous": {
         "variables": [
             {
-                "name": "COMPONENTS",
+                "name": "ActionFromUser",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/ngx-ds-secret-house/src/lib/ngx-ds-secret-house.module.ts",
+                "file": "stories/chat/ChatMessage.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "[]",
-                "defaultValue": "[\n\tFieldContainerComponent,\n\tInputTextComponent,\n\tInputTextareaComponent,\n\tInputSelectComponent,\n\tBtnPrimaryComponent\n]"
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "ActionToUser",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/chat/ChatMessage.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Announcement",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/chat/ChatAnnouncement.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "context",
@@ -703,6 +943,16 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "Dare",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/chat/ChatAnnouncement.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "Default",
@@ -735,10 +985,10 @@
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "Default",
+                "name": "Elimination",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/buttons/ButtonPrimary.stories.ts",
+                "file": "stories/chat/ChatAnnouncement.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -752,6 +1002,46 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "literal type"
+            },
+            {
+                "name": "TalkFromUser",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/chat/ChatMessage.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "TalkToUser",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/chat/ChatMessage.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/chat/ChatAnnouncement.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args)  => ({\r\n\tprops: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/chat/ChatMessage.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "(args)  => ({\r\n\tprops: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -784,30 +1074,122 @@
                 "defaultValue": "(args) => ({\n  props: args,\n})"
             },
             {
-                "name": "Template",
+                "name": "Vote",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/buttons/ButtonPrimary.stories.ts",
+                "file": "stories/chat/ChatAnnouncement.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<BtnPrimaryComponent>",
-                "defaultValue": "(args) => ({\n\tprops: args,\n})"
+                "type": "",
+                "defaultValue": "Template.bind({})"
             }
         ],
         "functions": [],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "projects/ngx-ds-secret-house/src/lib/ngx-ds-secret-house.module.ts": [
+            "stories/chat/ChatMessage.stories.ts": [
                 {
-                    "name": "COMPONENTS",
+                    "name": "ActionFromUser",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/ngx-ds-secret-house/src/lib/ngx-ds-secret-house.module.ts",
+                    "file": "stories/chat/ChatMessage.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "[]",
-                    "defaultValue": "[\n\tFieldContainerComponent,\n\tInputTextComponent,\n\tInputTextareaComponent,\n\tInputSelectComponent,\n\tBtnPrimaryComponent\n]"
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "ActionToUser",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/chat/ChatMessage.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "TalkFromUser",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/chat/ChatMessage.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "TalkToUser",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/chat/ChatMessage.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/chat/ChatMessage.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args)  => ({\r\n\tprops: args,\r\n})"
+                }
+            ],
+            "stories/chat/ChatAnnouncement.stories.ts": [
+                {
+                    "name": "Announcement",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/chat/ChatAnnouncement.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Dare",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/chat/ChatAnnouncement.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Elimination",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/chat/ChatAnnouncement.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/chat/ChatAnnouncement.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "(args)  => ({\r\n\tprops: args,\r\n})"
+                },
+                {
+                    "name": "Vote",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/chat/ChatAnnouncement.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
                 }
             ],
             "projects/ngx-ds-secret-house/src/test.ts": [
@@ -896,28 +1278,6 @@
                     "type": "Story<InputTextareaComponent>",
                     "defaultValue": "(args) => ({\n  props: args,\n})"
                 }
-            ],
-            "stories/buttons/ButtonPrimary.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/buttons/ButtonPrimary.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/buttons/ButtonPrimary.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<BtnPrimaryComponent>",
-                    "defaultValue": "(args) => ({\n\tprops: args,\n})"
-                }
             ]
         },
         "groupedFunctions": {},
@@ -930,12 +1290,21 @@
         "status": "low",
         "files": [
             {
-                "filePath": "projects/ngx-ds-secret-house/src/lib/components/buttons/btn-primary/btn-primary.component.ts",
+                "filePath": "projects/ngx-ds-secret-house/src/lib/components/chat/chat-announcement/chat-announcement.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "BtnPrimaryComponent",
+                "name": "ChatAnnouncementComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/13",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-ds-secret-house/src/lib/components/chat/chat-message/chat-message.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ChatMessageComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/10",
                 "status": "low"
             },
             {
@@ -993,16 +1362,6 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/ngx-ds-secret-house/src/lib/ngx-ds-secret-house.module.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "COMPONENTS",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
                 "filePath": "projects/ngx-ds-secret-house/src/lib/ngx-ds-secret-house.service.ts",
                 "type": "injectable",
                 "linktype": "injectable",
@@ -1041,17 +1400,97 @@
                 "status": "low"
             },
             {
-                "filePath": "stories/buttons/ButtonPrimary.stories.ts",
+                "filePath": "stories/chat/ChatAnnouncement.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Default",
+                "name": "Announcement",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "stories/buttons/ButtonPrimary.stories.ts",
+                "filePath": "stories/chat/ChatAnnouncement.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Dare",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/chat/ChatAnnouncement.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Elimination",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/chat/ChatAnnouncement.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/chat/ChatAnnouncement.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Vote",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/chat/ChatMessage.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ActionFromUser",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/chat/ChatMessage.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ActionToUser",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/chat/ChatMessage.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TalkFromUser",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/chat/ChatMessage.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "TalkToUser",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/chat/ChatMessage.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

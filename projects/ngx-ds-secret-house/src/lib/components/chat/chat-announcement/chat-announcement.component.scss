@@ -1,0 +1,8 @@
+.announcement {
+	text-align: center;
+	font-style: italic;
+
+	&.elimination {
+		line-height: 5px;
+	}
+}
