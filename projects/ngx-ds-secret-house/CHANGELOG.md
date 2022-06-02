@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.1.0](https://github.com/SecretHouseGame/ngx-design-system/compare/v1.0.17...v1.1.0) (2022-06-02)
+
+
+### Features
+
+* active animation in switch and add style ([#105](https://github.com/SecretHouseGame/ngx-design-system/issues/105)) ([7759cd4](https://github.com/SecretHouseGame/ngx-design-system/commit/7759cd4f7e479173a1325befb585563b5adb91ef))
+* add card and different style ([#103](https://github.com/SecretHouseGame/ngx-design-system/issues/103)) ([4b8227d](https://github.com/SecretHouseGame/ngx-design-system/commit/4b8227db5d2947d24acb16d6cd1cba694f7dc7a1))
+* add checkboxes & radio style ([#100](https://github.com/SecretHouseGame/ngx-design-system/issues/100)) ([58b71f6](https://github.com/SecretHouseGame/ngx-design-system/commit/58b71f68d6ec77d6098fc9cfa850a79def48cbcc))
+* add input file with upload states ([#106](https://github.com/SecretHouseGame/ngx-design-system/issues/106)) ([cfc9ea9](https://github.com/SecretHouseGame/ngx-design-system/commit/cfc9ea93ffdb58e861283e633e5af45d424394d4))
+* add table ([#101](https://github.com/SecretHouseGame/ngx-design-system/issues/101)) ([4a8f4e0](https://github.com/SecretHouseGame/ngx-design-system/commit/4a8f4e04a8245bd616b6bfbabf1d4c5660217acc))
+
+
+### Bug Fixes
+
+* checkbox type instead of radio type ([#99](https://github.com/SecretHouseGame/ngx-design-system/issues/99)) ([83b3058](https://github.com/SecretHouseGame/ngx-design-system/commit/83b30583412a5b64a0947bebb351da0c5530b25c))
+* color variable is incorrect ([#94](https://github.com/SecretHouseGame/ngx-design-system/issues/94)) ([9c32546](https://github.com/SecretHouseGame/ngx-design-system/commit/9c32546adf27a90fbf249bf2ee5117aecff3b568))
+
 ### [1.0.17](https://github.com/SecretHouseGame/ngx-design-system/compare/v1.0.16...v1.0.17) (2022-05-31)
 
 
