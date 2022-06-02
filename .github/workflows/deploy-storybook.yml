@@ -38,6 +38,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: |
           npm install -g @angular/cli
+          npm install
           ng build
           cd dist/ngx-ds-secret-house
           npm publish
