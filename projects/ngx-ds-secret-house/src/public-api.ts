@@ -44,16 +44,16 @@ export * from './lib/services/modal.service';
 export * from './lib/components/list/list.component';
 export * from './lib/components/list/list-item/list-item.component';
 
-// Interfaces
-export * from './lib/components/interfaces/checkbox-option';
-export * from './lib/components/interfaces/list-item';
-
 // Card
 export * from './lib/components/card/card.component';
+
+// Avatar
+export * from './lib/components/utils/avatar/avatar.component';
 
 // Chat
 export * from './lib/components/chat/chat-message/chat-message.component';
 export * from './lib/components/chat/chat-announcement/chat-announcement.component';
 
-// Avatar 
-export * from './lib/components/utils/avatar/avatar.component';
+// Interfaces
+export * from './lib/components/interfaces/checkbox-option';
+export * from './lib/components/interfaces/list-item';
