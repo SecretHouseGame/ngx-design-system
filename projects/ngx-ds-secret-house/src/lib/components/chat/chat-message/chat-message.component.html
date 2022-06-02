@@ -2,12 +2,12 @@
 	<div *ngIf="isCurrentUser; else showThis">
 		<div class="message-content talk right">
 			<p>{{content}}</p>
-			<img src="{{imageUrl}}" alt="pp">
+			<img [src]="imageUrl" alt="pp">
 		</div>
 	</div>
 	<ng-template #showThis>
 		<div class="message-content talk left">
-			<img src="{{imageUrl}}" alt="pp">
+			<img [src]="imageUrl" alt="pp">
 			<p>{{content}}</p>
 		</div>
 	</ng-template>
@@ -17,12 +17,12 @@
 	<div *ngIf="isCurrentUser; else showThis">
 		<div class="message-content acting right">
 			<p>{{content.replace("/[*]/",'')}}</p>
-			<img src="{{imageUrl}}" alt="pp">
+			<img [src]="imageUrl" alt="pp">
 		</div>
 	</div>
 	<ng-template #showThis>
 		<div class="message-content acting left">
-			<img src="{{imageUrl}}" alt="pp">
+			<img [src]="imageUrl" alt="pp">
 			<p>{{content}}</p>
 		</div>
 	</ng-template>
