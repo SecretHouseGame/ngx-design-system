@@ -4,7 +4,7 @@ import {NavbarComponent} from "../projects/ngx-ds-secret-house/src/lib/component
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
-  title: 'SecretHouse/NavBar',
+  title: 'Basics/NavBar',
   component: NavbarComponent,
   // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes
   argTypes: {

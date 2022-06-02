@@ -4,7 +4,7 @@ import { ChatMessageComponent } from "../../projects/ngx-ds-secret-house/src/lib
 // import defaultProfilePicture from "./stories/assets/images/default-pp.jpg";
 
 export default {
-	title: "SecretHouse/Chat Message",
+	title: "Chat/Chat Message",
 	component: ChatMessageComponent
 } as Meta;
 

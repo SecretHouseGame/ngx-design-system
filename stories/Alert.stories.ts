@@ -5,7 +5,7 @@ import { AlertComponent } from '../projects/ngx-ds-secret-house/src/lib/componen
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
-  title: 'SecretHouse/Alert',
+  title: 'Basics/Alert',
   component: AlertComponent,
   // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes
   argTypes: {

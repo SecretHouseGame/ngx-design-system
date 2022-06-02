@@ -3,7 +3,7 @@ import {Meta, Story} from "@storybook/angular";
 import { ChatAnnouncementComponent } from "../../projects/ngx-ds-secret-house/src/lib/components/chat/chat-announcement/chat-announcement.component";
 
 export default {
-	title: "SecretHouse/Chat Announcement",
+	title: "Chat/Chat Announcement",
 	component: ChatAnnouncementComponent
 } as Meta;
 
@@ -14,7 +14,8 @@ const Template: Story = (args)  => ({
 export const Announcement = Template.bind({});
 Announcement.args = {
 	type: "announcement",
-	content: "Le jeu a commencé !"
+	content: "Le jeu a commencé !",
+	isAnnouncement: true,
 }
 
 export const Dare = Template.bind({});
@@ -22,17 +23,20 @@ Dare.args = {
 	type: "dare",
 	targetName: "luigi",
 	dare: "manger du citron",
-	cashPrize: "10000"
+	cashPrize: "10000",
+	isDare: true,
 }
 
 export const Vote = Template.bind({});
 Vote.args = {
-	type: "vote"
+	type: "vote",
+	isVote: true,
 }
 
 export const Elimination = Template.bind({});
 Elimination.args = {
 	type: "elimination",
 	targetName: "luigi",
-	secret: "Je suis allergique au citron"
+	secret: "Je suis allergique au citron",
+	isElimination: true,
 }
