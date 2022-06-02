@@ -37,7 +37,8 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
       - run: |
-          npm ci
+          npm install -g @angular/cli
+          ng build
           cd dist/ngx-ds-secret-house
           npm publish
         env:
