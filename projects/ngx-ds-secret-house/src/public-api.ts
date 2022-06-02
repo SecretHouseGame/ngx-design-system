@@ -50,3 +50,10 @@ export * from './lib/components/interfaces/list-item';
 
 // Card
 export * from './lib/components/card/card.component';
+
+// Chat
+export * from './lib/components/chat/chat-message/chat-message.component';
+export * from './lib/components/chat/chat-announcement/chat-announcement.component';
+
+// Avatar 
+export * from './lib/components/utils/avatar/avatar.component';

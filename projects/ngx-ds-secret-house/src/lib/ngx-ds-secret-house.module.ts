@@ -1,3 +1,4 @@
+
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -42,6 +43,10 @@ import { ModalComponent } from './components/modal/modal.component';
 import { ListComponent } from './components/list/list.component';
 import { ListItemComponent } from './components/list/list-item/list-item.component';
 
+// Chat
+import {ChatMessageComponent} from './components/chat/chat-message/chat-message.component';
+import {ChatAnnouncementComponent} from './components/chat/chat-announcement/chat-announcement.component';
+
 const COMPONENTS = [
 	FieldContainerComponent,
 	InputTextComponent,
@@ -66,6 +71,8 @@ const COMPONENTS = [
 	CardComponent,
 	ListComponent,
 	ListItemComponent,
+	ChatMessageComponent,
+	ChatAnnouncementComponent,
 	AvatarComponent
 ];
 

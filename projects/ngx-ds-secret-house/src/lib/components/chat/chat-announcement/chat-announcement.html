@@ -1,0 +1,17 @@
+<div *ngIf="isAnnouncement" class="announcement">
+	<p>{{content}}</p>
+</div>
+
+<div *ngIf="isDare" class="announcement dare">
+	<p><strong>{{targetName}}</strong>, tu dois {{dare}} pour {{cashPrize}}€.</p>
+</div>
+
+<div *ngIf="isVote" class="announcement vote">
+	<p>Un nouveau vote va commencer !</p>
+</div>
+
+<div *ngIf="isElimination" class="announcement elimination">
+	<p><strong>{{targetName}}</strong> a été éliminé.</p>
+	<p>Son secret était... </p>
+	<p><strong>{{secret}}</strong></p>
+</div>
