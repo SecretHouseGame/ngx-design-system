@@ -6,7 +6,7 @@
 	z-index: 20;
 	position: fixed;
 	height: 100%;
-	background-color: $blue-dark;
+	background-color: $overlay;
 	color: $white;
 	width: $sidebarWidth;
 	padding: 1rem;
@@ -95,7 +95,7 @@
 
 		.sidebar-sections {
 			transform: translateX(0px);
-			width: $sidebarWidth;
+			width: 100%;
 			align-content: center;
 			padding-left: 0;
 
@@ -103,8 +103,6 @@
 				transform: translateX(0px);
 
 				sh-navbar-link {
-					width: 100%;
-
 					.navbar-link-text {
 						display: inline-block;
 					}

@@ -13,7 +13,7 @@ const ioniconsUrl =
 export class NavbarComponent implements OnInit {
 	@Input() navbarSections: NavbarSection[] = [];
 
-	isOpened: boolean = false;
+	isOpened: boolean = true;
 
 	constructor () {
 	}
@@ -23,6 +23,8 @@ export class NavbarComponent implements OnInit {
 		node.src = ioniconsUrl;
 		node.type = 'text/javascript';
 		document.getElementsByTagName('head')[0].appendChild(node);
+
+		document.body.classList.add('sidebar-opened')
 	}
 
 	toggleSidebar (): void {
