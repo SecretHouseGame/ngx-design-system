@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.2](https://github.com/SecretHouseGame/ngx-design-system/compare/v1.1.1...v1.1.2) (2022-06-03)
+
+
+### Bug Fixes
+
+* replace a={{b}} with [a]="b" ([#114](https://github.com/SecretHouseGame/ngx-design-system/issues/114)) ([2e1a935](https://github.com/SecretHouseGame/ngx-design-system/commit/2e1a9357e2c27d31e61dfd7efb254644b8d71b9e))
+
 ### [1.1.1](https://github.com/SecretHouseGame/ngx-design-system/compare/v1.1.0...v1.1.1) (2022-06-02)
 
 
