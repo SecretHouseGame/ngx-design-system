@@ -57,3 +57,4 @@ export * from './lib/components/chat/chat-announcement/chat-announcement.compone
 // Interfaces
 export * from './lib/components/interfaces/checkbox-option';
 export * from './lib/components/interfaces/list-item';
+export * from './lib/interfaces/navbar';

@@ -1,4 +1,6 @@
-@import "../../../../assets/scss/variables";
+@import "../../../../assets/scss/navbar";
+
+$sidebarPadding: 1rem;
 
 .sidebar {
 	top: 0;
@@ -6,11 +8,11 @@
 	z-index: 20;
 	position: fixed;
 	height: 100%;
-	background-color: $blue-dark;
+	background-color: $overlay;
 	color: $white;
-	width: 300px;
+	width: calc(#{$sidebarWidth} - calc(#{$sidebarPadding} * 2));
 	padding: 1rem;
-	transform: translateX(-250px);
+	transform: translateX(-$sidebarTranslateX);
 	transition: 0.3s;
 	overflow-x: hidden;
 
@@ -25,6 +27,7 @@
 		text-align: center;
 		font-size: 0.7rem;
 		color: $gray-400;
+		line-height: 1.25;
 	}
 
 	h3 {
@@ -36,7 +39,7 @@
 	.sidebar-sections {
 		transform: translateX(230px);
 		height: 80%;
-		margin: 25px 0;
+		margin: 15px 0;
 		transition: 0.3s transform;
 		display: flex;
 		flex-direction: column;
@@ -45,17 +48,17 @@
 
 	.hamburger-menu {
 		position: absolute;
-		right: 10px;
+		right: 12px;
 		top: 10px;
-		height: 36px;
-		width: 36px;
+		height: 26px;
+		width: 26px;
 		transition: 0.3s;
 		cursor: pointer;
 
 		div {
 			background-color: $white;
 			width: 100%;
-			height: 3px;
+			height: 2px;
 			margin-top: 7px;
 			transition: 0.3s;
 
@@ -69,23 +72,26 @@
 	&.opened {
 		transform: translateX(0px);
 
-		.hamburger-menu > div {
-			background-color: $white;
-			width: 100%;
-			height: 3px;
-			transition: 0.3s;
+		.hamburger-menu {
 
-			&#first-hambar {
-				transform: rotate(45deg) translateY(7px) translateX(7px);
-			}
+			& > div {
+				background-color: $white;
+				width: 100%;
+				height: 3px;
+				transition: 0.3s;
 
-			&#second-hambar {
-				opacity: 0;
-				transition: 0.5s opacity;
-			}
+				&#first-hambar {
+					transform: rotate(45deg) translateY(7px) translateX(7px);
+				}
 
-			&#third-hambar {
-				transform: rotate(-45deg) translateY(-7px) translateX(7px);
+				&#second-hambar {
+					opacity: 0;
+					transition: 0.5s opacity;
+				}
+
+				&#third-hambar {
+					transform: rotate(-45deg) translateY(-7px) translateX(7px);
+				}
 			}
 		}
 
@@ -95,7 +101,7 @@
 
 		.sidebar-sections {
 			transform: translateX(0px);
-			width: 300px;
+			width: 100%;
 			align-content: center;
 			padding-left: 0;
 
@@ -103,8 +109,6 @@
 				transform: translateX(0px);
 
 				sh-navbar-link {
-					width: 100%;
-
 					.navbar-link-text {
 						display: inline-block;
 					}
