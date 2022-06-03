@@ -126,5 +126,6 @@ export class NavbarComponent implements OnInit {
 
 	toggleSidebar (): void {
 		this.isOpened = !this.isOpened;
+		document.body.classList.toggle('sidebar-opened')
 	}
 }
