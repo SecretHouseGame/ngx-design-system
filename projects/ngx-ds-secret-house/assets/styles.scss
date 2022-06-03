@@ -8,7 +8,7 @@
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('/projects/ngx-ds-secret-house/assets/fonts/Montserrat.ttf') format('truetype');
+	src: url('./fonts/Montserrat.ttf') format('truetype');
 }
 
 /**
@@ -68,7 +68,7 @@ $transition: all .1s;
  */
 
 html {
-	font-family: 'Montserrat', serif;
+	font-family: Montserrat, serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
