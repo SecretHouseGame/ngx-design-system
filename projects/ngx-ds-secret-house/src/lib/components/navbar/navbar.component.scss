@@ -27,6 +27,7 @@ $sidebarPadding: 1rem;
 		text-align: center;
 		font-size: 0.7rem;
 		color: $gray-400;
+		line-height: 1.25;
 	}
 
 	h3 {
@@ -38,7 +39,7 @@ $sidebarPadding: 1rem;
 	.sidebar-sections {
 		transform: translateX(230px);
 		height: 80%;
-		margin: 25px 0;
+		margin: 15px 0;
 		transition: 0.3s transform;
 		display: flex;
 		flex-direction: column;
