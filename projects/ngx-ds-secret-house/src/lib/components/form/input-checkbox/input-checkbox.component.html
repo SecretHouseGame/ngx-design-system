@@ -1,0 +1,16 @@
+<sh-field-container [for]="id" [label]="label" [help]="help">
+    <div class="fields-inputs">
+        <div *ngFor="let option of options" class="fields-inputs__container">
+          <label [for]="option.id" class="fields-inputs__label">
+            <div class="fields-inputs__checkbox">
+              <input type="checkbox" [value]="option.value" [id]="option.id" [name]="name" [disabled]="option.disabled" [checked]="option.checked"/>
+              <span class="fields-inputs__checkmark">
+                <ion-icon name="checkmark-outline"></ion-icon>
+              </span>
+              <span>{{ option.text }}</span>
+            </div>
+            <small *ngIf="option.help">{{ option.help }}</small>
+          </label>
+        </div>
+    </div>
+</sh-field-container>

@@ -1,0 +1,51 @@
+:host{
+    .size{
+        &-1{
+            img{
+                height: 1rem;
+                width: 1rem;
+            }
+        }
+        &-2{
+            img{
+                height: 2rem;
+                width: 2rem;
+            }
+        }
+        &-3{
+            img{
+                height: 3rem;
+                width: 3rem;
+            }    
+        }
+        &-4{
+            img{
+                height: 4rem;
+                width: 4rem;
+            }
+        }
+        &-5{
+            img{
+                height: 5rem;
+                width: 5rem;
+            }
+        }
+        &-6{
+            img{
+                height: 6rem;
+                width: 6rem;
+            }
+        }
+        &-7{
+            img{
+                height: 7rem;
+                width: 7rem;
+            }
+        }
+    }
+    img{
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,47 @@
+.message-content {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	img {
+		height: 30px;
+		width: 30px;
+		border-radius: 15px;
+	}
+	p{
+		max-width: 300px;
+		padding: 7px 20px;
+	}
+}
+
+.left {
+	img {
+		margin-right: 7px;
+	}
+	p {
+		border-radius: 7px 7px 7px 0;
+		background-color: #f6f6f6;
+	}
+	&.acting p {
+		background-color: #eeeeee;
+	}
+}
+
+.right {
+	img {
+		margin-left: 7px;
+	}
+	p {
+		border-radius: 7px 7px 0 7px;
+		background-color: #ECB365;
+		color: black;
+	}
+	&.acting p {
+		background-color: #F9CC8E;
+		color: #5c5c5c;
+	}
+}
+
+.acting {
+	color: gray;
+	font-style: italic;
+}

@@ -1,0 +1,11 @@
+<button
+	[class]="'btn btn--' + type"
+	[ngClass]="{ 'btn--loading': loading }"
+	[disabled]="disabled || loading">
+	<div class="btn__content" *ngIf="!loading">
+		<ion-icon [name]="icon"></ion-icon>
+	</div>
+	<div class="btn__loader" *ngIf="loading">
+		<ion-icon name="sync-outline"></ion-icon>
+	</div>
+</button>

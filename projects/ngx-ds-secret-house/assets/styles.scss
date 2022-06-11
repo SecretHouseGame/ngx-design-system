@@ -8,7 +8,7 @@
 
 @font-face {
 	font-family: 'Montserrat';
-	src: url('/projects/ngx-ds-secret-house/assets/fonts/Montserrat.ttf') format('truetype');
+	src: url('./fonts/Montserrat.ttf') format('truetype');
 }
 
 /**
@@ -16,7 +16,10 @@
  */
 
 $success: $green;
+$success-light: $green-light;
+
 $danger: $red;
+$danger-light: $red-light;
 
 $brand-primary: $yellow;
 $brand-primary-light: $yellow-light;
@@ -44,7 +47,8 @@ $element-overlay: $overlay;
  */
 
 $size-normal: 16px;
-$size-sm: 12px;
+$size-xs: 12px;
+$size-sm: 14px;
 $size-lg: 18px;
 
 /**
@@ -56,12 +60,15 @@ $space-medium: 16px;
 $space-large: 24px;
 $space-big: 40px;
 
+// Timing de transition
+$transition: all .1s;
+
 /**
  ***** Typography *****
  */
 
 html {
-	font-family: 'Montserrat', serif;
+	font-family: Montserrat, serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -99,3 +106,9 @@ p {
 small {
 	font-size: $size-sm;
 }
+
+p, small, span {
+	line-height: 1;
+}
+
+

@@ -1,17 +1,17 @@
-name: deploy storybook
+name: deploy storybook on firebase and npm
 
 # Run this workflow every time a new commit pushed on develop to update storybook and use it on other feature
 on:
-  push:
-    branches:
-        - develop
+  release:
+    types:
+      - published
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [ 16.x ]
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
@@ -26,3 +26,21 @@ jobs:
         run: npm i firebase-tools -g
       - name: deploy
         run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
+
+  deploy-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      # Setup .npmrc file to publish to npm
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: |
+          npm install -g @angular/cli
+          npm install
+          ng build
+          cd dist/ngx-ds-secret-house
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

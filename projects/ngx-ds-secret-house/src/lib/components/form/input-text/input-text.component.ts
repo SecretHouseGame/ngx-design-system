@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -14,6 +14,9 @@ export class InputTextComponent implements OnInit {
 	@Input() placeholder: string = '';
 	@Input() label: string = '';
 	@Input() help: string = '';
+	@Input() error: boolean = false;
+	@Input() success: boolean = false;
+	@Input() disabled: boolean = false;
 
 	constructor() {}
 
