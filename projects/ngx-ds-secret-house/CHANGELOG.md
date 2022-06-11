@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.3](https://github.com/SecretHouseGame/ngx-design-system/compare/v1.1.2...v1.1.3) (2022-06-11)
+
+
+### Bug Fixes
+
+* button must have type button to prevent submit form ([#120](https://github.com/SecretHouseGame/ngx-design-system/issues/120)) ([4a19259](https://github.com/SecretHouseGame/ngx-design-system/commit/4a19259aac6933df2f8236a4e3a33c3479c6bf1a))
+
 ### [1.1.2](https://github.com/SecretHouseGame/ngx-design-system/compare/v1.1.1...v1.1.2) (2022-06-03)
 
 
