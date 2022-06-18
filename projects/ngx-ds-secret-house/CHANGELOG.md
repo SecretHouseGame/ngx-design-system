@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.4](https://github.com/SecretHouseGame/ngx-design-system/compare/v1.1.3...v1.1.4) (2022-06-18)
+
+
+### Bug Fixes
+
+* style of current message in chat ([#122](https://github.com/SecretHouseGame/ngx-design-system/issues/122)) ([1d91709](https://github.com/SecretHouseGame/ngx-design-system/commit/1d9170938ab40f229b3eed883bf7acab95645415))
+
 ### [1.1.3](https://github.com/SecretHouseGame/ngx-design-system/compare/v1.1.2...v1.1.3) (2022-06-11)
 
 
