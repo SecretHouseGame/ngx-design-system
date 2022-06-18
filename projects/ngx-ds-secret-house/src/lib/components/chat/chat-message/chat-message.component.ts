@@ -10,7 +10,7 @@ export class ChatMessageComponent implements OnInit {
 	@Input() content : string = "";
 	@Input() imageUrl ?: string;
 	@Input() type : string = "";
-	@Input() isCurrentUser : boolean = true;
+	@Input() isCurrentUser : boolean = false;
 
 	isTalking: boolean = false;
 	isActing: boolean = false;
